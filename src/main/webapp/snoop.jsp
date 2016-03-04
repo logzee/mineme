@@ -42,7 +42,7 @@
  
 <tr>
 <td colspan="2" align="center">
-<h3>Memory Pool MXBeans</h3>
+<h3>Memory Pool MXBeans. Commit test</h3>
 </td>
 </tr>
  
