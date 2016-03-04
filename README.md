@@ -1,3 +1,4 @@
-The OpenShift `jbossews` cartridge documentation can be found at:
+MineMe - my 'Hello Wolrd' app for collecting data about myself.
+Written on Java, uses MongoDB and deployed on OpenShift.
 
-http://openshift.github.io/documentation/oo_cartridge_guide.html#tomcat
+http://mineme-logzee.rhcloud.com/
