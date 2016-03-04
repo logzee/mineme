@@ -61,12 +61,5 @@
         </div>
     </div>
 </div>
-<footer>
-    <div class="row">
-        <div class="large-6 columns large-centered">
-            <p>&copy Малышев М. 2016</p>
-        </div>
-    </div>
-</footer>
 </body>
 </html>
