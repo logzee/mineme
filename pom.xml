@@ -62,11 +62,6 @@
             <artifactId>bson</artifactId>
             <version>2.13.3</version>
         </dependency>
-        <dependency>
-            <groupId>org.jboss.web</groupId>
-            <artifactId>jbossweb</artifactId>
-            <version>7.5.12.Final-redhat-1</version>
-        </dependency>
     </dependencies>
 	<profiles>
 		<profile>
