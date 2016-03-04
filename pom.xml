@@ -67,11 +67,6 @@
             <artifactId>jbossweb</artifactId>
             <version>7.5.12.Final-redhat-1</version>
         </dependency>
-        <dependency>
-            <groupId>org.richfaces.cdk</groupId>
-            <artifactId>cmdln-generator</artifactId>
-            <version>4.5.0.Final-redhat-2</version>
-        </dependency>
     </dependencies>
 	<profiles>
 		<profile>
