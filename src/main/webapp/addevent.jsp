@@ -6,4 +6,3 @@
 <%
     DBManager dbManager = new DBManager();
 %>
-<%= dbManager.findOne() %>
