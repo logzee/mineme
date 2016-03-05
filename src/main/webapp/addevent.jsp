@@ -5,6 +5,7 @@
 
 <%
     DBManager dbManager = new DBManager();
+    dbManager.setCollection("event-types");
     Map requestParams = request.getParameterMap();
 %>
 <%= dbManager.findOne()%>
@@ -31,7 +32,7 @@
     <div class="large-6 columns large-centered">
         <h1>Добавить событие</h1>
         <div class="callout">
-            <form action="ins_handle.php" id="event_form">
+            <form action="ins-handle.jsp" id="event_form">
                 <div class="row">
                     <div class="large-12 columns" id="event_selection">
                         <div id="form_wrapper">
@@ -62,12 +63,5 @@
     </div>
 </div>
 <script src="js/addevent.js" language="Javascript" type="text/javascript"></script>
-<footer>
-    <div class="row">
-        <div class="large-6 columns large-centered">
-            <p>&copy Малышев М. 2016</p>
-        </div>
-    </div>
-</footer>
 </body>
 </html>

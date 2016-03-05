@@ -1,31 +1,33 @@
 package classes;
 
 import com.mongodb.*;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 
 import java.net.UnknownHostException;
-import java.util.Arrays;
 
 /**
  * Created by logzee on 04.03.16.
  */
 public class DBManager {
-    private final String URL = "127.10.188.130";
-    private final String USERNAME = "admin";
-    private final String DATABASE = "mineme";
-    private final char[] PASSWORD = "9s__XpG8Yrvp".toCharArray();
-    private MongoClient mongoClient;
-    private DB db;
-    private MongoCredential credential;
-    private DBCollection coll;
+    private MongoCollection<Document> collection;
+    private MongoDatabase db;
+
 
     public DBManager() throws UnknownHostException {
-        credential = MongoCredential.createCredential(USERNAME, DATABASE, PASSWORD);
-        mongoClient = new MongoClient(new MongoClientURI(System.getenv("OPENSHIFT_MONGODB_DB_URL")));
-        db = mongoClient.getDB( "mineme" );
-        coll = db.getCollection("testCollection");
+        MongoClient mongoClient = new MongoClient(new MongoClientURI(System.getenv("MONGODB_URL")));
+        db = mongoClient.getDatabase("mineme");
     }
     public String findOne() {
-        DBObject myDoc = coll.findOne();
-        return myDoc.toString();
+        FindIterable<Document> myDoc = collection.find();
+        return myDoc.iterator().next().toJson();
+    }
+    public void setCollection(String collection) {
+        this.collection = db.getCollection(collection);
+    }
+    public void insertOne(Document document) {
+
     }
 }
