@@ -50,14 +50,15 @@ option.setAttribute("value", "none");
 option.innerHTML = 'Выбери тип события';
 eventDropdown.appendChild(option);
 
-for (var i in structData) {
-    alert(structData[i].title);
-}
-structData.forEach(function (item, i, structData) {
-    var title = item.title;
-    option = document.createElement('option');
-    option.innerHTML = title;
-    eventDropdown.appendChild(option);
+struct = structData.struct;
+
+struct.forEach(function (item, i, struct) {
+    if (item.hidden != true) {
+        var title = item.title;
+        option = document.createElement('option');
+        option.innerHTML = title;
+        eventDropdown.appendChild(option);
+    }
 });
 
 option = document.createElement('option');
