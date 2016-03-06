@@ -35,14 +35,16 @@ public class DBManager {
     }
     public Object[] getStructTitles() {
         if (this.collection != null) {
-            final ArrayList result = new ArrayList();
+            final ArrayList<String> result = new ArrayList<String>();
             FindIterable<Document> myDoc = collection.find();
             myDoc.forEach(new Block<Document>() {
                 @Override
                 public void apply(final Document document) {
-                    Document struct = (Document) document.get("struct");
-                    for (String key : struct.keySet()) {
-                        result.add(key);
+                    System.out.println(">>>>>>>>>>>>>DBManager.java>>>>>>>>>>>>>>>");
+                    System.out.println(document.get("struct").getClass().getSimpleName());
+                    ArrayList<Document> struct = (ArrayList<Document>) document.get("struct");
+                    for (Document key : struct) {
+                        result.add(key.toJson());
                     }
                 }
             });
