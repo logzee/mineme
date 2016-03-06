@@ -37,12 +37,6 @@
                             <label>Тип события
                                 <select name="type" id="event-dropdown" onChange="check(this);">
                                     <option value="none">Выбери тип события</option>
-                                    <%
-                                        Object[] titles = dbManager.getStructTitles();
-                                        for (Object title : titles) {
-                                            out.println("<option>" + title + "</option>");
-                                        }
-                                    %>
                                     <option value="new">Новый тип</option>
                                 </select>
                                 <p></p>
