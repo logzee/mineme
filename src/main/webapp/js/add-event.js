@@ -21,9 +21,17 @@ function updateForm(select) {
     newTypeOption = select.options[newTypeOption];
 
     eventName = select.value;
+
+    if (eventName == "none") {
+        removeInput();
+        return;
+    }
+
     try {
         dataType = getEventType(eventName);
-    } catch (ignored) {}
+    } catch (e) {
+        dataType = "new";
+    }
 
     removeInput();
 
@@ -31,11 +39,33 @@ function updateForm(select) {
         case "enum":
             addEnumInput(eventName);
             break;
+        case "subtypes":
+            addSubtypesInput(eventName);
+            break;
+        case "new":
+            addNewTypeInput();
+            break;
     }
 
     if (eventName == newTypeOption) {
         alert(true);
     }
+}
+
+function addSubtypesInput(eventName) {
+    var wrapper = document.createElement('div');
+    wrapper.setAttribute("id", "enum-input");
+    result = "<label>Выбери</label><select id='enum'>";
+    enumStruct = getEventStruct(eventName);
+
+    for (var i = 0; i < enumStruct.value.length; i++) {
+        result += "<option value='" + i + "'>" + enumStruct.value[i].title + "</option>";
+    }
+    result += "<option value='new-subtype'>Новый подтип</option>";
+    result += "</select><p></p>";
+    wrapper.innerHTML = result;
+    document.getElementById('form-wrapper').appendChild(wrapper);
+    addedInputId = "enum-input";
 }
 
 /**
@@ -54,9 +84,8 @@ function getEventStruct(eventName) {
  **/
 function removeInput() {
     if (addedInputId != null) {
-        formWrapper = document.getElementById('form-wrapper');
         addedInput = document.getElementById(addedInputId);
-        formWrapper.removeChild(addedInput);
+        addedInput.remove();
         addedInputId = null;
     }
 }
@@ -124,3 +153,4 @@ option = document.createElement('option');
 option.setAttribute("value", "new");
 option.innerHTML = 'Новый тип';
 eventDropdown.appendChild(option);
+
