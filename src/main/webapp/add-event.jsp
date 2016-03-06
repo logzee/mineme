@@ -30,7 +30,7 @@
     <div class="large-6 columns large-centered">
         <h1>Добавить событие</h1>
         <div class="callout">
-            <form action="ins-handle.jsp" id="event_form">
+            <form action="ins-handle.jsp" id="event-form">
                 <div class="row">
                     <div class="large-12 columns" id="event-selection">
                         <div id="form-wrapper">
@@ -50,12 +50,12 @@
                         </div>
                         <a type="button" class="success button event-btn" onclick="addValueInput();"><i class="fa fa-plus"></i> Добавить значение</a>
                         <a type="button" class="warning button event-btn" onclick="removeValueInput();"><i class="fa fa-minus"></i> Удалить значение</a>
-                        <div id="values_wrapper">
+                        <div id="values-wrapper">
                             <label>Значение
                                 <input name="val0" type="text" placeholder="Значение или подтип">
                             </label>
                         </div>
-                        <a type="submit" class="button event-btn" onclick="document.getElementById('event_form').submit()"><i class="fa fa-floppy-o"></i> Сохранить событие</a>
+                        <a type="submit" class="button event-btn" onclick="document.getElementById('event-form').submit()"><i class="fa fa-floppy-o"></i> Сохранить событие</a>
                         <a class="alert button event-btn" href="index.jsp"><i class="fa fa-ban"></i> Отменить</a>
                     </div>
                 </div>

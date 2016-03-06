@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/addevent.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/js/addevent.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/add-event.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
     </list>
     <ignored path="mineme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,20 +36,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add-event.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add-event.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/add-event.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.607142">
-              <caret line="38" column="75" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="75" />
+            <state vertical-scroll-proportion="1.2251132">
+              <caret line="57" column="106" selection-start-line="57" selection-start-column="106" selection-end-line="57" selection-end-column="106" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add-event.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add-event.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2916666">
+            <state vertical-scroll-proportion="0.0">
               <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
               <folding />
             </state>
@@ -129,8 +126,8 @@
         <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/addevent.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/addevent.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
       </list>
     </option>
   </component>
@@ -775,7 +772,7 @@
       <workItem from="1457115633940" duration="6941000" />
       <workItem from="1457164217654" duration="426000" />
       <workItem from="1457205831416" duration="5579000" />
-      <workItem from="1457244110986" duration="8897000" />
+      <workItem from="1457244110986" duration="8979000" />
     </task>
     <task id="LOCAL-00001" summary="Commit test">
       <created>1457103454695</created>
@@ -903,11 +900,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457251376255</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Event dropdown now forms on client side">
+      <created>1457254399526</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1457254399526</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23020000" />
+    <option name="totallyTimeSpent" value="23102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -960,7 +963,8 @@
     <MESSAGE value="Updated mongodb to 3.2: some DBManager code changed, added insert handlier JSP" />
     <MESSAGE value="Starting to make CRUD" />
     <MESSAGE value="Events (from mongodb) dropdown done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Events (from mongodb) dropdown done" />
+    <MESSAGE value="Event dropdown now forms on client side" />
+    <option name="LAST_COMMIT_MESSAGE" value="Event dropdown now forms on client side" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1182,18 +1186,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/add-event.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.607142">
-          <caret line="38" column="75" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/add-event.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2916666">
-          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+        <state vertical-scroll-proportion="1.2251132">
+          <caret line="57" column="106" selection-start-line="57" selection-start-column="106" selection-end-line="57" selection-end-column="106" />
           <folding />
         </state>
       </provider>
