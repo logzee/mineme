@@ -17,8 +17,7 @@
 </head>
 <body>
 <!-- Data from MongoDB describing events structure for JavaScript -->
-<div hidden id="struct-data">
-</div>
+<div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
     <div class="title-bar-title">MineMe</div>
 </div>
