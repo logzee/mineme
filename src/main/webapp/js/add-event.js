@@ -43,6 +43,7 @@ function removeValueInput() {
 
 // Dropdown init
 var structData = JSON.parse(document.getElementById('struct-data').innerHTML);
+alert(document.getElementById('struct-data').innerHTML);
 var eventDropdown = document.getElementById('event-dropdown');
 
 var option = document.createElement('option');
@@ -51,7 +52,6 @@ option.innerHTML = 'Выбери тип события';
 eventDropdown.appendChild(option);
 
 structData.forEach(function (item) {
-    alert(item);
     var title = item.title;
     option = document.createElement('option');
     option.innerHTML = title;
