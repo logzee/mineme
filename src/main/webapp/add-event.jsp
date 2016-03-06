@@ -17,7 +17,8 @@
 </head>
 <body>
 <!-- Data from MongoDB describing events structure for JavaScript -->
-<div hidden id="struct-data"><%= dbManager.getStruct() %></div>
+<div hidden id="struct-data">
+</div>
 <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
     <div class="title-bar-title">MineMe</div>
 </div>
@@ -35,17 +36,9 @@
                     <div class="large-12 columns" id="event-selection">
                         <div id="form-wrapper">
                             <label>Тип события
-                                <select name="type" id="event-dropdown" onChange="check(this);">
-
+                                <select name="type" id="event-dropdown" onChange="updateForm(this)">
                                 </select>
                                 <p></p>
-                            </label>
-                        </div>
-                        <a type="button" class="success button event-btn" onclick="addValueInput();"><i class="fa fa-plus"></i> Добавить значение</a>
-                        <a type="button" class="warning button event-btn" onclick="removeValueInput();"><i class="fa fa-minus"></i> Удалить значение</a>
-                        <div id="values-wrapper">
-                            <label>Значение
-                                <input name="val0" type="text" placeholder="Значение или подтип">
                             </label>
                         </div>
                         <a type="submit" class="button event-btn" onclick="document.getElementById('event-form').submit()"><i class="fa fa-floppy-o"></i> Сохранить событие</a>
