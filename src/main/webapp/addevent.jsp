@@ -1,19 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="classes.DBManager" %>
-<%@ page import="java.util.Map" %>
-
 
 <%
     DBManager dbManager = new DBManager();
     dbManager.setCollection("event-types");
-    Map requestParams = request.getParameterMap();
-
-    Object[] titles = dbManager.getStructTitles();
-    for (Object title : titles) {
-%>
-        <%= title.toString() %>
-<%
-    }
 %>
 
 <!DOCTYPE HTML>
@@ -46,7 +36,10 @@
                                 <select name="type" id="event_dropdown" onChange="check(this);">
                                     <option value="none">Выбери тип события</option>
                                     <%
-                                        // TODO: вывод типов событий в цикле
+                                        Object[] titles = dbManager.getStructTitles();
+                                        for (Object title : titles) {
+                                            out.println("<option>" + title + "</option>");
+                                        }
                                     %>
                                     <option value="new">Новый тип</option>
                                 </select>

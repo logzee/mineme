@@ -12,6 +12,7 @@
           <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:3.2.0-rc0" />
           <element id="library" level="project" name="Maven: org.mongodb:bson:3.2.0" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.6.2" />
+          <element id="library" level="project" name="Maven: com.google.gwt:gwt-dev:2.5.0-redhat-1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
