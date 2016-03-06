@@ -93,6 +93,7 @@
 						<configuration>
 							<outputDirectory>webapps</outputDirectory>
 							<warName>ROOT</warName>
+							<webXml>src/main/webapp/WEB-INF/web-openshift.xml</webXml>  <!--add this-->
 						</configuration>
 					</plugin>
 				</plugins>
