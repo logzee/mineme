@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_gwt_gwt_dev_2_5_0_redhat_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/addevent.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/addevent.jsp" />
     </list>
     <ignored path="mineme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,26 +57,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addevent.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addevent.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/addevent.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3337104">
+            <state vertical-scroll-proportion="-10.535714">
               <caret line="40" column="87" selection-start-line="40" selection-start-column="87" selection-end-line="40" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="73" selection-start-line="47" selection-start-column="73" selection-end-line="47" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.6458333">
+              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1064#1072#0" expanded="true" />
-                <element signature="e#1164#1776#0" expanded="true" />
-                <element signature="e#1775#1776#0" expanded="true" />
+                <element signature="e#1164#1707#0" expanded="true" />
+                <element signature="e#1706#1707#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,8 +134,8 @@
         <option value="$PROJECT_DIR$/src/main/java/classes/DBManagerr.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/addevent.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
       </list>
     </option>
   </component>
@@ -755,7 +754,7 @@
       <workItem from="1457115633940" duration="6941000" />
       <workItem from="1457164217654" duration="426000" />
       <workItem from="1457205831416" duration="5579000" />
-      <workItem from="1457244110986" duration="5606000" />
+      <workItem from="1457244110986" duration="5906000" />
     </task>
     <task id="LOCAL-00001" summary="Commit test">
       <created>1457103454695</created>
@@ -871,11 +870,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457250249530</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Events (from mongodb) dropdown done">
+      <created>1457251104875</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1457251104875</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19729000" />
+    <option name="totallyTimeSpent" value="20029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -927,7 +932,8 @@
     <MESSAGE value="Deleted default index.html and created addevent.jsp layout" />
     <MESSAGE value="Updated mongodb to 3.2: some DBManager code changed, added insert handlier JSP" />
     <MESSAGE value="Starting to make CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting to make CRUD" />
+    <MESSAGE value="Events (from mongodb) dropdown done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Events (from mongodb) dropdown done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1136,19 +1142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="73" selection-start-line="47" selection-start-column="73" selection-end-line="47" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1064#1072#0" expanded="true" />
-            <element signature="e#1164#1776#0" expanded="true" />
-            <element signature="e#1775#1776#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.392857">
@@ -1159,9 +1152,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/addevent.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3337104">
+        <state vertical-scroll-proportion="-10.535714">
           <caret line="40" column="87" selection-start-line="40" selection-start-column="87" selection-end-line="40" selection-end-column="87" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6458333">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1064#1072#0" expanded="true" />
+            <element signature="e#1164#1707#0" expanded="true" />
+            <element signature="e#1706#1707#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

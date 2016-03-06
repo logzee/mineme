@@ -42,11 +42,10 @@ public class DBManager {
                 public void apply(final Document document) {
                     System.out.println(">>>>>>>>>>>>>DBManager.java>>>>>>>>>>>>>>>");
                     ArrayList<Document> struct = (ArrayList<Document>) document.get("struct");
-                    System.out.println(struct.get(0).containsKey("hidden"));
 
-                    for (Document key : struct) {
-                        if(struct.get(0).containsKey("hidden")) continue;
-                        result.add(key.get("title").toString());
+                    for (Document eventType : struct) {
+                        if(eventType.containsKey("hidden")) continue;
+                        result.add(eventType.get("title").toString());
                     }
                 }
             });
