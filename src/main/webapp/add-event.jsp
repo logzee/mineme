@@ -36,8 +36,7 @@
                         <div id="form-wrapper">
                             <label>Тип события
                                 <select name="type" id="event-dropdown" onChange="check(this);">
-                                    <option value="none">Выбери тип события</option>
-                                    <option value="new">Новый тип</option>
+
                                 </select>
                                 <p></p>
                             </label>

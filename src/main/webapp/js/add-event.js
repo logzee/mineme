@@ -51,6 +51,7 @@ option.innerHTML = 'Выбери тип события';
 eventDropdown.appendChild(option);
 
 structData.forEach(function (item) {
+    alert(item);
     var title = item.title;
     option = document.createElement('option');
     option.innerHTML = title;
