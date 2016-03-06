@@ -7,8 +7,14 @@
     DBManager dbManager = new DBManager();
     dbManager.setCollection("event-types");
     Map requestParams = request.getParameterMap();
+
+    Object[] titles = dbManager.getStructTitles();
+    for (Object title : titles) {
 %>
-<%= dbManager.findOne()%>
+        <%= title.toString() %>
+<%
+    }
+%>
 
 <!DOCTYPE HTML>
 <html lang="ru">

@@ -7,6 +7,7 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 
 /**
  * Created by logzee on 04.03.16.
@@ -29,5 +30,19 @@ public class DBManager {
     }
     public void insertOne(Document document) {
 
+    }
+    public Object[] getStructTitles() {
+        if (this.collection != null) {
+            final ArrayList result = new ArrayList();
+            FindIterable<Document> myDoc = collection.find();
+            myDoc.forEach(new Block<Document>() {
+                @Override
+                public void apply(final Document document) {
+                    result.add(document.toJson());
+                }
+            });
+            return result.toArray();
+        }
+        return new String[0];
     }
 }
