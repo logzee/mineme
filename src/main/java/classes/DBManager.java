@@ -41,8 +41,9 @@ public class DBManager {
                 @Override
                 public void apply(final Document document) {
                     System.out.println(">>>>>>>>>>>>>DBManager.java>>>>>>>>>>>>>>>");
-                    System.out.println(document.get("struct").getClass().getSimpleName());
                     ArrayList<Document> struct = (ArrayList<Document>) document.get("struct");
+                    System.out.println(struct.get(0).toJson());
+                    System.out.println(document.get("struct").getClass().getSimpleName());
                     for (Document key : struct) {
                         result.add(key.toJson());
                     }
