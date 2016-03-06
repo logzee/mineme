@@ -22,7 +22,7 @@
 <div class="top-bar" id="realEstateMenu">
     <div class="top-bar-right">
         <ul class="menu">
-            <li><a class="button" href="addevent.jsp">Добавить событие</a></li>
+            <li><a class="button" href="add-event.jsp">Добавить событие</a></li>
         </ul>
     </div>
 </div>

@@ -21,13 +21,13 @@ public class DBManager {
         db = mongoClient.getDatabase("mineme");
     }
 
-    public String findOne() {
-        FindIterable<Document> myDoc = collection.find();
-        return myDoc.iterator().next().toJson();
-    }
-
     public void setCollection(String collection) {
         this.collection = db.getCollection(collection);
+    }
+
+    public String getStruct() {
+        FindIterable<Document> myDoc = collection.find();
+        return myDoc.iterator().next().toJson();
     }
 
     public void insertOne(Document document) {

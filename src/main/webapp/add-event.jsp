@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
+<!-- Data from MongoDB describing events structure for JavaScript -->
+<div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
     <div class="title-bar-title">MineMe</div>
 </div>
@@ -30,10 +32,10 @@
         <div class="callout">
             <form action="ins-handle.jsp" id="event_form">
                 <div class="row">
-                    <div class="large-12 columns" id="event_selection">
-                        <div id="form_wrapper">
+                    <div class="large-12 columns" id="event-selection">
+                        <div id="form-wrapper">
                             <label>Тип события
-                                <select name="type" id="event_dropdown" onChange="check(this);">
+                                <select name="type" id="event-dropdown" onChange="check(this);">
                                     <option value="none">Выбери тип события</option>
                                     <%
                                         Object[] titles = dbManager.getStructTitles();
@@ -61,6 +63,6 @@
         </div>
     </div>
 </div>
-<script src="js/addevent.js" language="Javascript" type="text/javascript"></script>
+<script src="js/add-event.js" language="Javascript" type="text/javascript"></script>
 </body>
 </html>
