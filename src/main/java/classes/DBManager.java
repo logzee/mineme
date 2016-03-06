@@ -16,18 +16,20 @@ public class DBManager {
     private MongoCollection<Document> collection;
     private MongoDatabase db;
 
-
     public DBManager() throws UnknownHostException {
         MongoClient mongoClient = new MongoClient(new MongoClientURI(System.getenv("MONGODB_URL")));
         db = mongoClient.getDatabase("mineme");
     }
+
     public String findOne() {
         FindIterable<Document> myDoc = collection.find();
         return myDoc.iterator().next().toJson();
     }
+
     public void setCollection(String collection) {
         this.collection = db.getCollection(collection);
     }
+
     public void insertOne(Document document) {
 
     }
@@ -38,7 +40,10 @@ public class DBManager {
             myDoc.forEach(new Block<Document>() {
                 @Override
                 public void apply(final Document document) {
-                    result.add(document.toJson());
+                    Document struct = (Document) document.get("struct");
+                    for (String key : struct.keySet()) {
+                        result.add(key);
+                    }
                 }
             });
             return result.toArray();
