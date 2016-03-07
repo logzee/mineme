@@ -2,8 +2,8 @@
 <%@ page import="classes.DBManager" %>
 
 <%
-    DBManager dbManager = new DBManager();
-    dbManager.setCollection("event-types");
+DBManager dbManager = new DBManager();
+dbManager.setCollection("event-types");
 %>
 
 <!DOCTYPE HTML>
@@ -11,40 +11,40 @@
 <head>
     <meta charset="UTF-8">
     <title>MineMe</title>
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/uikit.gradient.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/mineme.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/uikit.min.js"></script>
 </head>
 <body>
-<!-- Data from MongoDB describing events structure for JavaScript -->
-<div hidden id="struct-data"><%= dbManager.getStruct() %></div>
-<div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
-    <div class="title-bar-title">MineMe</div>
-</div>
-<div class="top-bar" id="realEstateMenu">
-    <div class="top-bar-right">
-    </div>
-</div>
-<br>
-<div class="row">
-    <div class="large-6 columns large-centered">
-        <h1>Добавить событие</h1>
-        <div class="callout">
-            <form action="ins-handle.jsp" id="event-form">
-                <div class="row">
-                    <div class="large-12 columns" id="event-selection">
-                        <div id="form-wrapper">
-                            <select name="type" id="event-dropdown" onChange="updateForm(this)">
-                            </select>
-                        </div>
-                        <a type="submit" class="button event-btn" onclick="sendData()"><i class="fa fa-floppy-o"></i> Сохранить событие</a>
-                        <a class="alert button event-btn" href="index.jsp"><i class="fa fa-ban"></i> Отменить</a>
+    <!-- Data from MongoDB describing events structure for JavaScript -->
+    <div hidden id="struct-data"></div>
+    <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+        <nav class="uk-navbar uk-margin-large-bottom">
+            <a href="index.jsp" class="uk-navbar-brand uk-hidden-small">MineMe</a>
+            <ul class="uk-navbar-nav uk-hidden-small">
+                <li class="uk-active"><a href="add-event.jsp">Добавить событие</a></li>
+            </ul>
+        </nav>
+        <br>
+        <div class="uk-container-center">
+            <h1>Добавить событие</h1>
+            <form class="uk-panel uk-panel-box uk-form">
+                <fieldset>
+                    <div id="form-wrapper" class="uk-form-row">
+                        <select name="type" id="event-dropdown" onChange="updateForm(this)">
+                        </select>
                     </div>
-                </div>
+                    <div class="uk-form-row">
+                        <a class="uk-button uk-button-primary" onclick="sendData()"><i class="fa fa-floppy-o"></i> Сохранить событие</a>
+                        <a class="uk-button uk-button-danger" href="index.jsp"><i class="fa fa-ban"></i> Отменить</a>
+                    </div>
+                </fieldset>
             </form>
         </div>
     </div>
-</div>
-<script src="js/add-event.js" language="Javascript" type="text/javascript"></script>
+    <script src="js/add-event.js" language="Javascript" type="text/javascript"></script>
 </body>
 </html>
