@@ -1,96 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="Some clean-ups">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/04a574b9dcb788863f265d0854fa0662dfc4ec26/_base.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/04a574b9dcb788863f265d0854fa0662dfc4ec26/_sprite-img.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/23d5ef384c29bd24badd6f68776d8714160be6c3/_compass.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/34d6b06780dc1bc120d2fb8126ac6e6373b8cb85/_hover-link.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/34d6b06780dc1bc120d2fb8126ac6e6373b8cb85/_link-colors.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/34d6b06780dc1bc120d2fb8126ac6e6373b8cb85/_unstyled-link.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/4baf4f63f9c2bbbc37c12ac5420b2d4eecd3e2a4/ie.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/4baf4f63f9c2bbbc37c12ac5420b2d4eecd3e2a4/print.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/4baf4f63f9c2bbbc37c12ac5420b2d4eecd3e2a4/screen.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/4baf4f63f9c2bbbc37c12ac5420b2d4eecd3e2a4/styles.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/6df777ee3b65b7516d0ac997dcd3c1fd4e01d050/_css3.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/6df777ee3b65b7516d0ac997dcd3c1fd4e01d050/_reset.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/6df777ee3b65b7516d0ac997dcd3c1fd4e01d050/_support.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/6df777ee3b65b7516d0ac997dcd3c1fd4e01d050/_typography.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/6df777ee3b65b7516d0ac997dcd3c1fd4e01d050/_utilities.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/_support.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/css3/_background-size.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/css3/_box-sizing.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/css3/_images.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/css3/_inline-block.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/typography/_links.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/typography/_lists.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/typography/_text.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/typography/lists/_bullets.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/typography/text/_replacement.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/utilities/general/_float.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/usr/share/compass/frameworks/compass/stylesheets/compass/utilities/general/_reset.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/7f14bd7ad205d2fe0408374db7f1af8534773a39/_alternating-rows-and-columns.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/7f14bd7ad205d2fe0408374db7f1af8534773a39/_borders.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/7f14bd7ad205d2fe0408374db7f1af8534773a39/_scaffolding.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/89742823fac2bdd7ef15cb93241ad6821a6fe03b/_normalize.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/89742823fac2bdd7ef15cb93241ad6821a6fe03b/_variables.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/8c788c8b1d8fa906da36196695c6206e2aef9fe6/_clearfix.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/8c788c8b1d8fa906da36196695c6206e2aef9fe6/_float.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/8c788c8b1d8fa906da36196695c6206e2aef9fe6/_hacks.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/8c788c8b1d8fa906da36196695c6206e2aef9fe6/_min.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/8c788c8b1d8fa906da36196695c6206e2aef9fe6/_reset.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/8c788c8b1d8fa906da36196695c6206e2aef9fe6/_tag-cloud.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/968647386db2a8391c43e3caac39c31d385ffd1a/_color.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/968647386db2a8391c43e3caac39c31d385ffd1a/_general.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/968647386db2a8391c43e3caac39c31d385ffd1a/_sprites.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/968647386db2a8391c43e3caac39c31d385ffd1a/_tables.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/9e5e64a19dcc48d5a907402d44291a30c3e7e94b/_ellipsis.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/9e5e64a19dcc48d5a907402d44291a30c3e7e94b/_force-wrap.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/9e5e64a19dcc48d5a907402d44291a30c3e7e94b/_nowrap.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/9e5e64a19dcc48d5a907402d44291a30c3e7e94b/_replacement.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_animation.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_appearance.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_background-clip.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_background-origin.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_background-size.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_border-radius.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_box-shadow.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_box-sizing.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_columns.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_deprecated-support.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_filter.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_flexbox.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_font-face.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_hyphenation.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_images.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_inline-block.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_opacity.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_regions.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_text-shadow.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_transform.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_transition.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_user-interface.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/b7214e687b1e7e64010120db4cced0edfb47477b/_bullets.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/b7214e687b1e7e64010120db4cced0edfb47477b/_horizontal-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/b7214e687b1e7e64010120db4cced0edfb47477b/_inline-block-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/b7214e687b1e7e64010120db4cced0edfb47477b/_inline-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/c72ca4cb11b5180ff6addaf61bd8a5812fcc77ef/_brightness.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/c72ca4cb11b5180ff6addaf61bd8a5812fcc77ef/_contrast.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/cc5c8cad7c31fa45a998a22ca5156cd3c8ae244e/_grid-background.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/ccbaed75e65ce9506ff5cd281367a2316dbd3082/_utilities.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/dff6a38c198f5bc43f7761ba34bd2f77c7ae40c3/_links.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/dff6a38c198f5bc43f7761ba34bd2f77c7ae40c3/_lists.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/dff6a38c198f5bc43f7761ba34bd2f77c7ae40c3/_text.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/dff6a38c198f5bc43f7761ba34bd2f77c7ae40c3/_units.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/.sass-cache/dff6a38c198f5bc43f7761ba34bd2f77c7ae40c3/_vertical_rhythm.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/images/jbosscorp_logo.png" afterPath="" />
+    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.min.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/add-event.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
     </list>
     <ignored path="mineme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,16 +41,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.785714">
               <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uikit.almost-flat.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/uikit.almost-flat.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -309,32 +212,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mineme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mineme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -878,7 +755,7 @@
       <workItem from="1457244110986" duration="19819000" />
       <workItem from="1457335131877" duration="1181000" />
       <workItem from="1457372530311" duration="2533000" />
-      <workItem from="1457379906874" duration="2212000" />
+      <workItem from="1457379906874" duration="2355000" />
     </task>
     <task id="LOCAL-00001" summary="Commit test">
       <created>1457103454695</created>
@@ -1126,15 +1003,21 @@
       <option name="project" value="LOCAL" />
       <updated>1457387578336</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Some clean-ups">
+      <created>1457387903485</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1457387903485</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39868000" />
+    <option name="totallyTimeSpent" value="40011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1146,7 +1029,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15280777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15280777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1439,14 +1322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/uikit.almost-flat.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.785714">
@@ -1459,22 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.142857">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/uikit.almost-flat.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.04761905">
-          <caret line="417" column="0" selection-start-line="417" selection-start-column="0" selection-end-line="417" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mineme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13605443">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
       </provider>
