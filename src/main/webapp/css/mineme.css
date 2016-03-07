@@ -1,0 +1,7 @@
+.list-wrapper {
+	display: inline-block;
+	padding: 0;
+}
+.input-value {
+	margin: 0 0 0 4px!important;
+}
