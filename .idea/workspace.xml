@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.min.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mineme.iws" />
@@ -755,7 +754,7 @@
       <workItem from="1457244110986" duration="19819000" />
       <workItem from="1457335131877" duration="1181000" />
       <workItem from="1457372530311" duration="2533000" />
-      <workItem from="1457379906874" duration="2355000" />
+      <workItem from="1457379906874" duration="2486000" />
     </task>
     <task id="LOCAL-00001" summary="Commit test">
       <created>1457103454695</created>
@@ -1009,11 +1008,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457387903485</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Some clean-ups">
+      <created>1457388044644</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1457388044644</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40011000" />
+    <option name="totallyTimeSpent" value="40142000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
