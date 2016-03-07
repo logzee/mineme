@@ -34,13 +34,10 @@
                 <div class="row">
                     <div class="large-12 columns" id="event-selection">
                         <div id="form-wrapper">
-                            <label>Тип события
-                                <select name="type" id="event-dropdown" onChange="updateForm(this)">
-                                </select>
-                                <p></p>
-                            </label>
+                            <select name="type" id="event-dropdown" onChange="updateForm(this)">
+                            </select>
                         </div>
-                        <a type="submit" class="button event-btn" onclick="document.getElementById('event-form').submit()"><i class="fa fa-floppy-o"></i> Сохранить событие</a>
+                        <a type="submit" class="button event-btn" onclick="sendData()"><i class="fa fa-floppy-o"></i> Сохранить событие</a>
                         <a class="alert button event-btn" href="index.jsp"><i class="fa fa-ban"></i> Отменить</a>
                     </div>
                 </div>
