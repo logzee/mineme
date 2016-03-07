@@ -1,6 +1,11 @@
-<%@ page import="java.util.Map" %>
+<%@ page import="com.google.common.io.CharStreams" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-    Map requestParams = request.getParameterMap();
+    String requestBody = null;
+    if ("POST".equalsIgnoreCase(request.getMethod())) {
+        requestBody = CharStreams.toString(request.getReader());
+    }
+    System.out.println(requestBody);
 %>
+<%= requestBody %>
