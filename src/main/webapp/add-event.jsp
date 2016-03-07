@@ -20,7 +20,7 @@ dbManager.setCollection("event-types");
 </head>
 <body>
     <!-- Data from MongoDB describing events structure for JavaScript -->
-    <div hidden id="struct-data"></div>
+    <div hidden id="struct-data"><%= dbManager.getStruct() %></div>
     <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
         <nav class="uk-navbar uk-margin-large-bottom">
             <a href="index.jsp" class="uk-navbar-brand uk-hidden-small">MineMe</a>
