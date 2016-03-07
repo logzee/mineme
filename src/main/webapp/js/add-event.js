@@ -2,13 +2,13 @@
 var structData = JSON.parse(document.getElementById('struct-data').innerHTML);
 struct = structData.struct;
 
-formWrapper = document.getElementById('form-wrapper');
+var formWrapper = document.getElementById('form-wrapper');
 
-structChain = [];
+var structChain = [];
 
-currentNode = struct;
+var currentNode = struct;
 
-inputContainer = [];
+var inputContainer = [];
 
 
 /**
@@ -152,7 +152,7 @@ function addDropdownInput(itemStruct) {
 function getEventStruct(eventNumber) {
     structChain.push(eventNumber);
     var level = structChain.length;
-    eventType = currentNode.dataType;
+    var eventType = currentNode.dataType;
     switch (eventType) {
         case "subtypes":
             currentNode = currentNode.value[structChain[level-1]];
@@ -175,18 +175,18 @@ function clearBelow(input) {
         targetIndex++;
     }
         
-    var allChilds = formWrapper.childNodes; // массив со всеми childnod'ами form-wrapper'a (включая текстовые)
+    var allChildren = formWrapper.childNodes; // массив со всеми childnod'ами form-wrapper'a (включая текстовые)
 
-    var elementChilds = []; // массив со всеми childnod'ами form-wrapper'a исключая текстовые
+    var elementChildren = []; // массив со всеми childnod'ами form-wrapper'a исключая текстовые
 
-    for (var i = 0; i < allChilds.length; i++) {
-        if(allChilds[i].nodeType == Node.ELEMENT_NODE) {
-            elementChilds.push(allChilds[i]);
+    for (var i = 0; i < allChildren.length; i++) {
+        if(allChildren[i].nodeType == Node.ELEMENT_NODE) {
+            elementChildren.push(allChildren[i]);
         }
     }
 
-    for (var i = targetIndex+1; i < elementChilds.length; i++) {
-        elementChilds[i].remove();
+    for (var i = targetIndex+1; i < elementChildren.length; i++) {
+        elementChildren[i].remove();
     }
 
     // обрезаем цепочку значений
@@ -231,39 +231,6 @@ function dropDownInit() {
     eventDropdown.appendChild(option);
 
 }
-function sendData() {
-    var values = document.getElementsByClassName('input-value');
-    var xhr = new XMLHttpRequest();
-    var resultData = structChain;
-
-    // проверка данных на корректность
-    if (formWrapper.children.length > structChain.length + values.length) {
-        alert('Ошибка ввода. Всё вводи');
-        return;
-    }
-
-    if (values.length != 0) {
-        var inputsData = [];
-        if (values.length > 1) {
-            for (var i = 0; i < values.length; i++) {
-                if (!isBlank(values[i].value)) {
-                    inputsData.push(values[i].value);
-                } else {
-                    alert('Ошибка ввода. Всё вводи');
-                    return;
-                }
-            }
-            if (inputsData.length > 0)
-                resultData.push(inputsData);
-        } else {
-            resultData.push(values[0].value);
-        }
-    }
-    var requestBody = JSON.stringify(resultData);
-    xhr.open('POST', 'ins-handle.jsp', false);
-    xhr.send(requestBody);
-    alert(xhr.status);
-}
 
 function sendData() {
     var values = document.getElementsByClassName('input-value');
@@ -294,9 +261,9 @@ function sendData() {
 
     var requestBody = JSON.stringify(resultData);
     alert("Result " + requestBody);
-    //xhr.open('POST', 'ins-handle.jsp', false);
-    //xhr.send(requestBody);
-    //alert(xhr.status);
+    xhr.open('POST', 'ins-handle.jsp', false);
+    xhr.send(requestBody);
+    alert(xhr.status);
 }
 
 /*
