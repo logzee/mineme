@@ -260,14 +260,18 @@ function sendData() {
             resultData.push(inputsData[0]);
     }
 
-    var requestBody = JSON.stringify(resultData);
-    alert("Result " + requestBody);
+    var eventChain = JSON.stringify(resultData);
+    var result = {
+        chain: eventChain,
+        tags: []
+    };
+    alert("Result " + JSON.stringify(result));
     xhr.open('POST', 'ins-handle.jsp', false);
-    xhr.send(requestBody);
+    xhr.send(JSON.stringify(result));
     if (xhr.status == 200) {
         alert("Запись добавлена успешно");
     } else {
-        alert("Ошибка при добавлении. Код ");
+        alert("Ошибка при добавлении. Код " + xhr.status);
     }
 }
 

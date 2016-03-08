@@ -23,7 +23,7 @@
 <div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
-        <div class="uk-navbar-brand">MineMe</div>
+        <a class="uk-navbar-brand" href="index.jsp">MineMe</a>
         <ul class="uk-navbar-nav">
             <li class="uk-active"><a href="add-event.jsp">Добавить событие</a></li>
         </ul>
