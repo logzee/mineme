@@ -32,7 +32,7 @@
 */
 
         Gson gson = new Gson();
-        Map<String, Object> dataMap = new HashMap<>();
+        Map<String, Object> dataMap = new HashMap<String, Object>();
         String timeStamp = String.valueOf(new Date().getTime());
 
         JsonParser parser = new JsonParser();
