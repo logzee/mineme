@@ -5,4 +5,4 @@ This is my web app for collecting data about myself.
 * Front-end framework: **UiKit**
 
 The project is under development and not ready yet. Demo:
-`http://mineme-logzee.rhcloud.com/`
+<http://mineme-logzee.rhcloud.com/>
