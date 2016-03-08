@@ -7,6 +7,7 @@
 <%@ page import="com.google.gson.JsonObject" %>
 <%@ page import="classes.DBManager" %>
 <%@ page import="org.bson.Document" %>
+<%@ page import="com.google.gson.JsonPrimitive" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -36,9 +37,11 @@
         String timeStamp = String.valueOf(new Date().getTime());
 
         JsonParser parser = new JsonParser();
-        JsonObject o = parser.parse(requestBody).getAsJsonObject();
+        JsonObject responseBodyJson = parser.parse(requestBody).getAsJsonObject();
 
-        dataMap.put(timeStamp, o);
+        responseBodyJson.add("date", new JsonPrimitive(timeStamp));
+
+        dataMap.put("event", responseBodyJson);
 
         String result = gson.toJson(dataMap);
         System.out.println(result);

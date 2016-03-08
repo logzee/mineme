@@ -24,7 +24,7 @@ Time: 21:25
     <script src="js/uikit.min.js"></script>
 </head>
 <body>
-<div hidden id="last-events"><%= dbManager.getLastEvents(10) %></div>
+<div hidden id="last-events"><%= dbManager.getLastEventsJson(10) %></div>
 
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">

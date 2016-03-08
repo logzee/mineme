@@ -1,5 +1,7 @@
 package classes;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.mongodb.*;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
@@ -9,6 +11,7 @@ import org.bson.Document;
 import javax.print.Doc;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -39,11 +42,22 @@ public class DBManager {
         collection.insertOne(Document.parse(json));
     }
 
-    public List<String> getLastEvents(int count) {
-        List<String> eventList = new ArrayList<String>(count);
+    public String getLastEventsJson(int count) {
+        JsonArray resultObject = new JsonArray();
         if (this.collection != null) {
-            FindIterable<Document> myDoc = collection.find();
+            Document sortPattern = new Document("event", -1);
+            FindIterable<Document> sortedEvents = collection.find().sort(sortPattern);
+
+            Iterator<Document> sortedEventsIterator = sortedEvents.iterator();
+            int i = 0;
+            while(sortedEventsIterator.hasNext() && i < count) {
+                Document event = sortedEventsIterator.next();
+                resultObject.add(event.toJson());
+                i++;
+            }
+
         }
-        return eventList;
+        System.out.println("getLastEventsJson result: " + resultObject.toString());
+        return resultObject.toString();
     }
 }

@@ -4,7 +4,7 @@
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/add-event.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
     </list>
     <ignored path="mineme.iws" />
@@ -28,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.428572">
-              <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.27210885">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,11 +52,13 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+              <caret line="59" column="83" selection-start-line="59" selection-start-column="83" selection-end-line="59" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
+                <element signature="e#904#905#0" expanded="true" />
+                <element signature="e#1099#1100#0" expanded="true" />
+                <element signature="e#1157#1158#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,19 +78,19 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="273" column="43" selection-start-line="273" selection-start-column="43" selection-end-line="273" selection-end-column="43" />
+              <caret line="264" column="16" selection-start-line="264" selection-start-column="16" selection-end-line="264" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ins-handle.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ins-handle.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22902495">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state vertical-scroll-proportion="-19.357143">
+              <caret line="41" column="65" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
               <folding>
-                <element signature="e#1276#1292#0#JAVA" expanded="true" />
+                <element signature="e#1327#1343#0#JAVA" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,13 +136,13 @@
         <option value="$PROJECT_DIR$/.openshift/config/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/uikit.almost-flat.css" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/mineme.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       </list>
     </option>
   </component>
@@ -834,13 +836,7 @@
       <workItem from="1457372530311" duration="2533000" />
       <workItem from="1457379906874" duration="3427000" />
       <workItem from="1457422522885" duration="4963000" />
-      <workItem from="1457449624727" duration="9708000" />
-    </task>
-    <task id="LOCAL-00014" summary="Updated mongodb to 3.2: some DBManager code changed, added insert handlier JSP">
-      <created>1457246247608</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1457246247608</updated>
+      <workItem from="1457449624727" duration="12515000" />
     </task>
     <task id="LOCAL-00015" summary="Starting to make CRUD">
       <created>1457248971064</created>
@@ -1130,11 +1126,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457458254525</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="I can now insert values to mongoDB">
+      <created>1457459905220</created>
+      <option name="number" value="00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1457459905220</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55754000" />
+    <option name="totallyTimeSpent" value="58561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1204,7 +1206,8 @@
     <MESSAGE value="Started to work on back-end" />
     <MESSAGE value="Debugging" />
     <MESSAGE value="Fixed a js bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a js bug" />
+    <MESSAGE value="I can now insert values to mongoDB" />
+    <option name="LAST_COMMIT_MESSAGE" value="I can now insert values to mongoDB" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1245,8 +1248,10 @@
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#1099#1100#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1256,7 +1261,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding>
-            <element signature="e#1276#1292#0#JAVA" expanded="true" />
+            <element signature="e#1327#1343#0#JAVA" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1275,8 +1280,10 @@
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#1099#1100#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1286,7 +1293,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1276#1292#0#JAVA" expanded="true" />
+            <element signature="e#1327#1343#0#JAVA" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1480,14 +1487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.428572">
-          <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.6.2/gson-2.6.2.jar!/com/google/gson/JsonParser.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22675736">
@@ -1508,14 +1507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.428571">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="273" column="43" selection-start-line="273" selection-start-column="43" selection-end-line="273" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1542,11 +1533,13 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <caret line="59" column="83" selection-start-line="59" selection-start-column="83" selection-end-line="59" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#1099#1100#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1559,13 +1552,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="264" column="16" selection-start-line="264" selection-start-column="16" selection-end-line="264" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22902495">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state vertical-scroll-proportion="-19.357143">
+          <caret line="41" column="65" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
           <folding>
-            <element signature="e#1276#1292#0#JAVA" expanded="true" />
+            <element signature="e#1327#1343#0#JAVA" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27210885">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
