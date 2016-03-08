@@ -270,6 +270,8 @@ function sendData() {
     if (xhr.status == 200) {
         alert("Запись добавлена успешно");
     } else {
+        var debug = document.getElementById('response-debug');
+        debug.innerHTML = xhr.responseText;
         alert("Ошибка при добавлении. Код " + xhr.status);
     }
 }

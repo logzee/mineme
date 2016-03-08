@@ -49,3 +49,4 @@
 <script src="js/add-event.js" language="Javascript" type="text/javascript"></script>
 </body>
 </html>
+<div id="response-debug"></div>
