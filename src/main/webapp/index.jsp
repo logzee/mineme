@@ -28,7 +28,7 @@ Time: 21:25
 
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
-        <div class="uk-navbar-brand uk-visible-large">MineMe</div>
+        <div class="uk-navbar-brand">MineMe</div>
         <ul class="uk-navbar-nav">
             <li><a href="add-event.jsp">Добавить событие</a></li>
         </ul>
