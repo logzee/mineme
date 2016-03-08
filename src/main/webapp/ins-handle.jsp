@@ -8,6 +8,7 @@
 <%@ page import="classes.DBManager" %>
 <%@ page import="org.bson.Document" %>
 <%@ page import="com.google.gson.JsonPrimitive" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -33,7 +34,7 @@
                     }
                 */
         Gson gson = new Gson();
-        Map<String, Object> dataMap = new HashMap<String, Object>();
+        ArrayList<Object> data = new ArrayList<Object>();
         String timeStamp = String.valueOf(new Date().getTime());
 
         JsonParser parser = new JsonParser();
@@ -41,9 +42,9 @@
 
         responseBodyJson.add("date", new JsonPrimitive(timeStamp));
 
-        dataMap.put("event", responseBodyJson);
+        data.add(responseBodyJson);
 
-        String result = gson.toJson(dataMap);
+        String result = gson.toJson(data);
         System.out.println(result);
 
         DBManager dbManager = new DBManager();
