@@ -2,6 +2,7 @@ package classes;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.mongodb.*;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
@@ -52,10 +53,10 @@ public class DBManager {
             int i = 0;
             while(sortedEventsIterator.hasNext() && i < count) {
                 Document event = sortedEventsIterator.next();
-                resultObject.add(event.toJson());
+                JsonParser parser = new JsonParser();
+                resultObject.add(parser.parse(event.toJson()));
                 i++;
             }
-
         }
         System.out.println("getLastEventsJson result: " + resultObject.toString());
         return resultObject.toString();
