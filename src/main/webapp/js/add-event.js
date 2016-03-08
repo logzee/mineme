@@ -260,9 +260,8 @@ function sendData() {
             resultData.push(inputsData[0]);
     }
 
-    var eventChain = JSON.stringify(resultData);
     var result = {
-        chain: eventChain,
+        chain: resultData,
         tags: []
     };
     alert("Result " + JSON.stringify(result));
