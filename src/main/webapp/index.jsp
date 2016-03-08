@@ -1,4 +1,5 @@
 <%@ page import="classes.DBManager" %>
+<%@ page import="java.util.Date" %>
 <%--
 Project mineme
 Author: logzee
@@ -24,6 +25,7 @@ Time: 21:25
     <script src="js/uikit.min.js"></script>
 </head>
 <body>
+<div hidden id="server-timestamp"><%= new Date().getTime() %></div>
 <div hidden id="last-events"><%= dbManager.getLastEventsJson(10) %></div>
 
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
@@ -51,7 +53,7 @@ Time: 21:25
             <div class="uk-panel uk-panel-box">
                 <h1 class="uk-panel-title">Последние события</h1>
                 <p>Здесь будет список последних событий, например</p>
-                <dl class="uk-list uk-list-line uk-description-list-line">
+                <dl class="uk-list uk-list-line uk-description-list-line" id="event-log">
                     <dt>Сон, 8ч.43м.</dt><dd>12 минут назад<dd>
                     <dt>Физическая активность, отжимания, 75</dt><dd>9 минут назад<dd>
                     <dt>Забота о теле, душ</dt><dd>6 минут назад</dd>
@@ -65,5 +67,6 @@ Time: 21:25
     <p>Здесь будут графики, например</p>
     <img src="img/plot-example.png" width="100%"/>
 </div>
+<script src="js/index.js" language="Javascript" type="text/javascript"></script>
 </body>
 </html>
