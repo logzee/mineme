@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/mineme.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/mineme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
     </list>
     <ignored path="mineme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,20 +76,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ins-handle.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ins-handle.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.357142">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.90929705">
+              <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mineme.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mineme.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mineme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20408164">
+            <state vertical-scroll-proportion="-6.428571">
               <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
@@ -131,8 +131,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/mineme.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
       </list>
     </option>
   </component>
@@ -826,13 +826,7 @@
       <workItem from="1457372530311" duration="2533000" />
       <workItem from="1457379906874" duration="3427000" />
       <workItem from="1457422522885" duration="4963000" />
-      <workItem from="1457449624727" duration="6199000" />
-    </task>
-    <task id="LOCAL-00009" summary="Created index.jsp &amp; addevent.jsp">
-      <created>1457121318306</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1457121318306</updated>
+      <workItem from="1457449624727" duration="6592000" />
     </task>
     <task id="LOCAL-00010" summary="Created index.jsp &amp; addevent.jsp">
       <created>1457121700780</created>
@@ -1122,11 +1116,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457456153836</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Started to work on back-end">
+      <created>1457456276397</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1457456276397</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52245000" />
+    <option name="totallyTimeSpent" value="52638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1513,18 +1513,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mineme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.357142">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        <state vertical-scroll-proportion="-6.428571">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mineme.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20408164">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.90929705">
+          <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
           <folding />
         </state>
       </provider>

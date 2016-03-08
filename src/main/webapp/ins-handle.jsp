@@ -8,16 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-    String requestBody = null;
-    if ("POST".equalsIgnoreCase(request.getMethod())) {
-        requestBody = CharStreams.toString(request.getReader());
-    } else {
-        response.sendError(405, "Method Not Allowed");
-    }
-    if (requestBody.isEmpty()) {
-        response.sendError(400, "Bad Request");
-    }
-    System.out.println(requestBody);
+    try {
+        String requestBody = null;
+        if ("POST".equalsIgnoreCase(request.getMethod())) {
+            requestBody = CharStreams.toString(request.getReader());
+        } else {
+            response.sendError(405, "Method Not Allowed");
+        }
+        if (requestBody.isEmpty()) {
+            response.sendError(400, "Bad Request");
+        }
+        System.out.println(requestBody);
 
 /* Data example
          {
@@ -30,16 +31,19 @@
         }
 */
 
-    Gson gson = new Gson();
-    Map<String, Object> dataMap = new HashMap<>();
-    String timeStamp = String.valueOf(new Date().getTime());
+        Gson gson = new Gson();
+        Map<String, Object> dataMap = new HashMap<>();
+        String timeStamp = String.valueOf(new Date().getTime());
 
-    JsonParser parser = new JsonParser();
-    JsonObject o = parser.parse(requestBody).getAsJsonObject();
+        JsonParser parser = new JsonParser();
+        JsonObject o = parser.parse(requestBody).getAsJsonObject();
 
-    dataMap.put(timeStamp, o);
+        dataMap.put(timeStamp, o);
 
-    String result = gson.toJson(dataMap);
+        String result = gson.toJson(dataMap);
 
-    System.out.println(result);
+        System.out.println(result);
+    } catch (Exception e) {
+        response.sendError(500, e.getClass().getSimpleName() + ": " + e.getMessage());
+    }
 %>
