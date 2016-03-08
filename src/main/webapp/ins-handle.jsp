@@ -34,7 +34,6 @@
                     }
                 */
         Gson gson = new Gson();
-        ArrayList<Object> data = new ArrayList<Object>();
         String timeStamp = String.valueOf(new Date().getTime());
 
         JsonParser parser = new JsonParser();
@@ -42,9 +41,7 @@
 
         responseBodyJson.add("date", new JsonPrimitive(timeStamp));
 
-        data.add(responseBodyJson);
-
-        String result = gson.toJson(data);
+        String result = gson.toJson(responseBodyJson);
         System.out.println(result);
 
         DBManager dbManager = new DBManager();

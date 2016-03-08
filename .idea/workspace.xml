@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
     </list>
     <ignored path="mineme.iws" />
@@ -82,11 +81,9 @@
       <file leaf-file-name="ins-handle.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65986395">
-              <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-              <folding>
-                <element signature="e#1365#1373#0#JAVA" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.6371882">
+              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -832,13 +829,7 @@
       <workItem from="1457372530311" duration="2533000" />
       <workItem from="1457379906874" duration="3427000" />
       <workItem from="1457422522885" duration="4963000" />
-      <workItem from="1457449624727" duration="16732000" />
-    </task>
-    <task id="LOCAL-00018" summary="Starting to make CRUD">
-      <created>1457250030167</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1457250030167</updated>
+      <workItem from="1457449624727" duration="17057000" />
     </task>
     <task id="LOCAL-00019" summary="Starting to make CRUD">
       <created>1457250249530</created>
@@ -1128,11 +1119,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457468355408</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="DB structure changes fix">
+      <created>1457468884578</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1457468884578</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62778000" />
+    <option name="totallyTimeSpent" value="63103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1178,7 +1175,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created index.jsp &amp; addevent.jsp" />
     <MESSAGE value="Started rewriting addevent.php (from my old project) to addevent.jsp" />
     <MESSAGE value="Deleted default index.html and created addevent.jsp layout" />
     <MESSAGE value="Updated mongodb to 3.2: some DBManager code changed, added insert handlier JSP" />
@@ -1203,7 +1199,8 @@
     <MESSAGE value="Fixed a js bug" />
     <MESSAGE value="I can now insert values to mongoDB" />
     <MESSAGE value="Some DB structure changes. Start of developing of eventlog display on main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some DB structure changes. Start of developing of eventlog display on main page" />
+    <MESSAGE value="DB structure changes fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB structure changes fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1256,9 +1253,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="e#1365#1373#0#JAVA" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1288,9 +1283,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1365#1373#0#JAVA" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1570,11 +1563,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65986395">
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-          <folding>
-            <element signature="e#1365#1373#0#JAVA" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.6371882">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
