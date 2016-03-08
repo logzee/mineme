@@ -6,10 +6,9 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
+import javax.print.Doc;
 import java.net.UnknownHostException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -36,29 +35,10 @@ public class DBManager {
         return myDoc.iterator().next().toJson();
     }
 
-    public void insertOne(Document document) {
-
+    public void insertFromString(String json) {
+        collection.insertOne(Document.parse(json));
     }
-    public Object[] getStructTitles() {
-        if (this.collection != null) {
-            final ArrayList<String> result = new ArrayList<String>();
-            FindIterable<Document> myDoc = collection.find();
-            myDoc.forEach(new Block<Document>() {
-                @Override
-                public void apply(final Document document) {
-                    System.out.println(">>>>>>>>>>>>>DBManager.java>>>>>>>>>>>>>>>");
-                    ArrayList<Document> struct = (ArrayList<Document>) document.get("struct");
 
-                    for (Document eventType : struct) {
-                        if(eventType.containsKey("hidden")) continue;
-                        result.add(eventType.get("title").toString());
-                    }
-                }
-            });
-            return result.toArray();
-        }
-        return new String[0];
-    }
     public List<String> getLastEvents(int count) {
         List<String> eventList = new ArrayList<String>(count);
         if (this.collection != null) {
