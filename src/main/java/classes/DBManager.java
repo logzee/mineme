@@ -8,9 +8,13 @@ import org.bson.Document;
 
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Created by logzee on 04.03.16.
+ * Project mineme
+ * Author: logzee
+ * Date: 04.03.16
+ * Time: 11:30
  */
 public class DBManager {
     private MongoCollection<Document> collection;
@@ -52,5 +56,12 @@ public class DBManager {
             return result.toArray();
         }
         return new String[0];
+    }
+    public List<String> getLastEvents(int count) {
+        List<String> eventList = new ArrayList<String>(count);
+        if (this.collection != null) {
+            FindIterable<Document> myDoc = collection.find();
+        }
+        return eventList;
     }
 }

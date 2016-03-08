@@ -1,11 +1,14 @@
-<%--
-Created by IntelliJ IDEA.
-User: logzee
+<%@ page import="classes.DBManager" %><%--
+Project mineme
+Author: logzee
 Date: 04.03.16
 Time: 21:25
-To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    DBManager dbManager = new DBManager();
+    dbManager.setCollection("events");
+%>
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
@@ -19,6 +22,7 @@ To change this template use File | Settings | File Templates.
 	<script src="js/uikit.min.js"></script>
 </head>
 <body>
+    <div hidden id="last-events"><%= dbManager.getLastEvents(10) %></div>
 	<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
 		<nav class="uk-navbar uk-margin-large-bottom">
 			<div class="uk-navbar-brand uk-hidden-small">MineMe</div>
