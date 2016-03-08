@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mineme_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mineme_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mineme.iml" afterPath="$PROJECT_DIR$/mineme.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/add-event.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/mineme.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/mineme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/add-event.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
     </list>
     <ignored path="mineme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,21 +76,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ins-handle.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ins-handle.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29705215">
+            <state vertical-scroll-proportion="-9.357142">
               <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mineme.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mineme.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mineme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.142857">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.20408164">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -135,13 +126,13 @@
         <option value="$PROJECT_DIR$/.openshift/config/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/uikit.almost-flat.css" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/mineme.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/mineme.css" />
       </list>
     </option>
   </component>
@@ -835,13 +826,7 @@
       <workItem from="1457372530311" duration="2533000" />
       <workItem from="1457379906874" duration="3427000" />
       <workItem from="1457422522885" duration="4963000" />
-      <workItem from="1457449624727" duration="6048000" />
-    </task>
-    <task id="LOCAL-00008" summary="Created index.jsp &amp; addevent.jsp">
-      <created>1457121044720</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1457121044720</updated>
+      <workItem from="1457449624727" duration="6199000" />
     </task>
     <task id="LOCAL-00009" summary="Created index.jsp &amp; addevent.jsp">
       <created>1457121318306</created>
@@ -1131,11 +1116,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457452754897</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Started to work on back-end">
+      <created>1457456153836</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1457456153836</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52094000" />
+    <option name="totallyTimeSpent" value="52245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1202,7 +1193,8 @@
     <MESSAGE value="Clean-ups" />
     <MESSAGE value="Updated readme" />
     <MESSAGE value="Minor front-end improves" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor front-end improves" />
+    <MESSAGE value="Started to work on back-end" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started to work on back-end" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1473,26 +1465,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.214285">
-          <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.428572">
           <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mineme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.142857">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1529,10 +1505,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.214285">
+          <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29705215">
+        <state vertical-scroll-proportion="-9.357142">
           <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mineme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20408164">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
