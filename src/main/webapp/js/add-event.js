@@ -81,7 +81,7 @@ function addTextInput(itemStruct) {
 */
 function addListInput(listStruct) {
     var wrapper = document.createElement('div');
-    wrapper.setAttribute("class", "list-wrapper");
+    wrapper.setAttribute("class", "uk-form-row list-wrapper");
     for (var i = 0; i < listStruct.value.length; i++) {
         var itemStruct = listStruct.value[i];
         var field;
