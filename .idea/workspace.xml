@@ -71,8 +71,8 @@
       <file leaf-file-name="add-event.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24175824">
-              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            <state vertical-scroll-proportion="2.0659342">
+              <caret line="94" column="60" selection-start-line="94" selection-start-column="60" selection-end-line="94" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -840,13 +840,7 @@
       <workItem from="1457379906874" duration="3427000" />
       <workItem from="1457422522885" duration="4963000" />
       <workItem from="1457449624727" duration="17074000" />
-      <workItem from="1457533195801" duration="9385000" />
-    </task>
-    <task id="LOCAL-00029" summary="Event dropdown now forms on client side">
-      <created>1457257506896</created>
-      <option name="number" value="00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1457257506896</updated>
+      <workItem from="1457533195801" duration="9994000" />
     </task>
     <task id="LOCAL-00030" summary="Event dropdown now forms on client side">
       <created>1457257962081</created>
@@ -1136,15 +1130,21 @@
       <option name="project" value="LOCAL" />
       <updated>1457544200034</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Fixes for the last commit">
+      <created>1457544223249</created>
+      <option name="number" value="00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1457544223249</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72505000" />
+    <option name="totallyTimeSpent" value="73114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1590,8 +1590,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24175824">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state vertical-scroll-proportion="2.0659342">
+          <caret line="94" column="60" selection-start-line="94" selection-start-column="60" selection-end-line="94" selection-end-column="60" />
           <folding />
         </state>
       </provider>
