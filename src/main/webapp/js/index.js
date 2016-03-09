@@ -26,18 +26,20 @@ function eventLogInit() {
         var currentStruct = structRoot.value[eventsData[i].chain[0]];
         dtContent += currentStruct.title + ". ";
         for (var j = 1; j < eventsData[i].chain.length; j++) { // тут мы берем цифры из цепочки событий
+
             var chainItem = eventsData[i].chain[j];
             if (chainItem instanceof Array) {
                 for (var k = 0; k < chainItem.length; k++) {
                     dtContent += currentStruct.value[k].title + ": " + chainItem[k] + ". ";
                 }
             } else {
-                if (currentStruct.hasOwnProperty('title')) {
+                // если следующий узел - массив (то есть это не конечный узел)
+                if (currentStruct.value instanceof Array) {
                     currentStruct = currentStruct.value[chainItem];
                     var title = currentStruct.title;
                     dtContent += title + ". ";
                 } else {
-                    dtContent += chainItem + ". ";
+                    dtContent += currentStruct.value.title + ": " + chainItem.toString() + "  ";
                 }
             }
         }
