@@ -38,7 +38,7 @@ Time: 21:25
 </nav>
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
     <div class="uk-grid" data-uk-grid-match>
-        <div class="uk-width-1-2">
+        <div class="uk-width-large-1-2 uk-width-medium-1-1 uk-margin-large-bottom">
             <div class="uk-panel uk-panel-box">
                 <h1 class="uk-panel-title">Василий Пупкин</h1>
                 <dl class="uk-list uk-list-line uk-description-list-line">
@@ -49,7 +49,7 @@ Time: 21:25
                 </dl>
             </div>
         </div>
-        <div class="uk-width-1-2">
+        <div class="uk-width-large-1-2 uk-width-medium-1-1">
             <div class="uk-panel uk-panel-box">
                 <h1 class="uk-panel-title">Последние события</h1>
                 <p>Здесь будет список последних событий, например</p>
