@@ -55,12 +55,7 @@ Time: 21:25
         <div class="uk-width-large-1-2 uk-width-medium-1-1">
             <div class="uk-panel uk-panel-box">
                 <h1 class="uk-panel-title">Последние события</h1>
-                <p>Здесь будет список последних событий, например</p>
                 <dl class="uk-list uk-list-line uk-description-list-line" id="event-log">
-                    <dt>Сон, 8ч.43м.</dt><dd>12 минут назад<dd>
-                    <dt>Физическая активность, отжимания, 75</dt><dd>9 минут назад<dd>
-                    <dt>Забота о теле, душ</dt><dd>6 минут назад</dd>
-                    <dt>Завтрак</dt><dd>меньше минуты назад<dd>
                 </dl>
             </div>
         </div>

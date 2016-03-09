@@ -1,4 +1,15 @@
 // инициализация списка последних событий
+
+/*
+ Объясняю что происходит.
+ Сначала мы достаем из скрытых тегов на странице данные о структуре базы данных и о последних 10 событиях,
+ которые представленны в виде цепочки цифр (каждая цифра соответствует названию события из структуры)
+ потом мы в цикле проходимся по каждому значению этой цепочки и для каждого события добавляем на страницу запись.
+ Ещё мы форматируем дату, чтобы она показывала сколько времени прошло с момента регистрации события.
+
+ Объясню процесс формирования строчки события подробнее: достаем названия типа, подтипа и т.д. до тех пор, пока не встретися необозначенное в структуре
+ поле (это мы узнаем по наличию у объекта поля "title") - это и есть значение. Если это массив, то проходимя по нему и добавляем каждое значение к результату.
+ */
 function eventLogInit() {
     var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);
     var structRoot = JSON.parse(document.getElementById('struct-data').innerHTML).struct;
@@ -12,14 +23,27 @@ function eventLogInit() {
         dd.innerHTML = formatDate(eventsData[i].date);
 
         var dtContent = "";
-        var currentStruct = structRoot.value;
-        for (var j = 0; j < eventsData[i].chain.length; j++) { // тут мы берем цифры из цепочки событий
-            currentStruct = currentStruct.value[eventsData[i].chain[j]];
-            var title = currentStruct.title;
-            dtContent += title + ", ";
+        var currentStruct = structRoot.value[eventsData[i].chain[0]];
+        dtContent += currentStruct.title + ". ";
+        for (var j = 1; j < eventsData[i].chain.length; j++) { // тут мы берем цифры из цепочки событий
+            var chainItem = eventsData[i].chain[j];
+            if (chainItem instanceof Array) {
+                for (var k = 0; k < chainItem.length; k++) {
+                    dtContent += currentStruct.value[k].title + ": " + chainItem[k] + ". ";
+                }
+            } else {
+                if (currentStruct.hasOwnProperty('title')) {
+                    currentStruct = currentStruct.value[chainItem];
+                    var title = currentStruct.title;
+                    dtContent += title + ". ";
+                } else {
+                    dtContent += chainItem + ". ";
+                }
+            }
         }
         dt.innerHTML = dtContent.substring(0, dtContent.length - 2);
 
+        dt.setAttribute('class', 'uk-text-truncate');
         eventLogDl.appendChild(dt);
         eventLogDl.appendChild(dd);
     }
@@ -30,8 +54,7 @@ function formatDate(timestamp) {
     var currentTimestamp = parseInt(document.getElementById('server-timestamp').innerHTML);
     var eventTimestamp = parseInt(timestamp);
     var delta = currentTimestamp - eventTimestamp;
-    var timePassed = smartTime(delta);
-    return timePassed;
+    return smartTime(delta);
 }
 
 function smartTime(time) {
