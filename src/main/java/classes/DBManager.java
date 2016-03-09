@@ -46,7 +46,7 @@ public class DBManager {
     public String getLastEventsJson(int count) {
         JsonArray resultObject = new JsonArray();
         if (this.collection != null) {
-            Document sortPattern = new Document("date", 1);
+            Document sortPattern = new Document("date", -1);
             FindIterable<Document> sortedEvents = collection.find().sort(sortPattern);
 
             Iterator<Document> sortedEventsIterator = sortedEvents.iterator();
