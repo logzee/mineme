@@ -26,45 +26,6 @@ function eventLogInit() {
         var currentStruct = structRoot.value[eventsData[i].chain[0]];
         dtContent += currentStruct.title + ". ";
         for (var j = 1; j < eventsData[i].chain.length; j++) { // тут мы берем цифры из цепочки событий
-            var chainItem = eventsData[i].chain[j];
-            if (chainItem instanceof Array) {
-                for (var k = 0; k < chainItem.length; k++) {
-                    dtContent += currentStruct.value[k].title + ": " + chainItem[k] + ". ";
-                }
-            } else {
-                if (currentStruct.hasOwnProperty('title')) {
-                    currentStruct = currentStruct.value[chainItem];
-                    var title = currentStruct.title;
-                    dtContent += title + ". ";
-                } else {
-                    dtContent += chainItem + ". ";
-                }
-            }
-        }
-        dt.innerHTML = dtContent.substring(0, dtContent.length - 2);
-
-        dt.setAttribute('class', 'uk-text-truncate');
-        eventLogDl.appendChild(dt);
-        eventLogDl.appendChild(dd);
-    }
-}
-
-function eventLogInit() {
-    var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);
-    var structRoot = JSON.parse(document.getElementById('struct-data').innerHTML).struct;
-
-    var eventLogDl = document.getElementById('event-log');
-
-    for(var i = 0; i < eventsData.length; i++) {
-        var dt = document.createElement('dt'); // событие
-        var dd = document.createElement('dd'); // время с момента события
-
-        dd.innerHTML = formatDate(eventsData[i].date);
-
-        var dtContent = "";
-        var currentStruct = structRoot.value[eventsData[i].chain[0]];
-        dtContent += currentStruct.title + ". ";
-        for (var j = 1; j < eventsData[i].chain.length; j++) { // тут мы берем цифры из цепочки событий
 
             var chainItem = eventsData[i].chain[j];
             if (chainItem instanceof Array) {
