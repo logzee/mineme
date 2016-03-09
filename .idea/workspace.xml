@@ -71,7 +71,7 @@
       <file leaf-file-name="add-event.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8681319">
+            <state vertical-scroll-proportion="2.7802198">
               <caret line="133" column="60" selection-start-line="133" selection-start-column="60" selection-end-line="133" selection-end-column="60" />
               <folding />
             </state>
@@ -840,13 +840,7 @@
       <workItem from="1457379906874" duration="3427000" />
       <workItem from="1457422522885" duration="4963000" />
       <workItem from="1457449624727" duration="17074000" />
-      <workItem from="1457533195801" duration="7950000" />
-    </task>
-    <task id="LOCAL-00027" summary="Event dropdown now forms on client side">
-      <created>1457257244811</created>
-      <option name="number" value="00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1457257244811</updated>
+      <workItem from="1457533195801" duration="9354000" />
     </task>
     <task id="LOCAL-00028" summary="Event dropdown now forms on client side">
       <created>1457257400114</created>
@@ -1136,11 +1130,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457540752111</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Fixes for the last commit">
+      <created>1457543524653</created>
+      <option name="number" value="00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1457543524653</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71070000" />
+    <option name="totallyTimeSpent" value="72474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1186,7 +1186,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Starting to make CRUD" />
     <MESSAGE value="Events (from mongodb) dropdown done" />
     <MESSAGE value="Event dropdown now forms on client side" />
     <MESSAGE value="Event dropdown now forms on client side. And it works" />
@@ -1211,7 +1210,8 @@
     <MESSAGE value="DB structure changes fix of a previous fix" />
     <MESSAGE value="Minor front-end fixes" />
     <MESSAGE value="Last events list on the main page now functional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last events list on the main page now functional" />
+    <MESSAGE value="Fixes for the last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes for the last commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1590,7 +1590,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8681319">
+        <state vertical-scroll-proportion="2.7802198">
           <caret line="133" column="60" selection-start-line="133" selection-start-column="60" selection-end-line="133" selection-end-column="60" />
           <folding />
         </state>
