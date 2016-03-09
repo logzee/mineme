@@ -1,6 +1,6 @@
 // инициализация структуры событий
 var structData = JSON.parse(document.getElementById('struct-data').innerHTML);
-struct = structData.struct;
+var struct = structData.struct;
 
 var formWrapper = document.getElementById('form-wrapper');
 
@@ -8,7 +8,6 @@ var structChain = [];
 
 var currentNode = struct;
 
-var inputContainer = [];
 
 
 /**
@@ -17,11 +16,6 @@ var inputContainer = [];
 function updateForm(form) {
     var eventNumber = form.value;
 
-    if (eventNumber == "new") {
-        addTextInput(targetStruct);
-        return;
-    }
-
     clearBelow(form);
 
     var targetStruct = getEventStruct(eventNumber);
@@ -29,9 +23,7 @@ function updateForm(form) {
     var dataType;
     try {
         dataType = targetStruct.dataType;
-    } catch (e) {
-        alert('exception');
-        dataType = "end";
+    } catch (ignored) {
     }
     switch (dataType) {
         case "enum":
@@ -45,9 +37,6 @@ function updateForm(form) {
             break;
         case "list":
             addListInput(targetStruct);
-            break;
-        case "new":
-            addTextInput(targetStruct);
             break;
     }
 }
@@ -225,12 +214,6 @@ function dropDownInit() {
             eventDropdown.appendChild(option);
         }
     }
-
-    option = document.createElement('option');
-    option.setAttribute("value", "new");
-    option.innerHTML = 'Новый тип';
-    eventDropdown.appendChild(option);
-
 }
 
 function sendData() {
