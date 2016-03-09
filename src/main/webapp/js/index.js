@@ -1,11 +1,9 @@
 // инициализация списка последних событий
-var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);
-
-// вызвается при загрузке страницы
 function eventLogInit() {
-    var eventLogDl = document.getElementById('event-log');
+    var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);
+    var structRoot = JSON.parse(document.getElementById('struct-data').innerHTML).struct;
 
-    var eventMatrix = [];
+    var eventLogDl = document.getElementById('event-log');
 
     for(var i = 0; i < eventsData.length; i++) {
         var dt = document.createElement('dt'); // событие
@@ -13,9 +11,12 @@ function eventLogInit() {
 
         dd.innerHTML = formatDate(eventsData[i].date);
 
-        dtContent = "";
-        for (var j = 0; j < eventsData[i].chain.length; j++) {
-            dtContent += eventsData[i].chain[j] + ", ";
+        var dtContent = "";
+        var currentStruct = structRoot;
+        for (var j = 0; j < eventsData[i].chain.length; j++) { // тут мы берем цифры из цепочки событий
+            currentStruct = currentStruct.value[j];
+            var title = currentStruct.title;
+            dtContent += title + ", ";
         }
         dt.innerHTML = dtContent.substring(0, dtContent.length - 2);
 
@@ -23,6 +24,7 @@ function eventLogInit() {
         eventLogDl.appendChild(dd);
     }
 }
+
 
 function formatDate(timestamp) {
     var currentTimestamp = parseInt(document.getElementById('server-timestamp').innerHTML);

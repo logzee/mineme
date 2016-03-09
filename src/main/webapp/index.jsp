@@ -28,6 +28,8 @@ Time: 21:25
 <body>
 <div hidden id="server-timestamp"><%= new Date().getTime() %></div>
 <div hidden id="last-events"><%= dbManager.getLastEventsJson(10) %></div>
+<% dbManager.setCollection("event-types"); %>
+<div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
