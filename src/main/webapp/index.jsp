@@ -1,11 +1,5 @@
 <%@ page import="classes.DBManager" %>
 <%@ page import="java.util.Date" %>
-<%--
-Project mineme
-Author: logzee
-Date: 04.03.16
-Time: 21:25
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     DBManager dbManager = new DBManager();
@@ -26,9 +20,12 @@ Time: 21:25
     <script src="js/uikit.min.js"></script>
 </head>
 <body>
+<!-- Server time in case is client's time incorrect -->
 <div hidden id="server-timestamp"><%= new Date().getTime() %></div>
+<!-- List of last 10 events from MongoDB in JSON -->
 <div hidden id="last-events"><%= dbManager.getLastEventsJson(10) %></div>
 <% dbManager.setCollection("event-types"); %>
+<!-- Data from MongoDB describing events structure for JavaScript -->
 <div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
@@ -43,12 +40,22 @@ Time: 21:25
     <div class="uk-grid" data-uk-grid-match>
         <div class="uk-width-large-1-2 uk-width-medium-1-1 uk-margin-large-bottom">
             <div class="uk-panel uk-panel-box">
-                <h1 class="uk-panel-title">Василий Пупкин</h1>
+                <div class="uk-display-block uk-comment-meta">
+                    <img class="uk-comment-avatar uk-border-rounded" src="img/profile.png" alt="Avatar" width="59">
+                    <h1 class="uk-comment-title">Малышев Михаил</h1>
+                    <div class="uk-comment-meta">
+                        <a href="https://github.com/logzee" class="uk-icon-button uk-icon-github"></a>
+                        <a href="http://vk.com/logzee" class="uk-icon-button uk-icon-vk"></a>
+                        <a href="https://twitter.com/MichaelMalyshev" class="uk-icon-button uk-icon-twitter"></a>
+                        <a href="https://www.instagram.com/miwanya_vidit/" class="uk-icon-button uk-icon-instagram"></a>
+                    </div>
+                </div>
+                <hr>
                 <dl class="uk-list uk-list-line uk-description-list-line">
-                    <dt>Настроение</dt><dd>Хорошее</dd>
-                    <dt>Физическое состояние</dt><dd>Среднее</dd>
-                    <dt>Последняя физическая активность</dt><dd>20 минут назад</dd>
-                    <dt>Последний прием пищи</dt><dd>5 минут назад</dd>
+                    <dt>Настроение</dt><dd>не найдено</dd>
+                    <dt>Физическое состояние</dt><dd>не найдено</dd>
+                    <dt>Последняя физическая активность</dt><dd>не найдено</dd>
+                    <dt>Последний прием пищи</dt><dd>не найдено</dd>
                 </dl>
             </div>
         </div>

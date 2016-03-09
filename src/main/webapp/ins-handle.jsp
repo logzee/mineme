@@ -1,14 +1,10 @@
+<%@ page import="classes.DBManager" %>
 <%@ page import="com.google.common.io.CharStreams" %>
 <%@ page import="com.google.gson.Gson" %>
-<%@ page import="java.util.Map" %>
-<%@ page import="java.util.HashMap" %>
-<%@ page import="java.util.Date" %>
-<%@ page import="com.google.gson.JsonParser" %>
 <%@ page import="com.google.gson.JsonObject" %>
-<%@ page import="classes.DBManager" %>
-<%@ page import="org.bson.Document" %>
+<%@ page import="com.google.gson.JsonParser" %>
 <%@ page import="com.google.gson.JsonPrimitive" %>
-<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
