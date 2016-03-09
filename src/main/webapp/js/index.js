@@ -12,9 +12,9 @@ function eventLogInit() {
         dd.innerHTML = formatDate(eventsData[i].date);
 
         var dtContent = "";
-        var currentStruct = structRoot;
+        var currentStruct = structRoot.value;
         for (var j = 0; j < eventsData[i].chain.length; j++) { // тут мы берем цифры из цепочки событий
-            currentStruct = currentStruct.value[j];
+            currentStruct = currentStruct.value[eventsData[i].chain[j]];
             var title = currentStruct.title;
             dtContent += title + ", ";
         }
