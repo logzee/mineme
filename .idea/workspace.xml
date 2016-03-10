@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" />
     </list>
     <ignored path="mineme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -818,13 +817,7 @@
       <workItem from="1457449624727" duration="17074000" />
       <workItem from="1457533195801" duration="13244000" />
       <workItem from="1457618679822" duration="7155000" />
-      <workItem from="1457634109254" duration="1852000" />
-    </task>
-    <task id="LOCAL-00039" summary="Minor code refactor">
-      <created>1457380423958</created>
-      <option name="number" value="00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1457380423959</updated>
+      <workItem from="1457634109254" duration="1861000" />
     </task>
     <task id="LOCAL-00040" summary="Major front-end changes. Now im using uikit">
       <created>1457387388203</created>
@@ -1114,11 +1107,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457635108458</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Fix of previous commit">
+      <created>1457635966650</created>
+      <option name="number" value="00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1457635966650</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85371000" />
+    <option name="totallyTimeSpent" value="85380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
