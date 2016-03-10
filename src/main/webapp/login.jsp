@@ -1,3 +1,8 @@
+<%
+session.setAttribute("LOGIN_USER", user);
+//user entity if you have or user type of your user account...
+//if not set then LOGIN_USER will be null
+%>
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
@@ -19,15 +24,15 @@
     </nav>
     <div class="uk-vertical-align uk-text-center uk-height-1-1">
         <div class="uk-vertical-align-middle" style="width: 250px;">
-            <form class="uk-panel uk-panel-box uk-form">
+            <form class="uk-panel uk-panel-box uk-form" method="POST" action="j_security_check">
                 <div class="uk-form-row">
-                    <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Имя пользователя">
+                    <input class="uk-width-1-1 uk-form-large" type="text" name="j_username" placeholder="Имя пользователя">
                 </div>
                 <div class="uk-form-row">
-                    <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Пароль">
+                    <input class="uk-width-1-1 uk-form-large" type="password" name="j_password" placeholder="Пароль">
                 </div>
                 <div class="uk-form-row">
-                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="#">Войти</a>
+                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" type="submit">Войти</a>
                 </div>
             </form>
         </div>
