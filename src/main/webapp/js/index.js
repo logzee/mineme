@@ -1,5 +1,3 @@
-// инициализация списка последних событий
-
 /*
  Объясняю что происходит.
  Сначала мы достаем из скрытых тегов на странице данные о структуре базы данных и о последних 10 событиях,
@@ -72,20 +70,24 @@ function smartTime(time) {
 
     var hours = Math.round(minutes/60);
     if(hours < 24) {
-        return hours + " " + declOfNum(hours, ['час', 'часа', 'часов']) + ' назад';
+        return hours + " " + declOfNum(hours, ['час', 'часа', 'часов']) + " " + minutes % 60 + " " + declOfNum(minutes % 60, ['минута', 'минуты', 'минут']) + ' назад';
     }
 
     var days = Math.round(hours/24);
     if(days < 30) {
-        return days + " " + declOfNum(days, ['день', 'дня', 'дней']) + ' назад';
+        return days + " " + declOfNum(days, ['день', 'дня', 'дней']) + " " + hours % 24 + " " + declOfNum(hours % 24, ['час', 'часа', 'часов']) + ' назад';
     }
 
     var months = Math.round(days/30);
     if(months < 12) {
-        return months + " " + declOfNum(months, ['месяц', 'месяца', 'месяцев']) + ' назад';
+        return months + " " + declOfNum(months, ['месяц', 'месяца', 'месяцев']) + " " + days % 30 + " " + declOfNum(days % 30, ['день', 'дня', 'дней']) + ' назад';
     }
-    return Math.round(months/12) + " " + declOfNum(months/12, ['год', 'года', 'лет']) + ' назад';
+    return Math.round(months/12) + " " + declOfNum(months/12, ['год', 'года', 'лет']) + " " + months % 12 + " " + declOfNum(months % 12, ['месяц', 'месяца', 'месяцев']) + ' назад';
 }
+
+/**
+ * Функция склонения числительных
+ **/
 
 function declOfNum(number, titles) {
     cases = [2, 0, 1, 1, 1, 2];
