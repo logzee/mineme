@@ -1,8 +1,3 @@
-<%
-session.setAttribute("LOGIN_USER", user);
-//user entity if you have or user type of your user account...
-//if not set then LOGIN_USER will be null
-%>
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
