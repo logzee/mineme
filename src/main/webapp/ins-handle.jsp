@@ -41,7 +41,6 @@
         System.out.println(result);
 
         DBManager dbManager = new DBManager();
-        dbManager.setCollection("events");
         dbManager.insertFromString(result);
     } catch (Exception e) {
         response.sendError(500, e.getClass().getSimpleName() + ": " + e.getMessage());
