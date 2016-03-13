@@ -33,7 +33,7 @@
     <!-- Insert handle -->
     <servlet-mapping>
         <servlet-name>insertHandler</servlet-name>
-        <url-pattern>/insert(</url-pattern>
+        <url-pattern>/insert/*(</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>insertHandler</servlet-name>
@@ -43,7 +43,7 @@
     <!-- Add event page -->
     <servlet-mapping>
         <servlet-name>addEventJsp</servlet-name>
-        <url-pattern>/addevent(</url-pattern>
+        <url-pattern>/addevent/*(</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>addEventJsp</servlet-name>
@@ -53,7 +53,7 @@
     <!-- Index page -->
     <servlet-mapping>
         <servlet-name>indexPage</servlet-name>
-        <url-pattern>/(</url-pattern>
+        <url-pattern>/*(</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>indexPage</servlet-name>
