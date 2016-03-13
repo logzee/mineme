@@ -12,7 +12,7 @@ var currentNode = struct;
 
 /**
  * Вызывается при смене значения в форме
-**/
+ **/
 function updateForm(form) {
     var eventNumber = form.value;
 
@@ -42,8 +42,8 @@ function updateForm(form) {
 }
 
 /*
-    Добавляет новый текстовой input, принимает структуру как аргумент
-*/
+ Добавляет новый текстовой input, принимает структуру как аргумент
+ */
 function addTextInput(itemStruct) {
     var input = document.createElement('input');
     input.setAttribute('class', 'input-value');
@@ -66,8 +66,8 @@ function addTextInput(itemStruct) {
 }
 
 /*
-    Добавляет несколько текстовых полей для структуры list
-*/
+ Добавляет несколько текстовых полей для структуры list
+ */
 function addListInput(listStruct) {
     var wrapper = document.createElement('div');
     wrapper.setAttribute("class", "uk-form-row list-wrapper");
@@ -117,8 +117,8 @@ function addListInput(listStruct) {
 }
 
 /*
-    Добавляет новый dropdown input, принимает структуру как аргумент
-*/
+ Добавляет новый dropdown input, принимает структуру как аргумент
+ */
 function addDropdownInput(itemStruct) {
     var select = document.createElement('select');
     if (!itemStruct.hasOwnProperty('value')) {
@@ -138,7 +138,7 @@ function addDropdownInput(itemStruct) {
 
 /**
  * Возвращает структуру события из struct по его номеру, учитывается уровень (вложенности) события
-**/
+ **/
 function getEventStruct(eventNumber) {
     structChain.push(eventNumber);
     var level = structChain.length;
@@ -156,7 +156,7 @@ function getEventStruct(eventNumber) {
 
 /**
  * Убирает все инпуты, что есть под переданной формой
-**/
+ **/
 function clearBelow(input) {
     // определяем индекс input'a
     var targetIndex = 0;
@@ -185,8 +185,8 @@ function clearBelow(input) {
 }
 
 /*
-    Устанавливает currentNode в соответствии с цепочкой событий
-*/
+ Устанавливает currentNode в соответствии с цепочкой событий
+ */
 function resetStructChain() {
     var result = struct;
     for (var i = 0; i < structChain.length; i++) {
@@ -232,7 +232,7 @@ function sendData() {
     }
 
     if (formWrapper.children.length > structChain.length + inputsData.length) {
-        alert('Ошибка ввода. Всё вводи');
+        ukAlert('Ошибка ввода. Всё вводи', 'uk-alert-warning');
         return;
     }
 
@@ -250,18 +250,43 @@ function sendData() {
     xhr.open('POST', 'ins-handle.jsp', false);
     xhr.send(JSON.stringify(result));
     if (xhr.status == 200) {
-        alert("Запись добавлена успешно");
+        ukAlert("Запись добавлена успешно");
     } else {
         var debug = document.getElementById('response-debug');
         debug.innerHTML = xhr.responseText;
-        alert("Ошибка при добавлении. Код " + xhr.status);
+        ukAlert("Ошибка при добавлении. Код " + xhr.status, 'uk-alert-danger');
     }
 }
 
 /*
-    Функция для проверки строки на пустоту, пробелы, null, undefined
-*/
+ Checks if string is blank, null, undefined or consists of spaces
+ */
 function isBlank(str) {
     return (!str || /^\s*$/.test(str));
 }
 document.addEventListener("DOMContentLoaded", dropDownInit);
+
+/**
+ *  Displays a uikit alert message
+ */
+function ukAlert(message, htmlClass=null) {
+    var ukAlert = document.createElement('div');
+    if (htmlClass == null) {
+        ukAlert.setAttribute('class', 'uk-alert');
+    } else {
+        ukAlert.setAttribute('class', 'uk-alert' + ' ' + htmlClass);
+    }
+    ukAlert.setAttribute('data-uk-alert', 'true');
+
+    var ukAlertClose = document.createElement('a');
+    ukAlertClose.setAttribute('href', '');
+    ukAlertClose.setAttribute('class', 'uk-alert-close uk-close');
+    ukAlert.appendChild(ukAlertClose);
+
+    var p = document.createElement('p');
+    p.innerHTML = message;
+    ukAlert.appendChild(p);
+
+    var form = document.getElementsByTagName('form')[0];
+    form.insertBefore(ukAlert, form.firstChild);
+}
