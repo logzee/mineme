@@ -20,6 +20,7 @@ import java.util.Date;
  * @author      logzee
  */
 public class InsertHandler extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             String requestBody = null;
