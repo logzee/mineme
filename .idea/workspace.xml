@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="Some ui improvements">
+    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/logzee.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/logzee.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/add-event.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
     </list>
@@ -81,8 +83,8 @@
       <file leaf-file-name="add-event.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4065934">
-              <caret line="271" column="37" selection-start-line="271" selection-start-column="37" selection-end-line="271" selection-end-column="37" />
+            <state vertical-scroll-proportion="3.1648352">
+              <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -104,7 +106,10 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1457858326157" expanded="true" signature="784:940" placeholder="{...}" />
+                <marker date="1457858326157" expanded="true" signature="1133:1306" placeholder="{...}" />
+                <marker date="1457858326157" expanded="true" signature="1502:1615" placeholder="{...}" />
+                <marker date="1457858326157" expanded="true" signature="1846:2577" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -865,13 +870,7 @@
       <workItem from="1457533195801" duration="13244000" />
       <workItem from="1457618679822" duration="7155000" />
       <workItem from="1457634109254" duration="3639000" />
-      <workItem from="1457856855010" duration="3591000" />
-    </task>
-    <task id="LOCAL-00043" summary="Some clean-ups">
-      <created>1457388044644</created>
-      <option name="number" value="00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1457388044644</updated>
+      <workItem from="1457856855010" duration="6580000" />
     </task>
     <task id="LOCAL-00044" summary="Some clean-ups">
       <created>1457388174949</created>
@@ -1161,11 +1160,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457858904230</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Some ui improvements">
+      <created>1457865019310</created>
+      <option name="number" value="00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1457865019311</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90749000" />
+    <option name="totallyTimeSpent" value="93738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1211,7 +1216,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor code refactor" />
     <MESSAGE value="Major front-end changes. Now im using uikit" />
     <MESSAGE value="Some clean-ups" />
     <MESSAGE value="Finally added css folder" />
@@ -1236,7 +1240,8 @@
     <MESSAGE value="Auth is now 100% works.&#10;Minor front-end improvements" />
     <MESSAGE value="Added documentation to the DBManager class and minor code improvements" />
     <MESSAGE value="Fix of a previous update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix of a previous update" />
+    <MESSAGE value="Some ui improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some ui improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1268,7 +1273,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1457858326157" expanded="true" signature="784:940" placeholder="{...}" />
+            <marker date="1457858326157" expanded="true" signature="1133:1306" placeholder="{...}" />
+            <marker date="1457858326157" expanded="true" signature="1502:1615" placeholder="{...}" />
+            <marker date="1457858326157" expanded="true" signature="1846:2577" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1621,7 +1629,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1457858326157" expanded="true" signature="784:940" placeholder="{...}" />
+            <marker date="1457858326157" expanded="true" signature="1133:1306" placeholder="{...}" />
+            <marker date="1457858326157" expanded="true" signature="1502:1615" placeholder="{...}" />
+            <marker date="1457858326157" expanded="true" signature="1846:2577" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1644,8 +1655,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4065934">
-          <caret line="271" column="37" selection-start-line="271" selection-start-column="37" selection-end-line="271" selection-end-column="37" />
+        <state vertical-scroll-proportion="3.1648352">
+          <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
           <folding />
         </state>
       </provider>
