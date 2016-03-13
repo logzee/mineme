@@ -33,6 +33,7 @@
     <div class="uk-container-center">
         <h1>Добавить событие</h1>
         <form class="uk-panel uk-panel-box uk-form">
+            <div id="alert-wrapper"></div>
             <fieldset>
                 <div id="form-wrapper" class="uk-form-row">
                     <select name="type" id="event-dropdown" onChange="updateForm(this)">
