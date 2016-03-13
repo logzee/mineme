@@ -19,13 +19,13 @@
     <script src="js/uikit.min.js"></script>
 </head>
 <body>
-<!-- Data from MongoDB that describes events structure for JavaScript -->
+<%-- Data from MongoDB that describes events structure for JavaScript --%>
 <div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
-        <a class="uk-navbar-brand" href="index.jsp">MineMe</a>
+        <a class="uk-navbar-brand" href="/">MineMe</a>
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="add-event.jsp">Добавить событие</a></li>
+            <li class="uk-active">Добавить событие</li>
         </ul>
     </div>
 </nav>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="uk-form-row">
                     <a class="uk-button uk-button-primary uk-margin-small-top" onclick="sendData()"><i class="fa fa-floppy-o"></i> Сохранить событие</a>
-                    <a class="uk-button uk-button-danger uk-margin-small-top" href="index.jsp"><i class="fa fa-ban"></i> Отменить</a>
+                    <a class="uk-button uk-button-danger uk-margin-small-top" href="/"><i class="fa fa-ban"></i> Отменить</a>
                 </div>
             </fieldset>
         </form>

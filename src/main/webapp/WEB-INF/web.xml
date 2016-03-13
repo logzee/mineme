@@ -32,5 +32,34 @@
         </form-login-config>
     </login-config>
 
+    <!-- Insert handle -->
+    <servlet-mapping>
+        <servlet-name>insertHandler</servlet-name>
+        <url-pattern>/insert(</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>insertHandler</servlet-name>
+        <servlet-class>servlets.InsertHandler</servlet-class>
+    </servlet>
+
+    <!-- Add event page -->
+    <servlet-mapping>
+        <servlet-name>addEventJsp</servlet-name>
+        <url-pattern>/addevent(</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addEventJsp</servlet-name>
+        <jsp-file>/add-event.jsp</jsp-file>
+    </servlet>
+
+    <!-- Index page -->
+    <servlet-mapping>
+        <servlet-name>indexPage</servlet-name>
+        <url-pattern>/(</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>indexPage</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
 </web-app>
 

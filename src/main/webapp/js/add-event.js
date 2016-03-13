@@ -259,7 +259,7 @@ function sendData() {
         tags: []
     };
     ukAlert("Запись добавлена успешно");
-    xhr.open('POST', 'ins-handle.jsp', false);
+    xhr.open('POST', '/insert', false);
     xhr.send(JSON.stringify(result));
     xhr.onreadystatechange = function() {
         if (xhr.status == 200) {

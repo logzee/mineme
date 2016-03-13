@@ -12,7 +12,7 @@ import org.bson.Document;
 import java.net.UnknownHostException;
 import java.util.Iterator;
 
- /**
+/**
  * Wrapper for MongoDB
  *
  * @author      logzee

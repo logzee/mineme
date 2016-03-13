@@ -30,7 +30,7 @@
     <div class="uk-container uk-container-center">
         <div class="uk-navbar-brand">MineMe</div>
         <ul class="uk-navbar-nav">
-            <li><a href="add-event.jsp">Добавить событие</a></li>
+            <li><a href="/addevent">Добавить событие</a></li>
         </ul>
     </div>
 </nav>
