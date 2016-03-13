@@ -3,7 +3,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     DBManager dbManager = new DBManager();
-    dbManager.setCollection("events");
 %>
 
 <!DOCTYPE HTML>
@@ -20,12 +19,11 @@
     <script src="js/uikit.min.js"></script>
 </head>
 <body>
-<!-- Server time in case is client's time incorrect -->
+<%-- Server time in case if the client's time is incorrect --%>
 <div hidden id="server-timestamp"><%= new Date().getTime() %></div>
-<!-- List of last 10 events from MongoDB in JSON -->
+<%--  List of last 10 events from MongoDB in JSON format --%>
 <div hidden id="last-events"><%= dbManager.getLastEventsJson(10) %></div>
-<% dbManager.setCollection("event-types"); %>
-<!-- Data from MongoDB describing events structure for JavaScript -->
+<%-- Data from MongoDB describing events structure for the JavaScript --%>
 <div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">

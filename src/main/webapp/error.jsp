@@ -19,7 +19,7 @@
 </nav>
 <div class="uk-vertical-align uk-text-center uk-height-1-1">
     <div class="uk-vertical-align-middle" style="width: 250px;">
-        <h1 class="uk-text-warning">Неверная пара логин-пароль</h1>
+        <h1 class="uk-text-warning">No user found with such password</h1>
     </div>
 </div>
 </body>

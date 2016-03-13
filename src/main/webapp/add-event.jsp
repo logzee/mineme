@@ -3,7 +3,6 @@
 
 <%
     DBManager dbManager = new DBManager();
-    dbManager.setCollection("event-types");
 %>
 
 <!DOCTYPE HTML>
@@ -20,7 +19,7 @@
     <script src="js/uikit.min.js"></script>
 </head>
 <body>
-<!-- Data from MongoDB describing events structure for JavaScript -->
+<!-- Data from MongoDB that describes events structure for JavaScript -->
 <div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
