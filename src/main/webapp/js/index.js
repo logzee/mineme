@@ -68,27 +68,48 @@ function smartTime(time) {
         return minutes + " " + declOfNum(minutes, ['минута', 'минуты', 'минут']) + ' назад';
     }
 
+    var message;
+
     var hours = Math.round(minutes/60);
     if(hours < 24) {
-        return hours + " " + declOfNum(hours, ['час', 'часа', 'часов']) + " " + minutes % 60 + " " + declOfNum(minutes % 60, ['минута', 'минуты', 'минут']) + ' назад';
+        message = hours + " " + declOfNum(hours, ['час', 'часа', 'часов']);
+        if (minutes % 60 > 0) {
+            message += + " " + minutes % 60;
+        }
+        message += " " + declOfNum(minutes % 60, ['минута', 'минуты', 'минут']) + ' назад';
+        return message;
     }
 
     var days = Math.round(hours/24);
     if(days < 30) {
-        return days + " " + declOfNum(days, ['день', 'дня', 'дней']) + " " + hours % 24 + " " + declOfNum(hours % 24, ['час', 'часа', 'часов']) + ' назад';
+        message = days + " " + declOfNum(days, ['день', 'дня', 'дней']);
+        if (hours % 24 > 0) {
+            message += " " + hours % 24;
+        }
+        message +=  " " + declOfNum(hours % 24, ['час', 'часа', 'часов']) + ' назад';
+        return message;
     }
 
     var months = Math.round(days/30);
     if(months < 12) {
-        return months + " " + declOfNum(months, ['месяц', 'месяца', 'месяцев']) + " " + days % 30 + " " + declOfNum(days % 30, ['день', 'дня', 'дней']) + ' назад';
+        message = months + " " + declOfNum(months, ['месяц', 'месяца', 'месяцев']);
+        if (days % 30 > 0) {
+            message += " " + days % 30;
+        }
+        message += " " + declOfNum(days % 30, ['день', 'дня', 'дней']) + ' назад';
+        return message;
     }
-    return Math.round(months/12) + " " + declOfNum(months/12, ['год', 'года', 'лет']) + " " + months % 12 + " " + declOfNum(months % 12, ['месяц', 'месяца', 'месяцев']) + ' назад';
+    message = Math.round(months/12) + " " + declOfNum(months/12, ['год', 'года', 'лет']);
+    if (months % 12 > 0) {
+        message += " " + months % 12;
+    }
+    message += " " + declOfNum(months % 12, ['месяц', 'месяца', 'месяцев']) + ' назад';
+    return message;
 }
 
 /**
  * Функция склонения числительных
  **/
-
 function declOfNum(number, titles) {
     cases = [2, 0, 1, 1, 1, 2];
     return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
