@@ -25,7 +25,7 @@
     <div class="uk-container uk-container-center">
         <a class="uk-navbar-brand" href="index.jsp">MineMe</a>
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><p>Добавить событие</p></li>
+            <li class="uk-active"><a>Добавить событие</a></li>
         </ul>
     </div>
 </nav>
