@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/uikit.gradient.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/mineme.css">
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
     <script src="js/jquery.js"></script>
     <script src="js/uikit.min.js"></script>
 </head>
