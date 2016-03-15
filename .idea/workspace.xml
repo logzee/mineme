@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" />
     </list>
     <ignored path="mineme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -110,8 +111,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.3076923">
-              <caret line="105" column="87" selection-start-line="105" selection-start-column="87" selection-end-line="105" selection-end-column="87" />
+            <state vertical-scroll-proportion="0.2857143">
+              <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -916,13 +917,7 @@
       <workItem from="1457618679822" duration="7155000" />
       <workItem from="1457634109254" duration="3639000" />
       <workItem from="1457856855010" duration="12687000" />
-      <workItem from="1458060563098" duration="1362000" />
-    </task>
-    <task id="LOCAL-00055" summary="Minor front-end improves">
-      <created>1457452381230</created>
-      <option name="number" value="00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1457452381230</updated>
+      <workItem from="1458060563098" duration="1524000" />
     </task>
     <task id="LOCAL-00056" summary="Minor front-end improves">
       <created>1457452754896</created>
@@ -1212,11 +1207,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458070451537</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Minor date display fix and code cleaning">
+      <created>1458071024807</created>
+      <option name="number" value="00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1458071024807</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101207000" />
+    <option name="totallyTimeSpent" value="101369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1262,7 +1263,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean-ups" />
     <MESSAGE value="Updated readme" />
     <MESSAGE value="Minor front-end improves" />
     <MESSAGE value="Started to work on back-end" />
@@ -1287,7 +1287,8 @@
     <MESSAGE value="Testing servlets" />
     <MESSAGE value="Reverting and fixing" />
     <MESSAGE value="Minor front-end fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor front-end fix" />
+    <MESSAGE value="Minor date display fix and code cleaning" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor date display fix and code cleaning" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1684,8 +1685,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.3076923">
-          <caret line="105" column="87" selection-start-line="105" selection-start-column="87" selection-end-line="105" selection-end-column="87" />
+        <state vertical-scroll-proportion="0.2857143">
+          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

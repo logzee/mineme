@@ -74,7 +74,7 @@ function smartTime(time) {
     if(hours < 24) {
         message = hours + " " + declOfNum(hours, ['час', 'часа', 'часов']);
         if (minutes % 60 > 0) {
-            message += + " " + minutes % 60;
+            message += " " + minutes % 60;
         }
         message += " " + declOfNum(minutes % 60, ['минута', 'минуты', 'минут']) + ' назад';
         return message;
