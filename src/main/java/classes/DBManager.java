@@ -75,4 +75,13 @@ public class DBManager {
         }
         return resultObject.toString();
     }
+
+    /**
+         *  TODO
+         *  Method that saves info about my keylogs into the database.
+         * @param keylogs   info about last pressed keys
+         */
+    public void saveKeyLogs(String keylogs) {
+
+    }
 }

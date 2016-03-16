@@ -230,15 +230,26 @@ function dropDownInit() {
  * Sends data to the server
  */
 function sendData() {
+    // getting data from the forms
     var values = document.getElementsByClassName('input-value');
     var xhr = new XMLHttpRequest();
     var resultData = structChain;
 
-    // data validation
+    var tags = document.getElementById('tags');
+    tags = tags.value.split(/, */);
+
+    // validating data
     var inputsData = [];
     for (var i = 0; i < values.length; i++) {
         if (!isBlank(values[i].value)) {
             inputsData.push(values[i].value);
+        }
+    }
+
+    var validTags = [];
+    for (var i = 0; i < tags.length; i++) {
+        if (!isBlank(tags[i])) {
+            validTags.push(tags[i].toLowerCase());
         }
     }
 
@@ -256,7 +267,7 @@ function sendData() {
 
     var result = {
         chain: resultData,
-        tags: []
+        tags: validTags
     };
     ukAlert("Запись добавлена успешно");
     xhr.open('POST', 'ins-handle.jsp', false);

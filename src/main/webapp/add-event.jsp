@@ -41,6 +41,9 @@
                     </select>
                 </div>
                 <div class="uk-form-row">
+                    <input type="text" id="tags" placeholder="Тэги (через запятую)">
+                </div>
+                <div class="uk-form-row">
                     <a class="uk-button uk-button-primary uk-margin-small-top" onclick="sendData()"><i class="fa fa-floppy-o"></i> Сохранить событие</a>
                     <a class="uk-button uk-button-danger uk-margin-small-top" href="index.jsp"><i class="fa fa-ban"></i> Отменить</a>
                 </div>

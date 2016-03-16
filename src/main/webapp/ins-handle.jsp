@@ -37,7 +37,7 @@
 
         responseBodyJson.add("date", new JsonPrimitive(timeStamp));
 
-        String result = gson.toJson(responseBodyJson);
+        String result = gson.toJson(responseBodyJson); // TODO: 16.03.16 make this code able to add new tags to the event structure
         System.out.println(result);
 
         DBManager dbManager = new DBManager();
