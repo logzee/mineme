@@ -6,7 +6,7 @@
  Ещё мы форматируем дату, чтобы она показывала сколько времени прошло с момента регистрации события.
 
  Объясню процесс формирования строчки события подробнее: достаем названия типа, подтипа и т.д. до тех пор, пока не встретися необозначенное в структуре
- поле (это мы узнаем по наличию у объекта поля "title") - это и есть значение. Если это массив, то проходимя по нему и добавляем каждое значение к результату.
+ поле (это мы узнаем по наличию у объекта поля 'title') - это и есть значение. Если это массив, то проходимя по нему и добавляем каждое значение к результату.
  */
 function eventLogInit() {
     var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);
@@ -20,24 +20,24 @@ function eventLogInit() {
 
         dd.innerHTML = formatDate(eventsData[i].date);
 
-        var dtContent = "";
+        var dtContent = '';
         var currentStruct = structRoot.value[eventsData[i].chain[0]];
-        dtContent += currentStruct.title + ". ";
+        dtContent += currentStruct.title + '. ';
         for (var j = 1; j < eventsData[i].chain.length; j++) { // тут мы берем цифры из цепочки событий
 
             var chainItem = eventsData[i].chain[j];
             if (chainItem instanceof Array) {
                 for (var k = 0; k < chainItem.length; k++) {
-                    dtContent += currentStruct.value[k].title + ": " + chainItem[k] + ". ";
+                    dtContent += currentStruct.value[k].title + ': ' + chainItem[k] + '. ';
                 }
             } else {
                 // если следующий узел - массив (то есть это не конечный узел)
                 if (currentStruct.value instanceof Array) {
                     currentStruct = currentStruct.value[chainItem];
                     var title = currentStruct.title;
-                    dtContent += title + ". ";
+                    dtContent += title + '. ';
                 } else {
-                    dtContent += currentStruct.value.title + ": " + chainItem.toString() + "  ";
+                    dtContent += currentStruct.value.title + ': ' + chainItem.toString() + '  ';
                 }
             }
         }
@@ -65,45 +65,45 @@ function smartTime(time) {
 
     var minutes = Math.round(seconds/60);
     if (minutes < 60) {
-        return minutes + " " + declOfNum(minutes, ['минута', 'минуты', 'минут']) + ' назад';
+        return minutes + ' ' + declOfNum(minutes, ['минута', 'минуты', 'минут']) + ' назад';
     }
 
     var message;
 
     var hours = Math.round(minutes/60);
     if(hours < 24) {
-        message = hours + " " + declOfNum(hours, ['час', 'часа', 'часов']);
+        message = hours + ' ' + declOfNum(hours, ['час', 'часа', 'часов']);
         if (minutes % 60 > 0) {
-            message += " " + minutes % 60;
+            message += ' ' + minutes % 60 + ' ' + declOfNum(minutes % 60, ['минута', 'минуты', 'минут']);
         }
-        message += " " + declOfNum(minutes % 60, ['минута', 'минуты', 'минут']) + ' назад';
+        message += ' назад';
         return message;
     }
 
     var days = Math.round(hours/24);
     if(days < 30) {
-        message = days + " " + declOfNum(days, ['день', 'дня', 'дней']);
+        message = days + ' ' + declOfNum(days, ['день', 'дня', 'дней']);
         if (hours % 24 > 0) {
-            message += " " + hours % 24;
+            message += ' ' + hours % 24 + ' ' + declOfNum(hours % 24, ['час', 'часа', 'часов']);
         }
-        message +=  " " + declOfNum(hours % 24, ['час', 'часа', 'часов']) + ' назад';
+        message += ' назад';
         return message;
     }
 
     var months = Math.round(days/30);
     if(months < 12) {
-        message = months + " " + declOfNum(months, ['месяц', 'месяца', 'месяцев']);
+        message = months + ' ' + declOfNum(months, ['месяц', 'месяца', 'месяцев']);
         if (days % 30 > 0) {
-            message += " " + days % 30;
+            message += ' ' + days % 30 + ' ' + declOfNum(days % 30, ['день', 'дня', 'дней']);
         }
-        message += " " + declOfNum(days % 30, ['день', 'дня', 'дней']) + ' назад';
+        message += ' назад';
         return message;
     }
-    message = Math.round(months/12) + " " + declOfNum(months/12, ['год', 'года', 'лет']);
+    message = Math.round(months/12) + ' ' + declOfNum(months/12, ['год', 'года', 'лет']);
     if (months % 12 > 0) {
-        message += " " + months % 12;
+        message += ' ' + months % 12 + ' ' + declOfNum(months % 12, ['месяц', 'месяца', 'месяцев']);
     }
-    message += " " + declOfNum(months % 12, ['месяц', 'месяца', 'месяцев']) + ' назад';
+    message += ' назад';
     return message;
 }
 
@@ -115,4 +115,4 @@ function declOfNum(number, titles) {
     return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
 }
 
-document.addEventListener("DOMContentLoaded", eventLogInit);
+document.addEventListener('DOMContentLoaded', eventLogInit);

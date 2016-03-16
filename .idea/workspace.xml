@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="Added tags to events!">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/logzee.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/logzee.xml" />
+    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/add-event.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/add-event.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" />
     </list>
     <ignored path="mineme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,10 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add-event.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add-event.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.053846154">
+            <state vertical-scroll-proportion="0.0">
               <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
               <folding />
             </state>
@@ -110,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.31868133">
+              <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -162,7 +158,6 @@
         <option value="$PROJECT_DIR$/src/main/java/servlets/InsertHandlier.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/InsertHandler.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/index.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/error.jsp" />
@@ -170,6 +165,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/index.js" />
       </list>
     </option>
   </component>
@@ -947,13 +943,7 @@
       <workItem from="1457856855010" duration="12687000" />
       <workItem from="1458060563098" duration="1553000" />
       <workItem from="1458073764862" duration="715000" />
-      <workItem from="1458149326602" duration="3027000" />
-    </task>
-    <task id="LOCAL-00059" summary="Debugging">
-      <created>1457456672265</created>
-      <option name="number" value="00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1457456672265</updated>
+      <workItem from="1458149326602" duration="3485000" />
     </task>
     <task id="LOCAL-00060" summary="Fixed a js bug">
       <created>1457456823529</created>
@@ -1243,11 +1233,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458149386752</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="Added tags to events! This idea is not done completly yet, but im getting closer every commit">
+      <created>1458159025022</created>
+      <option name="number" value="00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1458159025022</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105140000" />
+    <option name="totallyTimeSpent" value="105598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1293,7 +1289,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Debugging" />
     <MESSAGE value="Fixed a js bug" />
     <MESSAGE value="I can now insert values to mongoDB" />
     <MESSAGE value="Some DB structure changes. Start of developing of eventlog display on main page" />
@@ -1318,7 +1313,8 @@
     <MESSAGE value="Fix of a previous fix" />
     <MESSAGE value="Added favicon&#10;" />
     <MESSAGE value="New favicon" />
-    <option name="LAST_COMMIT_MESSAGE" value="New favicon" />
+    <MESSAGE value="Added tags to events! This idea is not done completly yet, but im getting closer every commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tags to events! This idea is not done completly yet, but im getting closer every commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1651,16 +1647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.142857">
@@ -1711,9 +1697,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.053846154">
+        <state vertical-scroll-proportion="0.0">
           <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31868133">
+          <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
