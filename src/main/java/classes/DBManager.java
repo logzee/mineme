@@ -113,18 +113,22 @@ public class DBManager {
          */
     public void updateTags(List<String> eventTags) {
         List<String> dbTags = getTags();
-
         this.collection = db.getCollection("event-types");
 
+        printlog("Line 118");
         BasicDBList tagsList = new BasicDBList();
         tagsList.addAll(dbTags);
         tagsList.addAll(eventTags);
+        printlog("Line 122");
 
         BasicDBObject updateDocument = new BasicDBObject();
         updateDocument.append("$set", new BasicDBObject().append("tags", tagsList));
 
+        printlog("Line 126");
         BasicDBObject searchQuery = new BasicDBObject().append("_id", new BasicDBObject("$oid", "56db4d4e9b78fde7268d7d40"));
+        printlog("Line 127");
         UpdateResult result = collection.updateOne(searchQuery, updateDocument);
+        printlog("Line 128");
         printlog(result);
     }
     private void printlog(Object log) {

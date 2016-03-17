@@ -80,8 +80,8 @@
       <file leaf-file-name="ins-handle.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.071428">
-              <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
+            <state vertical-scroll-proportion="-18.642857">
+              <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -91,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.71428573">
-              <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
+              <caret line="129" column="80" selection-start-line="129" selection-start-column="80" selection-end-line="129" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -969,13 +969,7 @@
       <workItem from="1458193060022" duration="1853000" />
       <workItem from="1458194939955" duration="339000" />
       <workItem from="1458198755285" duration="3107000" />
-      <workItem from="1458210502233" duration="3385000" />
-    </task>
-    <task id="LOCAL-00063" summary="I can now insert values to mongoDB">
-      <created>1457459905220</created>
-      <option name="number" value="00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1457459905220</updated>
+      <workItem from="1458210502233" duration="3689000" />
     </task>
     <task id="LOCAL-00064" summary="I can now insert values to mongoDB">
       <created>1457463055750</created>
@@ -1265,11 +1259,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458213307978</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Trying to fix">
+      <created>1458213891851</created>
+      <option name="number" value="00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1458213891851</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114337000" />
+    <option name="totallyTimeSpent" value="114641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1730,8 +1730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.071428">
-          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
+        <state vertical-scroll-proportion="-18.642857">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1739,7 +1739,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.71428573">
-          <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
+          <caret line="129" column="80" selection-start-line="129" selection-start-column="80" selection-end-line="129" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
