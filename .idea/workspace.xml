@@ -934,14 +934,7 @@
       <workItem from="1458239339675" duration="458000" />
       <workItem from="1458241084786" duration="106000" />
       <workItem from="1458241266237" duration="2487000" />
-      <workItem from="1458246294009" duration="2398000" />
-    </task>
-    <task id="LOCAL-00077" summary="Fixes for the last commit">
-      <created>1457544200033</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1457544200034</updated>
+      <workItem from="1458246294009" duration="2404000" />
     </task>
     <task id="LOCAL-00078" summary="Fixes for the last commit">
       <created>1457544223249</created>
@@ -1279,11 +1272,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458248713119</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Fixes are coming">
+      <created>1458248724416</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1458248724416</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121860000" />
+    <option name="totallyTimeSpent" value="121866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
