@@ -1,9 +1,6 @@
 package classes;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.*;
 import com.mongodb.BasicDBList;
 import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
@@ -24,26 +21,26 @@ import java.util.List;
 /**
  * Wrapper for MongoDB
  *
- * @author      logzee
+ * @author logzee
  */
 public class DBManager {
     private MongoCollection<Document> collection;
     private MongoDatabase db;
 
     /**
-         * The only constructor initializes mongo client connection and then database connection
-         * @throws UnknownHostException     if failed to connect to the database
-         */
+     * The only constructor initializes mongo client connection and then database connection
+     * @throws UnknownHostException     if failed to connect to the database
+     */
     public DBManager() throws UnknownHostException {
         MongoClient mongoClient = new MongoClient(new MongoClientURI(System.getenv("MONGODB_URL")));
         db = mongoClient.getDatabase("mineme");
     }
 
     /**
-          * Gets data that's describes the structure of event types
-          *
-          * @return structure of event types in JSON format
-          */
+      * Gets data that's describes the structure of event types
+      *
+      * @return structure of event types in JSON format
+      */
     public String getStruct() {
         this.collection = db.getCollection("event-types");
         FindIterable<Document> myDoc = collection.find();
@@ -51,21 +48,21 @@ public class DBManager {
     }
 
     /**
-          * Inserts a new event to the database
-          *
-          * @param json     an event data to insert in JSON format
-          */
+      * Inserts a new event to the database
+      *
+      * @param json     an event data to insert in JSON format
+      */
     public void insertFromString(String json) {
         this.collection = db.getCollection("events");
         collection.insertOne(Document.parse(json));
     }
 
     /**
-          * Gets last events from the database
-          *
-          * @param count    how many events to get
-          * @return     last events in JSON format
-          */
+     * Gets last events from the database
+     *
+     * @param count    how many events to get
+     * @return     last events in JSON format
+     */
     public String getLastEventsJson(int count) {
         this.collection = db.getCollection("events");
         JsonArray resultObject = new JsonArray();
@@ -86,9 +83,9 @@ public class DBManager {
     }
 
     /**
-         *  Gets all the tags from the database;
-         * @return      list of all tags from the database
-         */
+     * Gets all the tags from the database;
+     * @return      list of all tags from the database
+     */
     public List<String> getTags() {
         this.collection = db.getCollection("event-types");
         String struct = getStruct();
@@ -100,43 +97,21 @@ public class DBManager {
     }
 
     /**
-         *  TODO
-         *  Saves info about my keylogs to the database
-         * @param keylogs   info about last pressed keys is JSON
-         */
-    public void saveKeyLogs(String keylogs) {
-        this.collection = db.getCollection("events");
-
-    }
-
-    /**
-         *  Adds new tags to the database
-         * @param eventTags   tags to add
-         */
+     * Adds new tags to the database
+     * @param eventTags   tags to add
+     */
     public void updateTags(List<String> eventTags) {
         List<String> dbTags = getTags();
         this.collection = db.getCollection("event-types");
 
-        printlog("Line 118");
         BasicDBList tagsList = new BasicDBList();
         tagsList.addAll(dbTags);
         tagsList.addAll(eventTags);
-        printlog("Line 122");
 
         BasicDBObject updateDocument = new BasicDBObject();
         updateDocument.append("$set", new BasicDBObject().append("tags", tagsList));
 
-        printlog("Line 126");
         BasicDBObject searchQuery = new BasicDBObject().append("_id", new ObjectId("56db4d4e9b78fde7268d7d40"));
-        printlog("Line 127");
-        printlog(searchQuery);
-        printlog(updateDocument);
         UpdateResult result = collection.updateOne(searchQuery, updateDocument);
-        printlog("Line 128");
-        printlog(result);
-    }
-    private void printlog(Object log) {
-        System.out.println(">>>> DBManager.java >>>>");
-        System.out.println(log);
     }
 }

@@ -6,10 +6,12 @@
 <%@ page import="java.lang.reflect.Type" %>
 <%@ page import="com.google.gson.reflect.TypeToken" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="java.util.Arrays" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
+    /**
+     * This JSP file handles insert requests
+     */
     try {
         String requestBody = null;
         if ("POST".equalsIgnoreCase(request.getMethod())) {
@@ -20,14 +22,7 @@
         if (requestBody.isEmpty()) {
             response.sendError(400, "Bad Request");
         }
-        System.out.println(">>>>>>>>>>>>>> ins-handle.jsp >>>>>>>>>>>>>>");
-        /* Data example
-                    {
-                        "chain" : [ "1", "4" ],
-                        "tags" : ["устал", "радость"],
-                        "date" : "1457545945177"
-                    }
-                */
+
         JsonParser parser = new JsonParser();
         JsonObject responseBodyJson = parser.parse(requestBody).getAsJsonObject();
 
@@ -53,12 +48,9 @@
                     eventTagsIterator.remove();
             }
             dbManager.updateTags(eventTags);
-            System.out.println("Tags updated");
         }
-
         Gson gson = new Gson();
         String result = gson.toJson(responseBodyJson);
-        System.out.println(result);
         dbManager.insertFromString(result);
     } catch (Exception e) {
         response.sendError(500, e.getClass().getSimpleName() + ": " + e.getMessage());

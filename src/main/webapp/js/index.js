@@ -1,12 +1,12 @@
-/*
- Объясняю что происходит.
- Сначала мы достаем из скрытых тегов на странице данные о структуре базы данных и о последних 10 событиях,
- которые представленны в виде цепочки цифр (каждая цифра соответствует названию события из структуры)
- потом мы в цикле проходимся по каждому значению этой цепочки и для каждого события добавляем на страницу запись.
- Ещё мы форматируем дату, чтобы она показывала сколько времени прошло с момента регистрации события.
-
- Объясню процесс формирования строчки события подробнее: достаем названия типа, подтипа и т.д. до тех пор, пока не встретися необозначенное в структуре
- поле (это мы узнаем по наличию у объекта поля 'title') - это и есть значение. Если это массив, то проходимя по нему и добавляем каждое значение к результату.
+/**
+ * OK. First of all we take data about the events structure and the last 10 events from the hidden tags on the page.
+ * Now we have think I call "event chain" (array of numbers) which tells what kind of event is it. We go through it and interpret these numbers
+ * into words. Also, we format date by smartTime function so now we know how much time has passed since the event.
+ *
+ * Event string forming algorithm detail explanation.
+ * 1. It takes name of a type and then name of a subtype then name of a sub-subtype etc. as long as this "tree" exists in the structure.
+ *  1.1 These type names being concatenated to a result string.
+ * 2. When it gets a value that is unmatched in the structure it concatenates it as it is, because this is a value, not a type name. Range for a run, for example.
  */
 function eventLogInit() {
     var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);
@@ -49,7 +49,11 @@ function eventLogInit() {
     }
 }
 
-
+/**
+ * Gets delta from event time and current time and passes it to the smartTime function
+ * @param timestamp     event time
+ * @returns {String}
+ */
 function formatDate(timestamp) {
     var currentTimestamp = parseInt(document.getElementById('server-timestamp').innerHTML);
     var eventTimestamp = parseInt(timestamp);
@@ -57,24 +61,29 @@ function formatDate(timestamp) {
     return smartTime(delta);
 }
 
-function smartTime(time) {
-    var seconds = time / 1000;
+/**
+ * Formats timestamp into a nice presentation
+ * @param timestamp
+ * @returns String
+ */
+function smartTime(timestamp) {
+    var seconds = timestamp / 1000;
     if (seconds < 60) {
         return 'Меньше минуты назад';
     }
 
     var minutes = Math.round(seconds/60);
     if (minutes < 60) {
-        return minutes + ' ' + declOfNum(minutes, ['минута', 'минуты', 'минут']) + ' назад';
+        return minutes + ' ' + numberDeclension(minutes, ['минута', 'минуты', 'минут']) + ' назад';
     }
 
     var message;
 
     var hours = Math.round(minutes/60);
     if(hours < 24) {
-        message = hours + ' ' + declOfNum(hours, ['час', 'часа', 'часов']);
+        message = hours + ' ' + numberDeclension(hours, ['час', 'часа', 'часов']);
         if (minutes % 60 > 0) {
-            message += ' ' + minutes % 60 + ' ' + declOfNum(minutes % 60, ['минута', 'минуты', 'минут']);
+            message += ' ' + minutes % 60 + ' ' + numberDeclension(minutes % 60, ['минута', 'минуты', 'минут']);
         }
         message += ' назад';
         return message;
@@ -82,9 +91,9 @@ function smartTime(time) {
 
     var days = Math.round(hours/24);
     if(days < 30) {
-        message = days + ' ' + declOfNum(days, ['день', 'дня', 'дней']);
+        message = days + ' ' + numberDeclension(days, ['день', 'дня', 'дней']);
         if (hours % 24 > 0) {
-            message += ' ' + hours % 24 + ' ' + declOfNum(hours % 24, ['час', 'часа', 'часов']);
+            message += ' ' + hours % 24 + ' ' + numberDeclension(hours % 24, ['час', 'часа', 'часов']);
         }
         message += ' назад';
         return message;
@@ -92,27 +101,29 @@ function smartTime(time) {
 
     var months = Math.round(days/30);
     if(months < 12) {
-        message = months + ' ' + declOfNum(months, ['месяц', 'месяца', 'месяцев']);
+        message = months + ' ' + numberDeclension(months, ['месяц', 'месяца', 'месяцев']);
         if (days % 30 > 0) {
-            message += ' ' + days % 30 + ' ' + declOfNum(days % 30, ['день', 'дня', 'дней']);
+            message += ' ' + days % 30 + ' ' + numberDeclension(days % 30, ['день', 'дня', 'дней']);
         }
         message += ' назад';
         return message;
     }
-    message = Math.round(months/12) + ' ' + declOfNum(months/12, ['год', 'года', 'лет']);
+    message = Math.round(months/12) + ' ' + numberDeclension(months/12, ['год', 'года', 'лет']);
     if (months % 12 > 0) {
-        message += ' ' + months % 12 + ' ' + declOfNum(months % 12, ['месяц', 'месяца', 'месяцев']);
+        message += ' ' + months % 12 + ' ' + numberDeclension(months % 12, ['месяц', 'месяца', 'месяцев']);
     }
     message += ' назад';
     return message;
 }
 
 /**
- * Функция склонения числительных
+ * Noun declension function according to a number
+ * @param number    number to incline
+ * @param cases     array of noun cases
  **/
-function declOfNum(number, titles) {
+function numberDeclension(number, cases) {
     cases = [2, 0, 1, 1, 1, 2];
-    return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
+    return cases[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
 }
 
 document.addEventListener('DOMContentLoaded', eventLogInit);
