@@ -33,7 +33,7 @@
 </nav>
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
         <div class="uk-grid" data-uk-grid-match>
-            <h1 class="uk-comment-title">События</h1>
+            <h1>События</h1>
             <div class="uk-panel uk-panel-box uk-width-1-1">
                 <dl class="uk-list uk-list-line uk-description-list-line" id="event-log">
                 </dl>
