@@ -125,6 +125,10 @@ public class DBManager {
 
         BasicDBObject searchQuery = new BasicDBObject().append("_id", new BasicDBObject("$oid", "56db4d4e9b78fde7268d7d40"));
         UpdateResult result = collection.updateOne(searchQuery, updateDocument);
-        System.out.println(result);
+        printlog(result);
+    }
+    private void printlog(Object log) {
+        System.out.println(">>>> DBManager.java >>>>");
+        System.out.println(log);
     }
 }

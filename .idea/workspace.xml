@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
     </list>
     <ignored path="mineme.iws" />
@@ -76,21 +77,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ins-handle.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ins-handle.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9297052">
-              <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
+            <state vertical-scroll-proportion="-20.071428">
+              <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="119" column="26" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.71428573">
+              <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,8 +177,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/add-event.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/index.js" />
-        <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
       </list>
     </option>
   </component>
@@ -968,13 +969,7 @@
       <workItem from="1458193060022" duration="1853000" />
       <workItem from="1458194939955" duration="339000" />
       <workItem from="1458198755285" duration="3107000" />
-      <workItem from="1458210502233" duration="2796000" />
-    </task>
-    <task id="LOCAL-00062" summary="Fixed a js bug">
-      <created>1457458254525</created>
-      <option name="number" value="00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1457458254525</updated>
+      <workItem from="1458210502233" duration="3385000" />
     </task>
     <task id="LOCAL-00063" summary="I can now insert values to mongoDB">
       <created>1457459905220</created>
@@ -1264,11 +1259,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458212776238</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Trying to fix">
+      <created>1458213307978</created>
+      <option name="number" value="00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1458213307978</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113748000" />
+    <option name="totallyTimeSpent" value="114337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1316,7 +1317,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Some DB structure changes. Start of developing of eventlog display on main page" />
     <MESSAGE value="DB structure changes fix" />
     <MESSAGE value="DB structure changes fix of a previous fix" />
     <MESSAGE value="Minor front-end fixes" />
@@ -1341,7 +1341,8 @@
     <MESSAGE value="Added tags to events! This idea is not done completly yet, but im getting closer every commit" />
     <MESSAGE value="Fixed yesterday's improvement" />
     <MESSAGE value="Tags now add to global tag storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tags now add to global tag storage" />
+    <MESSAGE value="Trying to fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1727,21 +1728,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="119" column="26" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-20.071428">
+          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9297052">
-          <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
-          <folding />
+        <state vertical-scroll-proportion="0.71428573">
+          <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
