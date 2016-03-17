@@ -4,7 +4,6 @@
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/ins-handle.jsp" />
     </list>
     <ignored path="mineme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,8 +89,8 @@
       <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71428573">
-              <caret line="129" column="80" selection-start-line="129" selection-start-column="80" selection-end-line="129" selection-end-column="80" />
+            <state vertical-scroll-proportion="0.73626375">
+              <caret line="130" column="33" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -969,13 +968,7 @@
       <workItem from="1458193060022" duration="1853000" />
       <workItem from="1458194939955" duration="339000" />
       <workItem from="1458198755285" duration="3107000" />
-      <workItem from="1458210502233" duration="3689000" />
-    </task>
-    <task id="LOCAL-00064" summary="I can now insert values to mongoDB">
-      <created>1457463055750</created>
-      <option name="number" value="00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1457463055750</updated>
+      <workItem from="1458210502233" duration="3947000" />
     </task>
     <task id="LOCAL-00065" summary="I can now insert values to mongoDB">
       <created>1457463619208</created>
@@ -1265,11 +1258,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458213891851</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="Trying to fix">
+      <created>1458214198631</created>
+      <option name="number" value="00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1458214198631</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114641000" />
+    <option name="totallyTimeSpent" value="114899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1738,8 +1737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71428573">
-          <caret line="129" column="80" selection-start-line="129" selection-start-column="80" selection-end-line="129" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.73626375">
+          <caret line="130" column="33" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
