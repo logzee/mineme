@@ -79,8 +79,8 @@
       <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+            <state relative-caret-position="357">
+              <caret line="79" column="81" selection-start-line="79" selection-start-column="81" selection-end-line="79" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -913,14 +913,7 @@
       <workItem from="1458239339675" duration="458000" />
       <workItem from="1458241084786" duration="106000" />
       <workItem from="1458241266237" duration="2487000" />
-      <workItem from="1458246294009" duration="1623000" />
-    </task>
-    <task id="LOCAL-00074" summary="Minor front-end fixes">
-      <created>1457537606409</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1457537606409</updated>
+      <workItem from="1458246294009" duration="1807000" />
     </task>
     <task id="LOCAL-00075" summary="Last events list on the main page now functional">
       <created>1457540752111</created>
@@ -1258,11 +1251,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458247689368</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Fixes are coming">
+      <created>1458247951541</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1458247951541</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121085000" />
+    <option name="totallyTimeSpent" value="121269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1708,8 +1708,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+        <state relative-caret-position="357">
+          <caret line="79" column="81" selection-start-line="79" selection-start-column="81" selection-end-line="79" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

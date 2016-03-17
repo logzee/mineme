@@ -77,7 +77,7 @@ public class DBManager {
                 Document event = sortedEventsIterator.next();
                 System.out.println(event);
                 ArrayList<Object> chain = (ArrayList<Object>) event.get("chain");
-                Integer eventType = (Integer) chain.toArray()[0];
+                Integer eventType = Integer.parseInt((String) chain.toArray()[0]);
                 if (eventType == 4 && ignoreHidden)
                     continue;
                 System.out.println("Not ignored");
