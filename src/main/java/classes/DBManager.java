@@ -8,7 +8,6 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.result.UpdateResult;
 import org.bson.Document;
 import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
@@ -61,7 +60,7 @@ public class DBManager {
      * Gets last events from the database
      *
      * @param count    how many events to get
-     * @return     last events in JSON format
+     * @return         last events in JSON format
      */
     public String getLastEventsJson(int count) {
         this.collection = db.getCollection("events");
@@ -112,6 +111,6 @@ public class DBManager {
         updateDocument.append("$set", new BasicDBObject().append("tags", tagsList));
 
         BasicDBObject searchQuery = new BasicDBObject().append("_id", new ObjectId("56db4d4e9b78fde7268d7d40"));
-        UpdateResult result = collection.updateOne(searchQuery, updateDocument);
+        collection.updateOne(searchQuery, updateDocument);
     }
 }
