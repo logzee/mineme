@@ -1,10 +1,11 @@
 <%@ page import="classes.DBManager" %>
 <%@ page import="com.google.common.io.CharStreams" %>
-<%@ page import="com.google.gson.Gson" %>
-<%@ page import="com.google.gson.JsonObject" %>
-<%@ page import="com.google.gson.JsonParser" %>
-<%@ page import="com.google.gson.JsonPrimitive" %>
 <%@ page import="java.util.Date" %>
+<%@ page import="com.google.gson.*" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.lang.reflect.Type" %>
+<%@ page import="com.google.gson.reflect.TypeToken" %>
+<%@ page import="java.util.Iterator" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -20,13 +21,10 @@
         }
         System.out.println(requestBody);
         /* Data example
-                     {
-                        "2016-03-06 20:40:00": {
-                            "chain": [ 0, 0, 10
-                            ],
-                            "tags": [ "Спорт", "Физкультура", "Здоровье"
-                            ]
-                        }
+                    {
+                        "chain" : [ "1", "4" ],
+                        "tags" : ["устал", "радость"],
+                        "date" : "1457545945177"
                     }
                 */
         Gson gson = new Gson();
@@ -35,12 +33,31 @@
         JsonParser parser = new JsonParser();
         JsonObject responseBodyJson = parser.parse(requestBody).getAsJsonObject();
 
-        responseBodyJson.add("date", new JsonPrimitive(timeStamp));
-
-        String result = gson.toJson(responseBodyJson); // TODO: 16.03.16 make this code able to add new tags to the event structure
-        System.out.println(result);
+        if (!responseBodyJson.has("date")) {
+            responseBodyJson.add("date", new JsonPrimitive(timeStamp));
+        }
 
         DBManager dbManager = new DBManager();
+
+        if (responseBodyJson.has("tags")) {
+            JsonArray tags = responseBodyJson.getAsJsonArray("tags");
+            Type listType = new TypeToken<List<String>>() {
+            }.getType();
+            List<String> eventTags = new Gson().fromJson(tags, listType);
+
+            List<String> dbTags = dbManager.getTags();
+            Iterator<String> eventTagsIterator = eventTags.iterator();
+
+            while (eventTagsIterator.hasNext()) {
+                String eventTag = eventTagsIterator.next();
+                if (dbTags.contains(eventTag))
+                    eventTagsIterator.remove();
+            }
+
+            dbManager.updateTags(eventTags);
+        }
+
+        String result = gson.toJson(responseBodyJson);
         dbManager.insertFromString(result);
     } catch (Exception e) {
         response.sendError(500, e.getClass().getSimpleName() + ": " + e.getMessage());
