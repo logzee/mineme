@@ -90,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6703297">
-              <caret line="127" column="69" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
+              <caret line="129" column="73" selection-start-line="129" selection-start-column="73" selection-end-line="129" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -968,13 +968,7 @@
       <workItem from="1458193060022" duration="1853000" />
       <workItem from="1458194939955" duration="339000" />
       <workItem from="1458198755285" duration="3107000" />
-      <workItem from="1458210502233" duration="4177000" />
-    </task>
-    <task id="LOCAL-00066" summary="Some DB structure changes. Start of developing of eventlog display on main page">
-      <created>1457468355408</created>
-      <option name="number" value="00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1457468355408</updated>
+      <workItem from="1458210502233" duration="4638000" />
     </task>
     <task id="LOCAL-00067" summary="DB structure changes fix">
       <created>1457468884578</created>
@@ -1264,11 +1258,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458214453905</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Trying to fix">
+      <created>1458214683405</created>
+      <option name="number" value="00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1458214683405</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115129000" />
+    <option name="totallyTimeSpent" value="115590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1738,7 +1738,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6703297">
-          <caret line="127" column="69" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
+          <caret line="129" column="73" selection-start-line="129" selection-start-column="73" selection-end-line="129" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
