@@ -62,7 +62,7 @@ public class DBManager {
      * @param count    how many events to get
      * @return         last events in JSON format
      */
-    public String getLastEventsJson(int count) {
+    public String getLastEventsJson(int count, boolean ignoreHidden) {
         this.collection = db.getCollection("events");
         JsonArray resultObject = new JsonArray();
         if (this.collection != null) {
@@ -73,6 +73,8 @@ public class DBManager {
             int i = 0;
             while(sortedEventsIterator.hasNext() && i < count) {
                 Document event = sortedEventsIterator.next();
+                if (event.containsKey("hidden") && ignoreHidden)
+                    continue;
                 JsonParser parser = new JsonParser();
                 resultObject.add(parser.parse(event.toJson()));
                 i++;

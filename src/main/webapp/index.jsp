@@ -23,7 +23,7 @@
 <%-- Server time in case if the client's time is incorrect --%>
 <div hidden id="server-timestamp"><%= new Date().getTime() %></div>
 <%--  List of last 10 events from MongoDB in JSON format --%>
-<div hidden id="last-events"><%= dbManager.getLastEventsJson(10) %></div>
+<div hidden id="last-events"><%= dbManager.getLastEventsJson(10, true) %></div>
 <%-- Data from MongoDB describing events structure for the JavaScript --%>
 <div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 
