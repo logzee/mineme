@@ -73,8 +73,10 @@ public class DBManager {
             int i = 0;
             while(sortedEventsIterator.hasNext() && i < count) {
                 Document event = sortedEventsIterator.next();
+                System.out.println(event);
                 if (event.containsKey("hidden") && ignoreHidden)
                     continue;
+                System.out.println("Not ignored");
                 JsonParser parser = new JsonParser();
                 resultObject.add(parser.parse(event.toJson()));
                 i++;
