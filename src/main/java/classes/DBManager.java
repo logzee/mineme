@@ -15,6 +15,7 @@ import com.google.gson.reflect.TypeToken;
 import org.bson.types.ObjectId;
 
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -75,7 +76,7 @@ public class DBManager {
             while(sortedEventsIterator.hasNext() && i < count) {
                 Document event = sortedEventsIterator.next();
                 System.out.println(event);
-                BsonArray chain = (BsonArray) event.get("chain");
+                ArrayList<Object> chain = (ArrayList<Object>) event.get("chain");
                 Integer eventType = (Integer) chain.toArray()[0];
                 if (eventType == 4 && ignoreHidden)
                     continue;
