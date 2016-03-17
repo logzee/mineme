@@ -1,3 +1,13 @@
+/**
+ * OK. First of all we take data about the events structure and the last 10 events from the hidden tags on the page.
+ * Now we have think I call "event chain" (array of numbers) which tells what kind of event is it. We go through it and interpret these numbers
+ * into words. Also, we format date by smartTime function so now we know how much time has passed since the event.
+ *
+ * Event string forming algorithm detail explanation.
+ * 1. It takes name of a type and then name of a subtype then name of a sub-subtype etc. as long as this "tree" exists in the structure.
+ *  1.1 These type names being concatenated to a result string.
+ * 2. When it gets a value that is unmatched in the structure it concatenates it as it is, because this is a value, not a type name. Range for a run, for example.
+ */
 function eventLogInit() {
     var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);
     var structRoot = JSON.parse(document.getElementById('struct-data').innerHTML).struct;
@@ -5,15 +15,15 @@ function eventLogInit() {
     var eventLogDl = document.getElementById('event-log');
 
     for(var i = 0; i < eventsData.length; i++) {
-        var dt = document.createElement('dt'); // событие
-        var dd = document.createElement('dd'); // время с момента события
+        var dt = document.createElement('dt');
+        var dd = document.createElement('dd');
 
         dd.innerHTML = formatDate(eventsData[i].date);
 
         var dtContent = '';
         var currentStruct = structRoot.value[eventsData[i].chain[0]];
         dtContent += currentStruct.title + '. ';
-        for (var j = 1; j < eventsData[i].chain.length; j++) { // тут мы берем цифры из цепочки событий
+        for (var j = 1; j < eventsData[i].chain.length; j++) {
 
             var chainItem = eventsData[i].chain[j];
             if (chainItem instanceof Array) {
@@ -21,7 +31,6 @@ function eventLogInit() {
                     dtContent += currentStruct.value[k].title + ': ' + chainItem[k] + '. ';
                 }
             } else {
-                // если следующий узел - массив (то есть это не конечный узел)
                 if (currentStruct.value instanceof Array) {
                     currentStruct = currentStruct.value[chainItem];
                     var title = currentStruct.title;
@@ -39,7 +48,11 @@ function eventLogInit() {
     }
 }
 
-
+/**
+ * Gets delta from event time and current time and passes it to the smartTime function
+ * @param timestamp     event time
+ * @returns {String}
+ */
 function formatDate(timestamp) {
     var currentTimestamp = parseInt(document.getElementById('server-timestamp').innerHTML);
     var eventTimestamp = parseInt(timestamp);
@@ -47,8 +60,13 @@ function formatDate(timestamp) {
     return smartTime(delta);
 }
 
-function smartTime(time) {
-    var seconds = time / 1000;
+/**
+ * Formats timestamp into a nice presentation
+ * @param timestamp
+ * @returns String
+ */
+function smartTime(timestamp) {
+    var seconds = timestamp / 1000;
     if (seconds < 60) {
         return 'Меньше минуты назад';
     }
@@ -98,7 +116,9 @@ function smartTime(time) {
 }
 
 /**
- * Функция склонения числительных
+ * Noun declension function according to a number
+ * @param number    number to incline
+ * @param titles    array of noun cases
  **/
 function declOfNum(number, titles) {
     cases = [2, 0, 1, 1, 1, 2];

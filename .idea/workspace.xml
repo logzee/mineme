@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" />
     </list>
     <ignored path="mineme.iws" />
@@ -80,7 +79,7 @@
       <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-315">
+            <state relative-caret-position="-1477">
               <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
               <folding />
             </state>
@@ -90,8 +89,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2247">
-              <caret line="107" column="60" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
+            <state relative-caret-position="609">
+              <caret line="120" column="20" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -911,14 +910,7 @@
       <workItem from="1458210502233" duration="5459000" />
       <workItem from="1458239339675" duration="458000" />
       <workItem from="1458241084786" duration="106000" />
-      <workItem from="1458241266237" duration="2257000" />
-    </task>
-    <task id="LOCAL-00069" summary="Minor front-end fixes">
-      <created>1457533857585</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1457533857586</updated>
+      <workItem from="1458241266237" duration="2451000" />
     </task>
     <task id="LOCAL-00070" summary="Minor front-end fixes">
       <created>1457534146637</created>
@@ -1256,11 +1248,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458243228743</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Fix">
+      <created>1458243533392</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1458243533392</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119232000" />
+    <option name="totallyTimeSpent" value="119426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1322,7 +1321,6 @@
     <MESSAGE value="Fix of a previous update" />
     <MESSAGE value="Some ui improvements" />
     <MESSAGE value="Added some docs" />
-    <MESSAGE value="Fix" />
     <MESSAGE value="Testing servlets" />
     <MESSAGE value="Reverting and fixing" />
     <MESSAGE value="Minor front-end fix" />
@@ -1335,7 +1333,8 @@
     <MESSAGE value="Tags now add to global tag storage" />
     <MESSAGE value="Trying to fix" />
     <MESSAGE value="Some docs translated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some docs translated" />
+    <MESSAGE value="Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1681,14 +1680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1705,10 +1696,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1477">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2247">
-          <caret line="107" column="60" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
+        <state relative-caret-position="609">
+          <caret line="120" column="20" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
           <folding />
         </state>
       </provider>
