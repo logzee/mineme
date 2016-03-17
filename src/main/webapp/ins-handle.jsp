@@ -27,13 +27,11 @@
                         "date" : "1457545945177"
                     }
                 */
-        Gson gson = new Gson();
-        String timeStamp = String.valueOf(new Date().getTime());
-
         JsonParser parser = new JsonParser();
         JsonObject responseBodyJson = parser.parse(requestBody).getAsJsonObject();
 
         if (!responseBodyJson.has("date")) {
+            String timeStamp = String.valueOf(new Date().getTime());
             responseBodyJson.add("date", new JsonPrimitive(timeStamp));
         }
 
@@ -57,7 +55,10 @@
             dbManager.updateTags(eventTags);
         }
 
+        Gson gson = new Gson();
         String result = gson.toJson(responseBodyJson);
+        System.out.println("ins-handle.jsp>>>>>>>>>>>>");
+        System.out.println(result);
         dbManager.insertFromString(result);
     } catch (Exception e) {
         response.sendError(500, e.getClass().getSimpleName() + ": " + e.getMessage());
