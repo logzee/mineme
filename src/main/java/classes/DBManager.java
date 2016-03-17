@@ -8,6 +8,7 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import org.bson.BsonArray;
 import org.bson.Document;
 import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
@@ -74,7 +75,9 @@ public class DBManager {
             while(sortedEventsIterator.hasNext() && i < count) {
                 Document event = sortedEventsIterator.next();
                 System.out.println(event);
-                if (event.containsKey("hidden") && ignoreHidden)
+                BsonArray chain = (BsonArray) event.get("chain");
+                Integer eventType = (Integer) chain.toArray()[0];
+                if (eventType == 4 && ignoreHidden)
                     continue;
                 System.out.println("Not ignored");
                 JsonParser parser = new JsonParser();
