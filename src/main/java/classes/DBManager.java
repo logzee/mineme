@@ -125,7 +125,7 @@ public class DBManager {
         updateDocument.append("$set", new BasicDBObject().append("tags", tagsList));
 
         printlog("Line 126");
-        BasicDBObject searchQuery = new BasicDBObject().append("_id", new BasicDBObject("$oid", "56db4d4e9b78fde7268d7d40"));
+        BasicDBObject searchQuery = new BasicDBObject().append("_id", "56db4d4e9b78fde7268d7d40");
         printlog("Line 127");
         printlog(searchQuery);
         printlog(updateDocument);
