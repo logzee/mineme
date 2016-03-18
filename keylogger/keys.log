@@ -1,0 +1,3 @@
+2016-03-18 23:23:40+0300 > This is an example of logkeys' log file
+2016-03-18 23:24:49+0300 > Logkeys is a program for linux that logs pressed keys. For me it starts on boot
+2016-03-18 23:24:50+0300 > I use crontab to run sendlogs.py every 10 minutes
