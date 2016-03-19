@@ -3,11 +3,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     DBManager dbManager = new DBManager();
-    boolean ignoreKeylogger = false;
+    boolean ignoreKeylogger = true;
+    String link = "<a href=\"event-list.jsp?show-keylogger\">Показать кейлоггер</a>";
 
-    String requestBody = request.getParameter("ignore-keylogger");
-    if (requestBody != null && !requestBody.isEmpty()) {
-        ignoreKeylogger = true;
+
+    String requestBody = request.getParameter("show-keylogger");
+    if (requestBody != null) {
+        ignoreKeylogger = false;
+        link = "<a href=\"event-list.jsp\">Спрятать кейлоггер</a>";
     }
 %>
 
@@ -42,7 +45,7 @@
         <h1 class="uk-margin-bottom">События</h1>
         <div class="uk-width-1-1" id="event-log">
             <ul class="uk-breadcrumb uk-margin-small-left">
-                <li><a href="event-list.jsp?ignore-keylogger=true">Спрятать кейлоггер</a></li>
+                <li><%= link %></li>
             </ul>
         </div>
     </div>

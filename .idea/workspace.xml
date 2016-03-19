@@ -29,8 +29,8 @@
       <file leaf-file-name="event-list.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/event-list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+            <state relative-caret-position="126">
+              <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -779,14 +779,7 @@
       <workItem from="1458241266237" duration="2487000" />
       <workItem from="1458246294009" duration="2576000" />
       <workItem from="1458326726682" duration="3987000" />
-      <workItem from="1458370944011" duration="5353000" />
-    </task>
-    <task id="LOCAL-00088" summary="Fix of previous commit">
-      <created>1457635966650</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1457635966650</updated>
+      <workItem from="1458370944011" duration="5786000" />
     </task>
     <task id="LOCAL-00089" summary="Auth is now 100% works.&#10;Minor front-end improvements">
       <created>1457636030984</created>
@@ -1124,11 +1117,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458378441589</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="Minor fix">
+      <created>1458378633685</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1458378633685</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131378000" />
+    <option name="totallyTimeSpent" value="131811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1178,7 +1178,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Some ui improvements" />
     <MESSAGE value="Added some docs" />
     <MESSAGE value="Testing servlets" />
     <MESSAGE value="Reverting and fixing" />
@@ -1203,7 +1202,8 @@
     <MESSAGE value="Testing event deleting from web interface" />
     <MESSAGE value="Event deleting from web interface now works" />
     <MESSAGE value="Now able to hide keylogger in event list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now able to hide keylogger in event list" />
+    <MESSAGE value="Minor fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1582,8 +1582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/event-list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+        <state relative-caret-position="126">
+          <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
           <folding />
         </state>
       </provider>
