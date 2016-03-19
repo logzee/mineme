@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="Event deleting from web interface now works">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/logzee.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/logzee.xml" />
+    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/event-list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/event-list.jsp" />
     </list>
@@ -30,8 +29,8 @@
       <file leaf-file-name="event-list.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/event-list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+            <state relative-caret-position="168">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -780,14 +779,7 @@
       <workItem from="1458241266237" duration="2487000" />
       <workItem from="1458246294009" duration="2576000" />
       <workItem from="1458326726682" duration="3987000" />
-      <workItem from="1458370944011" duration="4984000" />
-    </task>
-    <task id="LOCAL-00086" summary="Fix of previous commit">
-      <created>1457634485641</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1457634485641</updated>
+      <workItem from="1458370944011" duration="5173000" />
     </task>
     <task id="LOCAL-00087" summary="Fix of previous commit">
       <created>1457635108458</created>
@@ -1125,11 +1117,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458377254427</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="Now able to hide keylogger in event list">
+      <created>1458378290332</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1458378290332</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131009000" />
+    <option name="totallyTimeSpent" value="131198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1179,7 +1178,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix of a previous update" />
     <MESSAGE value="Some ui improvements" />
     <MESSAGE value="Added some docs" />
     <MESSAGE value="Testing servlets" />
@@ -1204,7 +1202,8 @@
     <MESSAGE value="Added keylogger scripts and updated readme" />
     <MESSAGE value="Testing event deleting from web interface" />
     <MESSAGE value="Event deleting from web interface now works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Event deleting from web interface now works" />
+    <MESSAGE value="Now able to hide keylogger in event list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now able to hide keylogger in event list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1583,8 +1582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/event-list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        <state relative-caret-position="168">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           <folding />
         </state>
       </provider>

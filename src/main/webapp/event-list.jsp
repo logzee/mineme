@@ -6,7 +6,7 @@
     boolean ignoreKeylogger = false;
 
     String requestBody = request.getParameter("ignore-keylogger");
-    if (!requestBody.isEmpty()) {
+    if (requestBody != null && !requestBody.isEmpty()) {
         ignoreKeylogger = true;
     }
 %>
