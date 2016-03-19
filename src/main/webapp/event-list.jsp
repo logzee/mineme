@@ -12,6 +12,15 @@
         ignoreKeylogger = false;
         link = "<a href=\"event-list.jsp\">Спрятать кейлоггер</a>";
     }
+
+    String script;
+    String login = "";
+    if (request.getRemoteUser() != null) {
+        script = "<script src=\"js/event-list-admin.js\" language=\"Javascript\" type=\"text/javascript\"></script>";
+    } else {
+        script = "<script src=\"js/event-list.js\" language=\"Javascript\" type=\"text/javascript\"></script>";
+        login = "<ul class=\"uk-navbar-nav uk-hidden-small uk-float-right\"><li><a href=\"login.jsp\">Войти</a></li></ul>";
+    }
 %>
 
 <!DOCTYPE HTML>
@@ -38,6 +47,7 @@
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
         <a class="uk-navbar-brand" href="index.jsp">MineMe</a>
+        <%= login %>
     </div>
 </nav>
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
@@ -50,6 +60,6 @@
         </div>
     </div>
 </div>
-<script src="js/event-list.js" language="Javascript" type="text/javascript"></script>
+<%= script %>
 </body>
 </html>

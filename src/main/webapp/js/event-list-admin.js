@@ -20,6 +20,11 @@ function eventLogInit() {
         var dl = document.createElement('dl');
         dl.setAttribute('class', 'uk-list uk-list-line uk-description-list-line uk-margin-remove');
 
+        var closeBtn = document.createElement('span');
+        closeBtn.setAttribute('class', 'uk-close uk-float-right uk-close-alt');
+        var id = eventsData[i]._id.$oid;
+        closeBtn.setAttribute('onclick', 'deleteEvent(this, "' + id + '");');
+
         var dt = document.createElement('dt');
         dt.setAttribute('class', 'uk-text-truncate');
 
@@ -58,7 +63,8 @@ function eventLogInit() {
             }
         }
         dt.innerHTML = dtContent.substring(0, dtContent.length - 2);
-        
+
+        wrapper.appendChild(closeBtn);
         dl.appendChild(dt);
         if (tagsWrapper != undefined) {
             dl.appendChild(tagsWrapper);
