@@ -8,6 +8,7 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.result.DeleteResult;
 import com.mongodb.util.JSON;
 import org.bson.BsonArray;
 import org.bson.Document;
@@ -126,10 +127,10 @@ public class DBManager {
 
     /**
      * Removes event
-     * @param eventIdJson   request body from client
+     * @param eventId  request body from client
      */
-    public void removeEvent(String eventIdJson) {
+    public void removeEvent(String eventId) {
         this.collection = db.getCollection("events");
-        collection.deleteOne((Bson) JSON.parse(eventIdJson));
+        collection.deleteOne(new BasicDBObject().append("_id", new ObjectId(eventId)));
     }
 }

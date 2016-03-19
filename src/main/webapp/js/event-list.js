@@ -84,12 +84,9 @@ function eventLogInit() {
 function deleteEvent(element, id) {
     UIkit.modal.confirm("Удалить событие?", function() {
         try {
-            var result = {
-                _id: id
-            };
             var xhr = new XMLHttpRequest();
             xhr.open('POST', 'remove-event.jsp', false);
-            xhr.send(JSON.stringify(result));
+            xhr.send(id);
             
             xhr.onreadystatechange = function() {
                 if (xhr.status == 200) {
