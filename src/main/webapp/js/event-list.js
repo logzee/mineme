@@ -87,14 +87,7 @@ function deleteEvent(element, id) {
             var xhr = new XMLHttpRequest();
             xhr.open('POST', 'remove-event.jsp', false);
             xhr.send(id);
-            
-            xhr.onreadystatechange = function() {
-                if (xhr.status == 200) {
-                    element.parentElement.remove();
-                } else {
-                    // ukAlert("Ошибка при удалении. Код " + xhr.status + ": " + xhr.statusText, 'uk-alert-danger');
-                }
-            }
+            element.parentElement.remove();
         } catch (ignored) {}
     });
 }
