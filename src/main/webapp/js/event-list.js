@@ -87,14 +87,18 @@ function deleteEvent(element, id) {
             var xhr = new XMLHttpRequest();
             xhr.open('POST', 'remove-event.jsp', false);
             xhr.send(id);
-            element.parentElement.remove();
+            if (xhr.status != 200) {
+                UIkit.modal.alert("Ошибка при удалении: " + xhr.status + ", " + xhr.response);
+            } else {
+                element.parentElement.remove();
+            }
         } catch (ignored) {}
     });
 }
 
 /**
- * Gets delta from event time and current time and passes it to the smartTime function
- * @param timestamp     event time
+ * Formats date
+ * @param timestamp     event timestamp
  * @returns {String}
  */
 function formatDate(timestamp) {
@@ -108,7 +112,7 @@ function formatDate(timestamp) {
 }
 
 /**
- * Formats timestamp into a nice presentation
+ * Formats passed time
  * @param timestamp
  * @returns String
  */

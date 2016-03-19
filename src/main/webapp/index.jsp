@@ -70,6 +70,7 @@
     <h2>Биоритмы</h2>
     <p>Здесь будут графики, например</p>
     <img src="img/plot-example.png" width="100%"/>
+    <p><%= request.getRemoteUser() %></p>
 </div>
 <script src="js/index.js" language="Javascript" type="text/javascript"></script>
 </body>
