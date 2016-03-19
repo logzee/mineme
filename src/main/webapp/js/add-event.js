@@ -1,18 +1,14 @@
-// инициализация структуры событий
-var structData = JSON.parse(document.getElementById('struct-data').innerHTML);
-var struct = structData.struct;
-
+// some data initialization
+var struct = JSON.parse(document.getElementById('struct-data').innerHTML).struct;
 var formWrapper = document.getElementById('form-wrapper');
-
 var structChain = [];
-
 var currentNode = struct;
 
-
-
 /**
- * Вызывается при смене значения в форме
- **/
+ * Called when input value changes
+ *
+ * @param form      html element which has called the function
+ */
 function updateForm(form) {
     var eventNumber = form.value;
 
@@ -41,8 +37,10 @@ function updateForm(form) {
     }
 }
 
-/*
- Добавляет новый текстовой input, принимает структуру как аргумент
+/**
+ * Adds a new text input
+ *
+ * @param itemStruct    event structure of selected event
  */
 function addTextInput(itemStruct) {
     var input = document.createElement('input');
@@ -65,8 +63,10 @@ function addTextInput(itemStruct) {
     formWrapper.appendChild(input);
 }
 
-/*
- Добавляет несколько текстовых полей для структуры list
+/**
+ * Adds multiple text fields for the list struct
+ *
+ * @param listStruct
  */
 function addListInput(listStruct) {
     var wrapper = document.createElement('div');
@@ -74,7 +74,7 @@ function addListInput(listStruct) {
     for (var i = 0; i < listStruct.value.length; i++) {
         var itemStruct = listStruct.value[i];
         var field;
-        if (itemStruct.dataType=="input") { // если input, то остальные типы исключаются (вроде subtypes)
+        if (itemStruct.dataType=="input") {
             field = document.createElement('input');
             field.setAttribute('class', 'input-value');
             field.setAttribute('type', 'text');
@@ -142,6 +142,7 @@ function addDropdownInput(itemStruct) {
  * Returns structure of the event type from struct by its number and nesting level
  *
  * @param eventNumber     index number of the event type
+ * @return currentNode      structure of requested event type
  */
 function getEventStruct(eventNumber) {
     structChain.push(eventNumber);
@@ -159,7 +160,9 @@ function getEventStruct(eventNumber) {
 }
 
 /**
- * Removes all inputs under the input, which is passed as the argument
+ * Removes all inputs under the input, which has passed as the argument
+ *
+ * @param input
  */
 function clearBelow(input) {
     // определяем индекс input'a
@@ -227,23 +230,26 @@ function dropDownInit() {
  * Sends data to the server
  */
 function sendData() {
-    var tags = document.getElementById('tags');
-    tags = tags.value.split(/, */);
-    var validTags = [];
-    for (var i = 0; i < tags.length; i++) {
-        if (!isBlank(tags[i])) {
-            validTags.push(tags[i].toLowerCase());
-        }
-    }
-    alert(JSON.stringify(validTags));
+    // getting data from the forms
     var values = document.getElementsByClassName('input-value');
+    var xhr = new XMLHttpRequest();
     var resultData = structChain;
 
-    // data validation
+    var tags = document.getElementById('tags');
+    tags = tags.value.split(/, */);
+
+    // validating data
     var inputsData = [];
     for (var i = 0; i < values.length; i++) {
         if (!isBlank(values[i].value)) {
             inputsData.push(values[i].value);
+        }
+    }
+
+    var validTags = [];
+    for (var i = 0; i < tags.length; i++) {
+        if (!isBlank(tags[i])) {
+            validTags.push(tags[i].toLowerCase());
         }
     }
 
@@ -261,9 +267,9 @@ function sendData() {
 
     var result = {
         chain: resultData,
-        tags: []
+        tags: validTags
     };
-    var xhr = new XMLHttpRequest();
+    ukAlert("Запись добавлена успешно");
     xhr.open('POST', 'ins-handle.jsp', false);
     xhr.send(JSON.stringify(result));
     xhr.onreadystatechange = function() {
@@ -277,8 +283,10 @@ function sendData() {
     }
 }
 
-/*
- Checks if string is blank, null, undefined or has no characters but spaces
+/**
+ * Checks if string is blank, null, undefined or has no characters but spaces
+ *
+ * @return boolean
  */
 function isBlank(str) {
     return (!str || /^\s*$/.test(str));
