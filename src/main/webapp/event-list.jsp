@@ -39,7 +39,6 @@
 </nav>
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
     <div class="uk-grid" data-uk-grid-match>
-        <a href="event-list.jsp?ignore-keylogger=true" class="uk-float-right">Спрятать кейлоггер</a>
         <h1 class="uk-margin-bottom">События</h1>
         <div class="uk-width-1-1" id="event-log">
             <ul class="uk-breadcrumb uk-margin-small-left">
