@@ -18,11 +18,12 @@ function eventLogInit() {
         var wrapper = document.createElement('div');
         wrapper.setAttribute('class', 'uk-panel uk-panel-box uk-margin-small');
         var dl = document.createElement('dl');
-        dl.setAttribute('class', 'uuk-list uk-list-line uk-description-list-line uk-margin-remove');
+        dl.setAttribute('class', 'uk-list uk-list-line uk-description-list-line uk-margin-remove');
 
-        var closeBtn = document.createElement('a');
+        var closeBtn = document.createElement('span');
         closeBtn.setAttribute('class', 'uk-close uk-float-right uk-close-alt');
-        closeBtn.setAttribute('href', '');
+        var id = eventsData[i]._id.$oid;
+        closeBtn.setAttribute('onclick', 'deleteEvent(this, "' + id + '");');
 
         var dt = document.createElement('dt');
         dt.setAttribute('class', 'uk-text-truncate');
@@ -73,6 +74,32 @@ function eventLogInit() {
 
         eventLogDl.appendChild(wrapper);
     }
+}
+
+/**
+ * Called when user request deletion
+ * @param element     element that represents event
+ * @param id          id of the event
+ */
+function deleteEvent(element, id) {
+    UIkit.modal.confirm("Удалить событие?", function() {
+        try {
+            var result = {
+                _id: id
+            };
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'remove-event.jsp', false);
+            xhr.send(JSON.stringify(result));
+            
+            xhr.onreadystatechange = function() {
+                if (xhr.status == 200) {
+                    element.parentElement.remove();
+                } else {
+                    // ukAlert("Ошибка при удалении. Код " + xhr.status + ": " + xhr.statusText, 'uk-alert-danger');
+                }
+            }
+        } catch (ignored) {}
+    });
 }
 
 /**

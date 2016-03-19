@@ -8,10 +8,12 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.util.JSON;
 import org.bson.BsonArray;
 import org.bson.Document;
 import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
+import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 
 import java.net.UnknownHostException;
@@ -120,5 +122,14 @@ public class DBManager {
 
         BasicDBObject searchQuery = new BasicDBObject().append("_id", new ObjectId("56db4d4e9b78fde7268d7d40"));
         collection.updateOne(searchQuery, updateDocument);
+    }
+
+    /**
+     * Removes event
+     * @param eventIdJson   request body from client
+     */
+    public void removeEvent(String eventIdJson) {
+        this.collection = db.getCollection("events");
+        collection.deleteOne((Bson) JSON.parse(eventIdJson));
     }
 }
