@@ -285,7 +285,7 @@ function sendData() {
         var currentMonth = currentDate.getMonth();
         var currentDay = currentDate.getDate();
 
-        result.date = new Date(currentYear, currentMonth, currentDay, parseInt(hour), parseInt(minute)).getTime();
+        result.date = new Date(currentYear, currentMonth, currentDay, parseInt(hour), parseInt(minute)).getTime().toString();
     }
 
     xhr.open('POST', 'ins-handle.jsp', false);

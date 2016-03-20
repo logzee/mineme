@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
+    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="Finally">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/add-event.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
     </list>
@@ -59,8 +59,8 @@
       <file leaf-file-name="add-event.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="291" column="33" selection-start-line="291" selection-start-column="33" selection-end-line="291" selection-end-column="33" />
+            <state relative-caret-position="455">
+              <caret line="287" column="124" selection-start-line="287" selection-start-column="124" selection-end-line="287" selection-end-column="124" />
               <folding />
             </state>
           </provider>
@@ -797,14 +797,7 @@
       <workItem from="1458246294009" duration="2576000" />
       <workItem from="1458326726682" duration="3987000" />
       <workItem from="1458370944011" duration="8764000" />
-      <workItem from="1458497497149" duration="5976000" />
-    </task>
-    <task id="LOCAL-00100" summary="Testing servlets">
-      <created>1457895644254</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1457895644255</updated>
+      <workItem from="1458497497149" duration="7211000" />
     </task>
     <task id="LOCAL-00101" summary="Reverting and fixing">
       <created>1457895957501</created>
@@ -1142,11 +1135,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458503134504</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="Finally">
+      <created>1458503478374</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1458503478374</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140765000" />
+    <option name="totallyTimeSpent" value="142000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1600,8 +1600,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="291" column="33" selection-start-line="291" selection-start-column="33" selection-end-line="291" selection-end-column="33" />
+        <state relative-caret-position="455">
+          <caret line="287" column="124" selection-start-line="287" selection-start-column="124" selection-end-line="287" selection-end-column="124" />
           <folding />
         </state>
       </provider>
