@@ -275,8 +275,8 @@ function sendData() {
         var hour;
         var minute;
         try {
-            hour = parseInt(timePicker.value.split(":")[0]);
-            minute = parseInt(timePicker.value.split(":")[1]);
+            hour = timePicker.value.split(":")[0];
+            minute = timePicker.value.split(":")[1];
             if (isBlank(hour) || isBlank(minute)) {
                 throw new Error();
             }
@@ -290,7 +290,7 @@ function sendData() {
         var currentMonth = currentDate.getMonth();
         var currentDay = currentDate.getDate();
 
-        result.date = new Date(currentYear, currentMonth, currentDay, hour, minute).getTime();
+        result.date = new Date(currentYear, currentMonth, currentDay, parseInt(hour), parseInt(minute)).getTime();
     }
 
     xhr.open('POST', 'ins-handle.jsp', false);
