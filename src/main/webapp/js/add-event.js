@@ -19,8 +19,7 @@ function updateForm(form) {
     var dataType;
     try {
         dataType = targetStruct.dataType;
-    } catch (ignored) {
-    }
+    } catch (ignored) { }
     switch (dataType) {
         case "enum":
             addDropdownInput(targetStruct);
@@ -269,6 +268,31 @@ function sendData() {
         chain: resultData,
         tags: validTags
     };
+
+    // checking if date is set or not
+    var timePicker = document.getElementById('time-picker');
+    if (!isBlank(timePicker.value)) {
+        function checkDatetime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+        try {
+            var hour = timePicker.value.split(":")[0];
+            var minute = timePicker.value.split(":")[1];
+        } catch (cannotReadPropertyFromUndefined) {
+            ukAlert('Ошибка при вводе даты', 'uk-alert-warning');
+            return;
+        }
+        var currentDate = new Date();
+        var currentYear = currentDate.getFullYear();
+        var currentMonth = checkDatetime(currentDate.getMonth()+1);
+        var currentDay = checkDatetime(currentDate.getDate());
+
+        result.date = new Date(currentYear, currentMonth, currentDay, hour, minute, '00');
+    }
+
     ukAlert("Запись добавлена успешно");
     xhr.open('POST', 'ins-handle.jsp', false);
     xhr.send(JSON.stringify(result));
