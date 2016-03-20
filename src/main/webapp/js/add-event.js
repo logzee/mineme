@@ -332,6 +332,11 @@ function ukAlert(message, htmlClass) {
     ukAlert.appendChild(p);
 
     var alertWrapper = document.getElementById('alert-wrapper');
-    alertWrapper.innerHTML = "";
+    alertWrapper.innerHTML = '';
     alertWrapper.appendChild(ukAlert);
+}
+
+function clearTagsAndTime() {
+    document.getElementById('time-picker').value = '';
+    document.getElementById('tags').value = '';
 }

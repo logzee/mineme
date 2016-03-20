@@ -48,7 +48,7 @@
                 </div>
                 <div class="uk-form-row">
                     <a class="uk-button uk-button-primary uk-margin-small-top" onclick="sendData()"><i class="fa fa-floppy-o"></i> Сохранить событие</a>
-                    <a class="uk-button uk-button-danger uk-margin-small-top" href="index.jsp"><i class="fa fa-ban"></i> Отменить</a>
+                    <a class="uk-button uk-button-danger uk-margin-small-top" onclick="clearTagsAndTime()"><i class="fa fa-refresh"></i> Очистить</a>
                 </div>
             </fieldset>
         </form>
