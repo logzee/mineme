@@ -290,14 +290,12 @@ function sendData() {
 
     xhr.open('POST', 'ins-handle.jsp', false);
     xhr.send(JSON.stringify(result));
-    xhr.onreadystatechange = function() {
-        if (xhr.status == 200) {
-            ukAlert("Запись добавлена успешно");
-        } else {
-            var debug = document.getElementById('response-debug');
-            debug.innerHTML = xhr.responseText;
-            ukAlert("Ошибка при добавлении. Код " + xhr.status + ": " + xhr.statusText, 'uk-alert-danger');
-        }
+    if (xhr.status == 200) {
+        ukAlert("Запись добавлена успешно");
+    } else {
+        var debug = document.getElementById('response-debug');
+        debug.innerHTML = xhr.responseText;
+        ukAlert("Ошибка при добавлении. Код " + xhr.status + ": " + xhr.statusText, 'uk-alert-danger');
     }
 }
 

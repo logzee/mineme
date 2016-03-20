@@ -59,8 +59,8 @@
       <file leaf-file-name="add-event.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="288" column="5" selection-start-line="288" selection-start-column="5" selection-end-line="288" selection-end-column="5" />
+            <state relative-caret-position="413">
+              <caret line="291" column="33" selection-start-line="291" selection-start-column="33" selection-end-line="291" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -797,14 +797,7 @@
       <workItem from="1458246294009" duration="2576000" />
       <workItem from="1458326726682" duration="3987000" />
       <workItem from="1458370944011" duration="8764000" />
-      <workItem from="1458497497149" duration="5629000" />
-    </task>
-    <task id="LOCAL-00099" summary="Testing servlets">
-      <created>1457895246459</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1457895246459</updated>
+      <workItem from="1458497497149" duration="5976000" />
     </task>
     <task id="LOCAL-00100" summary="Testing servlets">
       <created>1457895644254</created>
@@ -1142,11 +1135,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458502817226</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="Finally">
+      <created>1458503134504</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1458503134504</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140418000" />
+    <option name="totallyTimeSpent" value="140765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1600,8 +1600,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="288" column="5" selection-start-line="288" selection-start-column="5" selection-end-line="288" selection-end-column="5" />
+        <state relative-caret-position="413">
+          <caret line="291" column="33" selection-start-line="291" selection-start-column="33" selection-end-line="291" selection-end-column="33" />
           <folding />
         </state>
       </provider>
