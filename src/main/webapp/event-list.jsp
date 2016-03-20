@@ -4,22 +4,20 @@
 <%
     DBManager dbManager = new DBManager();
     boolean ignoreKeylogger = true;
-    String link = "<a href=\"event-list.jsp?show-keylogger\">Показать кейлоггер</a>";
+    String showKeyloggerLink = "<a href=\"event-list.jsp?show-keylogger\">Показать кейлоггер</a>";
 
 
     String requestBody = request.getParameter("show-keylogger");
     if (requestBody != null) {
         ignoreKeylogger = false;
-        link = "<a href=\"event-list.jsp\">Спрятать кейлоггер</a>";
+        showKeyloggerLink = "<a href=\"event-list.jsp\">Спрятать кейлоггер</a>";
     }
 
     String script;
-    String login = "";
     if (request.getRemoteUser() != null) {
         script = "<script src=\"js/event-list-admin.js\" language=\"Javascript\" type=\"text/javascript\"></script>";
     } else {
         script = "<script src=\"js/event-list.js\" language=\"Javascript\" type=\"text/javascript\"></script>";
-        login = "<ul class=\"uk-navbar-nav uk-hidden-small uk-float-right\"><li><a href=\"login.jsp\">Войти</a></li></ul>";
     }
 %>
 
@@ -47,7 +45,6 @@
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
         <a class="uk-navbar-brand" href="index.jsp">MineMe</a>
-        <%= login %>
     </div>
 </nav>
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
@@ -55,7 +52,7 @@
         <h1 class="uk-margin-bottom">События</h1>
         <div class="uk-width-1-1" id="event-log">
             <ul class="uk-breadcrumb uk-margin-small-left">
-                <li><%= link %></li>
+                <li><%= showKeyloggerLink %></li>
             </ul>
         </div>
     </div>
