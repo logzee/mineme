@@ -3,11 +3,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     DBManager dbManager = new DBManager();
-
-    String login = "";
-    if (request.getRemoteUser() == null) {
-        login = "<ul class=\"uk-navbar-nav uk-hidden-small uk-float-right\"><li><a href=\"login.jsp\">Войти</a></li></ul>";
-    }
 %>
 
 <!DOCTYPE HTML>
@@ -38,7 +33,6 @@
         <ul class="uk-navbar-nav">
             <li><a href="add-event.jsp">Добавить событие</a></li>
         </ul>
-        <%= login %>
     </div>
 </nav>
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">

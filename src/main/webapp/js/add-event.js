@@ -290,14 +290,12 @@ function sendData() {
         }
         var currentDate = new Date();
         var currentYear = currentDate.getFullYear();
-        var currentMonth = checkDatetime(currentDate.getMonth()+1);
+        var currentMonth = checkDatetime(currentDate.getMonth());
         var currentDay = checkDatetime(currentDate.getDate());
 
-        result.date = new Date(currentYear, currentMonth, currentDay, hour, minute, '00').getTime();
+        result.date = new Date(currentYear.toString(), currentMonth.toString(), currentDay.toString(), hour, minute, '00').getTime();
     }
 
-    alert(JSON.stringify(result));
-    ukAlert("Запись добавлена успешно");
     xhr.open('POST', 'ins-handle.jsp', false);
     xhr.send(JSON.stringify(result));
     xhr.onreadystatechange = function() {
