@@ -292,6 +292,7 @@ function sendData() {
     xhr.send(JSON.stringify(result));
     if (xhr.status == 200) {
         ukAlert("Запись добавлена успешно");
+        clearTagsAndTime();
     } else {
         var debug = document.getElementById('response-debug');
         debug.innerHTML = xhr.responseText;
