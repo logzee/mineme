@@ -281,6 +281,9 @@ function sendData() {
         try {
             var hour = timePicker.value.split(":")[0];
             var minute = timePicker.value.split(":")[1];
+            if (isBlank(hour) || isBlank(minute)) {
+                throw new Error();
+            }
         } catch (cannotReadPropertyFromUndefined) {
             ukAlert('Ошибка при вводе даты', 'uk-alert-warning');
             return;
@@ -290,7 +293,7 @@ function sendData() {
         var currentMonth = checkDatetime(currentDate.getMonth()+1);
         var currentDay = checkDatetime(currentDate.getDate());
 
-        result.date = new Date(currentYear, currentMonth, currentDay, hour, minute, '00');
+        result.date = new Date(currentYear, currentMonth, currentDay, hour, minute, '00').getTime();
     }
 
     ukAlert("Запись добавлена успешно");
