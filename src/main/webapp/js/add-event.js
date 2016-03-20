@@ -272,15 +272,10 @@ function sendData() {
     // checking if date is set or not
     var timePicker = document.getElementById('time-picker');
     if (!isBlank(timePicker.value)) {
-        var hour;
-        var minute;
-        try {
-            hour = timePicker.value.split(":")[0];
-            minute = timePicker.value.split(":")[1];
-            if (isBlank(hour) || isBlank(minute)) {
-                throw new Error();
-            }
-        } catch (cannotReadPropertyFromUndefined) {
+        var hour = timePicker.value.split(":")[0];
+        var minute = timePicker.value.split(":")[1];
+
+        if (isBlank(hour) || isBlank(minute)) {
             ukAlert('Ошибка при вводе даты', 'uk-alert-warning');
             return;
         }
