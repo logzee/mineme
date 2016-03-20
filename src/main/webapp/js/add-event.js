@@ -296,6 +296,7 @@ function sendData() {
         result.date = new Date(currentYear, currentMonth, currentDay, hour, minute, '00').getTime();
     }
 
+    alert(JSON.stringify(result));
     ukAlert("Запись добавлена успешно");
     xhr.open('POST', 'ins-handle.jsp', false);
     xhr.send(JSON.stringify(result));
