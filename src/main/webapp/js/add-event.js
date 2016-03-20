@@ -272,15 +272,11 @@ function sendData() {
     // checking if date is set or not
     var timePicker = document.getElementById('time-picker');
     if (!isBlank(timePicker.value)) {
-        function checkDatetime(i) {
-            if (i < 10) {
-                i = "0" + i;
-            }
-            return i;
-        }
+        var hour;
+        var minute;
         try {
-            var hour = timePicker.value.split(":")[0];
-            var minute = timePicker.value.split(":")[1];
+            hour = parseInt(timePicker.value.split(":")[0]);
+            minute = parseInt(timePicker.value.split(":")[1]);
             if (isBlank(hour) || isBlank(minute)) {
                 throw new Error();
             }
@@ -288,12 +284,13 @@ function sendData() {
             ukAlert('Ошибка при вводе даты', 'uk-alert-warning');
             return;
         }
+
         var currentDate = new Date();
         var currentYear = currentDate.getFullYear();
-        var currentMonth = checkDatetime(currentDate.getMonth());
-        var currentDay = checkDatetime(currentDate.getDate());
+        var currentMonth = currentDate.getMonth();
+        var currentDay = currentDate.getDate();
 
-        result.date = new Date(currentYear.toString(), currentMonth.toString(), currentDay.toString(), hour, minute, '00').getTime();
+        result.date = new Date(currentYear, currentMonth, currentDay, hour, minute).getTime();
     }
 
     xhr.open('POST', 'ins-handle.jsp', false);
