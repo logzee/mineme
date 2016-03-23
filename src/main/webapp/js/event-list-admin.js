@@ -85,7 +85,7 @@ function deleteEvent(element, id) {
     UIkit.modal.confirm("Удалить событие?", function() {
         try {
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'remove-event.jsp', false);
+            xhr.open('POST', 'data?removeEvent', false);
             xhr.send(id);
             if (xhr.status != 200) {
                 UIkit.modal.alert("Ошибка при удалении: " + xhr.status + ", " + xhr.response);
