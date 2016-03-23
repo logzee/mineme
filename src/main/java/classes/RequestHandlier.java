@@ -5,6 +5,7 @@ import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -113,6 +114,7 @@ public class RequestHandlier extends HttpServlet {
         Long msAgo = Long.parseLong(request.getParameter("msAgo"));
 
         DBManager dbManager = new DBManager();
-        response.getWriter().print(dbManager.getEventsOfAType(typeChain, msAgo));
+        String jsonResponse = dbManager.getEventsOfAType(typeChain, msAgo);
+        response.getOutputStream().write(jsonResponse.getBytes("UTF-8"));
     }
 }

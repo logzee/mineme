@@ -144,15 +144,17 @@ public class DBManager {
         this.collection = db.getCollection("events");
         JsonArray resultJson = new JsonArray();
         JsonParser parser = new JsonParser();
-        FindIterable<Document> eventsDoc = collection.find();
-        Iterator<Document> eventsIterator = eventsDoc.iterator();
-        long currentTimestamp = new Date().getTime();
-        eventsIter: while (eventsIterator.hasNext()) {
+
+        Document sortPattern = new Document("date", -1);
+        FindIterable<Document> eventsSortedByDate = collection.find().sort(sortPattern);
+        Iterator<Document> eventsIterator = eventsSortedByDate.iterator();
+
+        Long currentTimestamp = new Date().getTime();
+        eventListIteration: while (eventsIterator.hasNext()) {
             Document event = eventsIterator.next();
             if (Long.parseLong(event.get("date").toString()) < currentTimestamp - msAgo) {
                 break;
             }
-
             ArrayList<Object> chain = (ArrayList<Object>) event.get("chain");
 
             Object[] chainFromDb = chain.toArray();
@@ -160,7 +162,7 @@ public class DBManager {
             for (int i = 0; i < minLength; i++) {
                 int eventTypeFromDb = Integer.parseInt(chainFromDb[i].toString());
                 if (eventTypeFromDb != chainFromClient[i]) {
-                    continue eventsIter;
+                    continue eventListIteration;
                 }
             }
             resultJson.add(parser.parse(event.toJson()));
