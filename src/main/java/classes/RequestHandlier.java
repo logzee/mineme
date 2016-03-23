@@ -1,6 +1,7 @@
 package classes;
 
 import com.google.common.io.CharStreams;
+import com.google.common.primitives.Booleans;
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 
@@ -85,7 +86,14 @@ public class RequestHandlier extends HttpServlet {
             count = 8;
         }
         if (count>0) {
-            String lastEventsJson = dbManager.getLastEventsJson(count, true);
+            Boolean ignoreKeylogger;
+            if (request.getParameter("ignoreKeylogger") != null) {
+                ignoreKeylogger = Boolean.valueOf(request.getParameter("ignoreKeylogger"));
+            } else {
+                ignoreKeylogger = true;
+            }
+
+            String lastEventsJson = dbManager.getLastEventsJson(count, ignoreKeylogger);
             response.getOutputStream().write(lastEventsJson.getBytes("UTF-8"));
         }
     }

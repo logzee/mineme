@@ -14,7 +14,11 @@ function eventLogInit() {
     xhr.send();
     var structRoot = JSON.parse(xhr.responseText).struct;
     
-    xhr.open('GET', 'data?method=getLastEvents&count=8', false);
+    var ignoreKeylogger = getRequestParam('ignoreKeylogger');
+    if (ignoreKeylogger != undefined && ignoreKeylogger != 'false') {
+        ignoreKeylogger = true;
+    }
+    xhr.open('GET', 'data?method=getLastEvents&count=100&ignoreKeylogger=' + ignoreKeylogger, false);
     xhr.send();
     var eventsData = JSON.parse(xhr.responseText);
 
@@ -74,6 +78,16 @@ function eventLogInit() {
 
         eventLogDl.appendChild(wrapper);
     }
+}
+
+/**
+ * Gets "GET" request params
+ * @param name     name of the param
+ * @returns {string}    value of the param
+ */
+function getRequestParam(name){
+    if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+        return decodeURIComponent(name[1]);
 }
 
 /**

@@ -4,10 +4,10 @@
 <%
     DBManager dbManager = new DBManager();
     boolean ignoreKeylogger = true;
-    String showKeyloggerLink = "<a href=\"event-list.jsp?show-keylogger\">Показать кейлоггер</a>";
+    String showKeyloggerLink = "<a href=\"event-list.jsp?ignoreKeylogger=false\">Показать кейлоггер</a>";
 
 
-    String requestBody = request.getParameter("show-keylogger");
+    String requestBody = request.getParameter("ignoreKeylogger");
     if (requestBody != null) {
         ignoreKeylogger = false;
         showKeyloggerLink = "<a href=\"event-list.jsp\">Спрятать кейлоггер</a>";
