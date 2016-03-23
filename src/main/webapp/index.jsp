@@ -69,7 +69,7 @@
     <hr>
     <h2>Биоритмы</h2>
     <p>Здесь будут графики, например</p>
-    <img src="img/plot-example.png" width="100%"/>
+    <div id="chart_div"></div>
 </div>
 <script src="js/index.js" language="Javascript" type="text/javascript"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
