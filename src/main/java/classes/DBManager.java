@@ -11,6 +11,7 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.util.JSON;
 import org.bson.BsonArray;
+import org.bson.BsonInt32;
 import org.bson.Document;
 import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
@@ -151,11 +152,13 @@ public class DBManager {
             if (Long.parseLong(event.get("date").toString()) + msAgo > currentTimestamp) {
                 break;
             }
-            BsonArray chainBson = (BsonArray) event.get("chain");
-            Object[] chainFromDb = chainBson.toArray();
+
+            ArrayList<Object> chain = (ArrayList<Object>) event.get("chain");
+
+            Object[] chainFromDb = chain.toArray();
             int minLength = chainFromDb.length < chainFromClient.length ? chainFromDb.length : chainFromClient.length;
             for (int i = 0; i < minLength; i++) {
-                int eventTypeFromDb = Integer.parseInt(chainFromDb[i].toString());
+                int eventTypeFromDb = (Integer) chainFromDb[i];
                 if (eventTypeFromDb != chainFromClient[i]) {
                     continue eventsIter;
                 }
