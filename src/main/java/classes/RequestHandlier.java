@@ -60,6 +60,8 @@ public class RequestHandlier extends HttpServlet {
                     getEventByType(request, response);
                 } else if (requestedMethod.equalsIgnoreCase("getEventTypesStruct")) {
                     getEventTypesStruct(response);
+                } else if (requestedMethod.equalsIgnoreCase("getLastEvents")) {
+                    getLastEvents(request, response);
                 }
             } else {
                 response.sendError(400, "Unknown method");
@@ -70,7 +72,26 @@ public class RequestHandlier extends HttpServlet {
     }
 
     /**
-     * Sends structure of event types
+     * Sends last x events to the client
+     * @param request   client's request
+     * @param response  server's response
+     * @throws IOException
+     */
+    private void getLastEvents(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Integer count;
+        try {
+            count = Integer.parseInt(request.getParameter("count"));
+        } catch (NumberFormatException e) {
+            count = 8;
+        }
+        if (count>0) {
+            String lastEventsJson = dbManager.getLastEventsJson(count, true);
+            response.getOutputStream().write(lastEventsJson.getBytes("UTF-8"));
+        }
+    }
+
+    /**
+     * Sends structure of event types to the client
      * @param response  link to servlet response
      */
     private void getEventTypesStruct(HttpServletResponse response) throws IOException {

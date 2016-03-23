@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/add-event.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/event-list-admin.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/event-list-admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java" afterPath="$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/event-list.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/event-list.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" />
     </list>
     <ignored path="mineme.iws" />
@@ -31,28 +32,38 @@
       <file leaf-file-name="event-list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/event-list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
+            <state relative-caret-position="336">
               <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event-list.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="event-list.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/event-list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+            <state relative-caret-position="357">
+              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="27" column="54" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="54" />
+            <state relative-caret-position="420">
+              <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -61,21 +72,11 @@
       <file leaf-file-name="RequestHandlier.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-512">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="1211">
+              <caret line="93" column="51" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -179,13 +180,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/event-list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/data.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/classes/ReqestHandlier.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/event-list.js" />
         <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/index.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/event-list-admin.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/add-event.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/index.js" />
+        <option value="$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/event-list.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       </list>
     </option>
   </component>
@@ -962,14 +963,7 @@
       <workItem from="1458370944011" duration="8764000" />
       <workItem from="1458497497149" duration="8652000" />
       <workItem from="1458556422886" duration="6244000" />
-      <workItem from="1458753166389" duration="12903000" />
-    </task>
-    <task id="LOCAL-00118" summary="Fix">
-      <created>1458243533392</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1458243533392</updated>
+      <workItem from="1458753166389" duration="14180000" />
     </task>
     <task id="LOCAL-00119" summary="Finally">
       <created>1458243729463</created>
@@ -1307,11 +1301,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458766385031</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="Fixed some issues">
+      <created>1458766539490</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1458766539491</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162588000" />
+    <option name="totallyTimeSpent" value="163865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1361,7 +1362,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added big events list page" />
     <MESSAGE value="Minor front-end fixes" />
     <MESSAGE value="Full event list alpha is done" />
     <MESSAGE value="Added keylogger scripts and updated readme" />
@@ -1386,7 +1386,8 @@
     <MESSAGE value="Testing servlet methods for event adding" />
     <MESSAGE value="Fixed removal event issues" />
     <MESSAGE value="Fixed removal event issues and migrated to servlets methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed removal event issues and migrated to servlets methods" />
+    <MESSAGE value="Fixed some issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some issues" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1754,44 +1755,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-512">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="1211">
+          <caret line="93" column="51" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" column="54" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/event-list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="441">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/event-list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+        <state relative-caret-position="357">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/event-list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
           <folding />
         </state>
       </provider>
