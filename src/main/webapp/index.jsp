@@ -67,8 +67,7 @@
         </div>
     </div>
     <hr>
-    <h2>Биоритмы</h2>
-    <p>Здесь будут графики, например</p>
+    <h2>Графический отчет за 7 дней</h2>
     <div id="chart_div"></div>
 </div>
 <script src="js/index.js" language="Javascript" type="text/javascript"></script>
@@ -94,12 +93,11 @@
         // Define the chart to be drawn.
         var data = new google.visualization.DataTable();
 
-        data.addColumn('date', 'X');
+        data.addColumn('date', 'Дата');
         data.addColumn('number', 'Настроение');
         data.addRows(dataRows);
 
         var options = {
-            title: 'Зависимость настроения от физической активности',
             hAxis: {
                 title: 'Дата'
             },
