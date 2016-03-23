@@ -158,7 +158,7 @@ public class DBManager {
             Object[] chainFromDb = chain.toArray();
             int minLength = chainFromDb.length < chainFromClient.length ? chainFromDb.length : chainFromClient.length;
             for (int i = 0; i < minLength; i++) {
-                int eventTypeFromDb = (Integer) chainFromDb[i];
+                int eventTypeFromDb = Integer.parseInt(chainFromDb[i].toString());
                 if (eventTypeFromDb != chainFromClient[i]) {
                     continue eventsIter;
                 }
