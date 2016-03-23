@@ -83,7 +83,7 @@
     var dataRows = [];
     for (var i = 0; i < moodData.length; i++) {
         var date = parseInt(moodData[i].date);
-        var value = parseInt(moodData.chain[1]);
+        var value = parseInt(moodData[i].chain[1]);
         dataRows.push([new Date(date), value]);
     }
 
