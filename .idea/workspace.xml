@@ -4,8 +4,6 @@
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java" afterPath="$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/event-list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/event-list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/event-list.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/event-list.js" />
     </list>
     <ignored path="mineme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/event-list.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="20" column="46" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="46" />
+              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -71,21 +69,11 @@
       <file leaf-file-name="RequestHandlier.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="95" column="86" selection-start-line="95" selection-start-column="86" selection-end-line="95" selection-end-column="86" />
+            <state relative-caret-position="306">
+              <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event-list-admin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/event-list-admin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="87" column="42" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -962,14 +950,7 @@
       <workItem from="1458370944011" duration="8764000" />
       <workItem from="1458497497149" duration="8652000" />
       <workItem from="1458556422886" duration="6244000" />
-      <workItem from="1458753166389" duration="15574000" />
-    </task>
-    <task id="LOCAL-00121" summary="Fixes are coming">
-      <created>1458247289206</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1458247289206</updated>
+      <workItem from="1458753166389" duration="15955000" />
     </task>
     <task id="LOCAL-00122" summary="Fixes are coming">
       <created>1458247689367</created>
@@ -1307,11 +1288,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458768296402</updated>
     </task>
-    <option name="localTasksCounter" value="170" />
+    <task id="LOCAL-00170" summary="Keylogger ignoration fixed">
+      <created>1458769386250</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1458769386250</updated>
+    </task>
+    <option name="localTasksCounter" value="171" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165259000" />
+    <option name="totallyTimeSpent" value="165640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1361,7 +1349,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Full event list alpha is done" />
     <MESSAGE value="Added keylogger scripts and updated readme" />
     <MESSAGE value="Testing event deleting from web interface" />
     <MESSAGE value="Event deleting from web interface now works" />
@@ -1386,7 +1373,8 @@
     <MESSAGE value="Fixed removal event issues and migrated to servlets methods" />
     <MESSAGE value="Fixed some issues" />
     <MESSAGE value="Completely servletted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completely servletted" />
+    <MESSAGE value="Keylogger ignoration fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Keylogger ignoration fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1397,13 +1385,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/2.13.3/mongo-java-driver-2.13.3.jar!/com/mongodb/MongoCredential.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mineme.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1781,15 +1762,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/event-list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="46" />
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar!/javax/servlet/ServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="95" column="86" selection-start-line="95" selection-start-column="86" selection-end-line="95" selection-end-column="86" />
+        <state relative-caret-position="306">
+          <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

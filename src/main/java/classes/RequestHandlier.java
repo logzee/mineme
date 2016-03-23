@@ -86,13 +86,10 @@ public class RequestHandlier extends HttpServlet {
             count = 8;
         }
         if (count>0) {
-            Boolean ignoreKeylogger;
-            if (request.getParameter("ignoreKeylogger") != null) {
-                ignoreKeylogger = Boolean.valueOf(request.getParameter("ignoreKeylogger"));
-            } else {
-                ignoreKeylogger = true;
+            Boolean ignoreKeylogger = true;
+            if (request.getParameter("ignoreKeylogger") != null && !request.getParameter("ignoreKeylogger").isEmpty()) {
+                ignoreKeylogger = Boolean.parseBoolean(request.getParameter("ignoreKeylogger"));
             }
-
             String lastEventsJson = dbManager.getLastEventsJson(count, ignoreKeylogger);
             response.getOutputStream().write(lastEventsJson.getBytes("UTF-8"));
         }
