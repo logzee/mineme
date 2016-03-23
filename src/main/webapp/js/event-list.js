@@ -12,7 +12,8 @@ function eventLogInit() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'data?method=getEventTypesStruct', false);
     xhr.send();
-
+    var structRoot = JSON.parse(xhr.responseText).struct;
+    
     xhr.open('GET', 'data?method=getLastEvents&count=8', false);
     xhr.send();
     var eventsData = JSON.parse(xhr.responseText);
