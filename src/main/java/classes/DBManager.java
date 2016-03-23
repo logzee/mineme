@@ -43,8 +43,7 @@ public class DBManager {
     }
 
     /**
-      * Gets data that's describes the structure of event types
-      *
+      * Gets data that describes the structure of event types
       * @return structure of event types in JSON format
       */
     public String getStruct() {
@@ -55,7 +54,6 @@ public class DBManager {
 
     /**
       * Inserts a new event to the database
-      *
       * @param json     an event data to insert in JSON format
       */
     public void insertFromString(String json) {

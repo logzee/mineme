@@ -71,26 +71,6 @@ function eventLogInit() {
 }
 
 /**
- * Called when user request deletion
- * @param element     element that represents event
- * @param id          id of the event
- */
-function deleteEvent(element, id) {
-    UIkit.modal.confirm("Удалить событие?", function() {
-        try {
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'data?removeEvent', false);
-            xhr.send(id);
-            if (xhr.status != 200) {
-                UIkit.modal.alert("Ошибка при удалении: " + xhr.status + ", " + xhr.response);
-            } else {
-                element.parentElement.remove();
-            }
-        } catch (ignored) {}
-    });
-}
-
-/**
  * Formats date
  * @param timestamp     event timestamp
  * @returns {String}

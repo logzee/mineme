@@ -9,8 +9,12 @@
  * 2. When it gets a value that is unmatched in the structure it concatenates it as it is, because this is a value, not a type name. Range for a run, for example.
  */
 function eventLogInit() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'data/getEventTypesStruct', false);
+    xhr.send();
+    
     var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);
-    var structRoot = JSON.parse(document.getElementById('struct-data').innerHTML).struct;
+    var structRoot = JSON.parse(xhr.responseText).struct;
 
     var eventLogDl = document.getElementById('event-log');
 

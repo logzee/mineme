@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.net.UnknownHostException;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -21,6 +22,19 @@ import java.util.List;
  */
 @WebServlet(name = "RequestHandlier", urlPatterns={"/data"})
 public class RequestHandlier extends HttpServlet {
+    /**
+     * Instance of DBManager to access MongoDB
+     */
+    private DBManager dbManager;
+
+    public RequestHandlier() {
+        try {
+            dbManager = new DBManager();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+    }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             String requestedMethod = request.getParameter("method");
@@ -44,6 +58,8 @@ public class RequestHandlier extends HttpServlet {
             if (requestedMethod != null && !requestedMethod.isEmpty()) {
                 if (requestedMethod.equalsIgnoreCase("getEventsByType")) {
                     getEventByType(request, response);
+                } else if (requestedMethod.equalsIgnoreCase("getEventTypesStruct")) {
+                    getEventTypesStruct(response);
                 }
             } else {
                 response.sendError(400, "Unknown method");
@@ -51,6 +67,14 @@ public class RequestHandlier extends HttpServlet {
         } catch (Exception e) {
             response.sendError(500, e.getClass().getSimpleName() + ": " + e.getMessage());
         }
+    }
+
+    /**
+     * Sends structure of event types
+     * @param response  link to servlet response
+     */
+    private void getEventTypesStruct(HttpServletResponse response) throws IOException {
+        response.getOutputStream().write(dbManager.getStruct().getBytes("UTF-8"));
     }
 
     private void removeEvent(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -77,8 +101,6 @@ public class RequestHandlier extends HttpServlet {
             String timeStamp = String.valueOf(new Date().getTime());
             responseBodyJson.add("date", new JsonPrimitive(timeStamp));
         }
-
-        DBManager dbManager = new DBManager();
 
         if (responseBodyJson.has("tags")) {
             JsonArray tags = responseBodyJson.getAsJsonArray("tags");
@@ -112,7 +134,6 @@ public class RequestHandlier extends HttpServlet {
         typeChain[0] = Integer.parseInt(request.getParameter("type"));
         Long msAgo = Long.parseLong(request.getParameter("msAgo"));
 
-        DBManager dbManager = new DBManager();
         String jsonResponse = dbManager.getEventsOfAType(typeChain, msAgo);
         response.getOutputStream().write(jsonResponse.getBytes("UTF-8"));
     }
