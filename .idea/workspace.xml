@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java" afterPath="$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java" />
     </list>
     <ignored path="mineme.iws" />
@@ -26,21 +27,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <file leaf-file-name="event-list.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/event-list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="85" column="40" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
+            <state relative-caret-position="336">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestHandlier.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-119">
+              <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestHandlier.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+            <state relative-caret-position="707">
+              <caret line="115" column="57" selection-start-line="115" selection-start-column="57" selection-end-line="115" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,51 +59,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="remove-event.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/remove-event.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ins-handle.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
+            <state relative-caret-position="-308">
               <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add-event.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/add-event.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="290" column="36" selection-start-line="290" selection-start-column="22" selection-end-line="290" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1260">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="142" column="18" selection-start-line="142" selection-start-column="18" selection-end-line="142" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="remove-event.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/remove-event.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="371">
+              <caret line="151" column="81" selection-start-line="151" selection-start-column="81" selection-end-line="151" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -151,8 +142,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/data.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/classes/ReqestHandlier.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/classes/DBManager.java" />
       </list>
     </option>
   </component>
@@ -929,14 +920,7 @@
       <workItem from="1458370944011" duration="8764000" />
       <workItem from="1458497497149" duration="8652000" />
       <workItem from="1458556422886" duration="6244000" />
-      <workItem from="1458753166389" duration="8720000" />
-    </task>
-    <task id="LOCAL-00110" summary="Tags now add to global tag storage">
-      <created>1458212776237</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1458212776238</updated>
+      <workItem from="1458753166389" duration="9368000" />
     </task>
     <task id="LOCAL-00111" summary="Trying to fix">
       <created>1458213307978</created>
@@ -1274,11 +1258,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458761150421</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="Migrating to Servlets from JSPs (just figured out that it's awful to keep pure Java code in JSP).&#10;Testing Google Charts">
+      <created>1458762350315</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1458762350315</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158405000" />
+    <option name="totallyTimeSpent" value="159053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1592,14 +1583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/remove-event.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/Servlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1628,14 +1611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1092">
           <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/event-list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="854">
-          <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1687,14 +1662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="85" column="40" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/add-event.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -1711,9 +1678,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/io/PrintWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="598" column="16" selection-start-line="598" selection-start-column="16" selection-end-line="598" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1260">
+        <state relative-caret-position="-1008">
           <caret line="12" column="30" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="32" />
           <folding />
         </state>
@@ -1729,35 +1704,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ins-handle.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="-308">
           <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/event-list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="142" column="18" selection-start-line="142" selection-start-column="18" selection-end-line="142" selection-end-column="18" />
+        <state relative-caret-position="336">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/io/PrintWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/remove-event.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="598" column="16" selection-start-line="598" selection-start-column="16" selection-end-line="598" selection-end-column="16" />
+        <state relative-caret-position="126">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/RequestHandlier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+        <state relative-caret-position="707">
+          <caret line="115" column="57" selection-start-line="115" selection-start-column="57" selection-end-line="115" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classes/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="151" column="81" selection-start-line="151" selection-start-column="81" selection-end-line="151" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>

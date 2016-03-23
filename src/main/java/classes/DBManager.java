@@ -149,7 +149,7 @@ public class DBManager {
         long currentTimestamp = new Date().getTime();
         eventsIter: while (eventsIterator.hasNext()) {
             Document event = eventsIterator.next();
-            if (Long.parseLong(event.get("date").toString()) + msAgo > currentTimestamp) {
+            if (Long.parseLong(event.get("date").toString()) < currentTimestamp - msAgo) {
                 break;
             }
 
