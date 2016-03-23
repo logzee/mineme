@@ -31,7 +31,7 @@ public class RequestHandlier extends HttpServlet {
                     removeEvent(request, response);
                 }
             } else {
-                response.sendError(400, "Unknown method");
+                response.sendError(400, "Unknown method " + requestedMethod);
             }
         } catch (Exception e) {
             response.sendError(500, e.getClass().getSimpleName() + ": " + e.getMessage());
