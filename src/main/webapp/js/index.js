@@ -6,11 +6,11 @@
  * Event string forming algorithm detail explanation.
  * 1. It takes name of a type and then name of a subtype then name of a sub-subtype etc. as long as this "tree" exists in the structure.
  *  1.1 These type names being concatenated to a result string.
- * 2. When it gets a value that is unmatched in the structure it concatenates it as it is, because this is a value, not a type name. Range for a run, for example.
+ * 2. When algorithm gets a value that is unmatched in the structure it concatenates it as it is, because this is a value, not a type name. Range of a run, for example.
  */
 function eventLogInit() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data/getEventTypesStruct', false);
+    xhr.open('GET', 'data?method=getEventTypesStruct', false);
     xhr.send();
     
     var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);

@@ -288,7 +288,7 @@ function sendData() {
     }
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'data/addEvent', false);
+    xhr.open('POST', 'data?method=addEvent', false);
     xhr.send(JSON.stringify(result));
     if (xhr.status == 200) {
         ukAlert("Запись добавлена успешно");
