@@ -5,14 +5,13 @@ import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.lang.reflect.Type;
-import java.net.UnknownHostException;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -28,6 +27,8 @@ public class RequestHandlier extends HttpServlet {
             if (requestedMethod != null && !requestedMethod.isEmpty()) {
                 if (requestedMethod.equalsIgnoreCase("addEvent")) {
                     addEvent(request);
+                } else if (requestedMethod.equalsIgnoreCase("removeEvent")) {
+                    removeEvent(request, response);
                 }
             } else {
                 response.sendError(400, "Unknown method");
@@ -43,8 +44,6 @@ public class RequestHandlier extends HttpServlet {
             if (requestedMethod != null && !requestedMethod.isEmpty()) {
                 if (requestedMethod.equalsIgnoreCase("getEventsByType")) {
                     getEventByType(request, response);
-                } else if (requestedMethod.equalsIgnoreCase("removeEvent")) {
-                    removeEvent(request, response);
                 }
             } else {
                 response.sendError(400, "Unknown method");
@@ -104,8 +103,8 @@ public class RequestHandlier extends HttpServlet {
 
     /**
      * Sends response with events of requested type and time interval
-     * @param request
-     * @param response
+     * @param request   Client's request
+     * @param response  Server's response
      * @throws IOException
      */
     private void getEventByType(HttpServletRequest request, HttpServletResponse response) throws IOException {
