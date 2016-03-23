@@ -72,5 +72,48 @@
     <img src="img/plot-example.png" width="100%"/>
 </div>
 <script src="js/index.js" language="Javascript" type="text/javascript"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    // method = getEventsByType, type=1 (настроение), msAgo = 604800000 (неделя)
+    xhr.open('GET', 'data?method=getEventsByType&type=1&msAgo=604800000', false);
+    xhr.send();
+
+    var moodData = JSON.parse(xhr.responseText);
+    var dataRows = [];
+    for (var i = 0; i < moodData.length; i++) {
+        var date = parseInt(moodData[i].date);
+        var value = parseInt(moodData.chain[1]);
+        dataRows.push([new Date(date), value]);
+    }
+
+    google.charts.load('current', {packages: ['corechart', 'line']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        // Define the chart to be drawn.
+        var data = new google.visualization.DataTable();
+
+        data.addColumn('date', 'X');
+        data.addColumn('number', 'Настроение');
+        data.addRows(dataRows);
+
+        var options = {
+            title: 'Зависимость настроения от физической активности',
+            hAxis: {
+                title: 'Дата'
+            },
+            curveType: 'function',
+            vAxis: {
+                title: 'Настроение'
+            },
+            legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+    }
+</script>
 </body>
 </html>

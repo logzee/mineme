@@ -231,7 +231,6 @@ function dropDownInit() {
 function sendData() {
     // getting data from the forms
     var values = document.getElementsByClassName('input-value');
-    var xhr = new XMLHttpRequest();
     var resultData = structChain;
 
     var tags = document.getElementById('tags');
@@ -288,6 +287,7 @@ function sendData() {
         result.date = new Date(currentYear, currentMonth, currentDay, parseInt(hour), parseInt(minute)).getTime().toString();
     }
 
+    var xhr = new XMLHttpRequest();
     xhr.open('POST', 'ins-handle.jsp', false);
     xhr.send(JSON.stringify(result));
     if (xhr.status == 200) {

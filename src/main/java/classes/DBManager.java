@@ -19,6 +19,7 @@ import org.bson.types.ObjectId;
 
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -76,15 +77,13 @@ public class DBManager {
 
             Iterator<Document> sortedEventsIterator = sortedEvents.iterator();
             int i = 0;
+            JsonParser parser = new JsonParser();
             while(sortedEventsIterator.hasNext() && i < count) {
                 Document event = sortedEventsIterator.next();
-                System.out.println(event);
                 ArrayList<Object> chain = (ArrayList<Object>) event.get("chain");
                 Integer eventType = Integer.parseInt((String) chain.toArray()[0]);
                 if (eventType == 4 && ignoreHidden)
                     continue;
-                System.out.println("Not ignored");
-                JsonParser parser = new JsonParser();
                 resultObject.add(parser.parse(event.toJson()));
                 i++;
             }
@@ -126,11 +125,43 @@ public class DBManager {
     }
 
     /**
-     * Removes event
+     * Removes event from database
      * @param eventId  request body from client
      */
     public void removeEvent(String eventId) {
         this.collection = db.getCollection("events");
         collection.deleteOne(new BasicDBObject().append("_id", new ObjectId(eventId)));
+    }
+
+    /**
+     * Gets list of events of requested type from database
+     * @param chainFromClient    event type or type and subtype
+     * @param msAgo     since which time
+     * @return  result in JSON format
+     */
+    public String getEventsOfAType(Integer[] chainFromClient, Long msAgo) {
+        this.collection = db.getCollection("events");
+        JsonArray resultJson = new JsonArray();
+        JsonParser parser = new JsonParser();
+        FindIterable<Document> eventsDoc = collection.find();
+        Iterator<Document> eventsIterator = eventsDoc.iterator();
+        long currentTimestamp = new Date().getTime();
+        eventsIter: while (eventsIterator.hasNext()) {
+            Document event = eventsIterator.next();
+            if (Long.parseLong(event.get("date").toString()) + msAgo > currentTimestamp) {
+                break;
+            }
+            BsonArray chainBson = (BsonArray) event.get("chain");
+            Object[] chainFromDb = chainBson.toArray();
+            int minLength = chainFromDb.length < chainFromClient.length ? chainFromDb.length : chainFromClient.length;
+            for (int i = 0; i < minLength; i++) {
+                int eventTypeFromDb = Integer.parseInt(chainFromDb[i].toString());
+                if (eventTypeFromDb != chainFromClient[i]) {
+                    continue eventsIter;
+                }
+            }
+            resultJson.add(parser.parse(event.toJson()));
+        }
+        return resultJson.toString();
     }
 }
