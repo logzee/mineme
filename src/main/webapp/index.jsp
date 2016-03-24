@@ -36,13 +36,6 @@
                         <a href="https://www.instagram.com/miwanya_vidit/" class="uk-icon-button uk-icon-instagram"></a>
                     </div>
                 </div>
-                <hr>
-                <dl class="uk-list uk-list-line uk-description-list-line">
-                    <dt>Настроение</dt><dd>не найдено</dd>
-                    <dt>Физическое состояние</dt><dd>не найдено</dd>
-                    <dt>Последняя физическая активность</dt><dd>не найдено</dd>
-                    <dt>Последний прием пищи</dt><dd>не найдено</dd>
-                </dl>
             </div>
         </div>
         <div class="uk-width-large-1-2 uk-width-medium-1-1">
