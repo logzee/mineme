@@ -57,7 +57,7 @@
         </div>
     </div>
     <hr>
-    <h2>Как менялось за последние 7 дней</h2>
+    <h2>Как менялось настроение за последние 7 дней</h2>
     <div id="chart_div"></div>
 </div>
 <script src="js/index.js" language="Javascript" type="text/javascript"></script>
