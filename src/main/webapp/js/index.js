@@ -58,13 +58,26 @@ function eventLogInit() {
 /**
  * Gets delta from event time and current time and passes it to the smartTime function
  * @param timestamp     event time
- * @returns {String}
+ * @returns {String}    formatted time
  */
 function formatDate(timestamp) {
-    var currentTimestamp = parseInt(document.getElementById('server-timestamp').innerHTML);
-    var eventTimestamp = parseInt(timestamp);
-    var delta = currentTimestamp - eventTimestamp;
-    return smartTime(delta);
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'data?method=serverTimestamp', true);
+    xhr.send();
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+
+        if (xhr.status == 200) {
+            var currentTimestamp = parseInt(xhr.responseText);
+            var eventTimestamp = parseInt(timestamp);
+            var delta = currentTimestamp - eventTimestamp;
+            return smartTime(delta);
+        } else {
+            return "error";
+        }
+
+    };
 }
 
 /**

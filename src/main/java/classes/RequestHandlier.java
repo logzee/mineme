@@ -63,6 +63,9 @@ public class RequestHandlier extends HttpServlet {
                     getEventTypesStruct(response);
                 } else if (requestedMethod.equalsIgnoreCase("getLastEvents")) {
                     getLastEvents(request, response);
+                } else if (requestedMethod.equalsIgnoreCase("serverTimestamp")) {
+                    Long timestamp = new Date().getTime();
+                    response.getOutputStream().write(timestamp.toString().getBytes("UTF-8"));
                 }
             } else {
                 response.sendError(400, "Unknown method");
