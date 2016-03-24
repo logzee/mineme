@@ -9,18 +9,8 @@
  * 2. When it gets a value that is unmatched in the structure it concatenates it as it is, because this is a value, not a type name. Range for a run, for example.
  */
 function eventLogInit() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data?method=getEventTypesStruct', false);
-    xhr.send();
-    var structRoot = JSON.parse(xhr.responseText).struct;
-
-    var ignoreKeylogger = getRequestParam('ignoreKeylogger');
-    if (ignoreKeylogger != undefined && ignoreKeylogger != 'false') {
-        ignoreKeylogger = true;
-    }
-    xhr.open('GET', 'data?method=getLastEvents&count=100&ignoreKeylogger=' + ignoreKeylogger, false);
-    xhr.send();
-    var eventsData = JSON.parse(xhr.responseText);
+    var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);
+    var structRoot = JSON.parse(document.getElementById('struct-data').innerHTML).struct;
 
     var eventLogDl = document.getElementById('event-log');
 
@@ -33,7 +23,7 @@ function eventLogInit() {
         var closeBtn = document.createElement('span');
         closeBtn.setAttribute('class', 'uk-close uk-float-right uk-close-alt');
         var id = eventsData[i]._id.$oid;
-        closeBtn.setAttribute('onclick', 'deleteEvent(this, "' + id + '");');
+        closeBtn.setAttribute('onclick', 'removeEvent(this, "' + id + '");');
 
         var dt = document.createElement('dt');
         dt.setAttribute('class', 'uk-text-truncate');
@@ -91,7 +81,7 @@ function eventLogInit() {
  * @param element     element that represents event
  * @param id          id of the event
  */
-function deleteEvent(element, id) {
+function removeEvent(element, id) {
     UIkit.modal.confirm("Удалить событие?", function() {
         try {
             var xhr = new XMLHttpRequest();
@@ -107,25 +97,12 @@ function deleteEvent(element, id) {
 }
 
 /**
- * Gets "GET" request params
- * @param name     name of the param
- * @returns {string}    value of the param
- */
-function getRequestParam(name){
-    if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
-        return decodeURIComponent(name[1]);
-}
-
-/**
  * Formats date
  * @param timestamp     event timestamp
  * @returns {String}
  */
 function formatDate(timestamp) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data?method=serverTimestamp', false);
-    xhr.send();
-    var currentTimestamp = parseInt(xhr.responseText);
+    var currentTimestamp = parseInt(document.getElementById('server-timestamp').innerHTML);
     var eventTimestamp = parseInt(timestamp);
     var delta = currentTimestamp - eventTimestamp;
 

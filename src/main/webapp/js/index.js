@@ -9,15 +9,8 @@
  * 2. When algorithm gets a value that is unmatched in the structure it concatenates it as it is, because this is a value, not a type name. Range of a run, for example.
  */
 function eventLogInit() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data?method=getEventTypesStruct', false);
-    xhr.send();
-    var structRoot = JSON.parse(xhr.responseText).struct;
-
-    xhr.open('GET', 'data?method=getLastEvents&count=8', false);
-    xhr.send();
-    var eventsData = JSON.parse(xhr.responseText);
-    
+    var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);
+    var structRoot = JSON.parse(document.getElementById('struct-data').innerHTML).struct;
 
     var eventLogDl = document.getElementById('event-log');
 
@@ -61,10 +54,7 @@ function eventLogInit() {
  * @returns {String}    formatted time
  */
 function formatDate(timestamp) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data?method=serverTimestamp', false);
-    xhr.send();
-    var currentTimestamp = parseInt(xhr.responseText);
+    var currentTimestamp = parseInt(document.getElementById('server-timestamp').innerHTML);
     var eventTimestamp = parseInt(timestamp);
     var delta = currentTimestamp - eventTimestamp;
     return smartTime(delta);

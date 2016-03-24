@@ -1,4 +1,9 @@
+<%@ page import="classes.DBManager" %>
+<%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    DBManager dbManager = new DBManager();
+%>
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
@@ -14,6 +19,11 @@
     <script src="js/uikit.min.js"></script>
 </head>
 <body>
+<!-- I use these hidden tags to get data from the server because it much faster then XmlHttpRequest -->
+<div hidden id="server-timestamp"><%= new Date().getTime() %></div>
+<div hidden id="last-events"><%= dbManager.getLastEventsJson(8, true) %></div>
+<div hidden id="struct-data"><%= dbManager.getStruct() %></div>
+
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
         <div class="uk-navbar-brand">MineMe</div>
@@ -32,13 +42,10 @@
                     <div class="uk-comment-meta">
                         <a href="https://github.com/logzee" class="uk-icon-button uk-icon-github"></a>
                         <a href="http://vk.com/logzee" class="uk-icon-button uk-icon-vk"></a>
-                        <a href="https://twitter.com/MichaelMalyshev" class="uk-icon-button uk-icon-twitter"></a>
                         <a href="https://www.instagram.com/miwanya_vidit/" class="uk-icon-button uk-icon-instagram"></a>
                     </div>
                 </div>
             </div>
-            <h3>Графический отчет за 7 дней</h3>
-            <div id="chart_div"></div>
         </div>
         <div class="uk-width-large-1-2 uk-width-medium-1-1">
             <div class="uk-panel uk-panel-box">
@@ -50,6 +57,8 @@
         </div>
     </div>
     <hr>
+    <h2>Как менялось за последние 7 дней</h2>
+    <div id="chart_div"></div>
 </div>
 <script src="js/index.js" language="Javascript" type="text/javascript"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

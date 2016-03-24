@@ -1,12 +1,15 @@
+<%@ page import="java.util.Date" %>
+<%@ page import="classes.DBManager" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    DBManager dbManager = new DBManager();
+    boolean ignoreKeylogger = true;
     String showKeyloggerLink = "<a href=\"event-list.jsp?ignoreKeylogger=false\">Показать кейлоггер</a>";
     String requestBody = request.getParameter("ignoreKeylogger");
-
     if (requestBody != null) {
+        ignoreKeylogger = false;
         showKeyloggerLink = "<a href=\"event-list.jsp\">Спрятать кейлоггер</a>";
     }
-
     String script;
     if (request.getRemoteUser() != null) {
         script = "<script src=\"js/event-list-admin.js\" language=\"Javascript\" type=\"text/javascript\"></script>";
@@ -30,6 +33,11 @@
     <script src="js/uikit.min.js"></script>
 </head>
 <body class="uk-height-1-1">
+<!-- I use these hidden tags to get data from the server because it much faster then XmlHttpRequest -->
+<div hidden id="server-timestamp"><%= new Date().getTime() %></div>
+<div hidden id="last-events"><%= dbManager.getLastEventsJson(100, ignoreKeylogger) %></div>
+<div hidden id="struct-data"><%= dbManager.getStruct() %></div>
+
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
         <a class="uk-navbar-brand" href="index.jsp">MineMe</a>
