@@ -62,21 +62,12 @@ function eventLogInit() {
  */
 function formatDate(timestamp) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data?method=serverTimestamp', true);
+    xhr.open('GET', 'data?method=serverTimestamp', false);
     xhr.send();
-
-    var formattedDate = "";
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState != 4) return;
-
-        if (xhr.status == 200) {
-            var currentTimestamp = parseInt(xhr.responseText);
-            var eventTimestamp = parseInt(timestamp);
-            var delta = currentTimestamp - eventTimestamp;
-            formattedDate = smartTime(delta);
-        }
-    };
-    return formattedDate;
+    var currentTimestamp = parseInt(xhr.responseText);
+    var eventTimestamp = parseInt(timestamp);
+    var delta = currentTimestamp - eventTimestamp;
+    return smartTime(delta);
 }
 
 /**

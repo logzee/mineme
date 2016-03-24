@@ -1,16 +1,8 @@
 // some data initialization
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'data?method=getEventTypesStruct', true);
+xhr.open('GET', 'data?method=getEventTypesStruct', false);
 xhr.send();
-
-var structRoot = [];
-xhr.onreadystatechange = function() {
-    if (xhr.readyState != 4) return;
-
-    if (xhr.status == 200) {
-        structRoot = JSON.parse(xhr.responseText).struct;
-    }
-};
+var structRoot = JSON.parse(xhr.responseText).struct;
 
 var formWrapper = document.getElementById('form-wrapper');
 var structChain = [];
