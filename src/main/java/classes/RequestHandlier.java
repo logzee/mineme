@@ -36,6 +36,7 @@ public class RequestHandlier extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if (request.getRemoteUser() == null) response.sendError(403, "Not authorized");
         try {
             String requestedMethod = request.getParameter("method");
             if (requestedMethod != null && !requestedMethod.isEmpty()) {
@@ -60,40 +61,12 @@ public class RequestHandlier extends HttpServlet {
                     getEventByType(request, response);
                 } else if (requestedMethod.equalsIgnoreCase("getEventTypesStruct")) {
                     getEventTypesStruct(response);
-                } else if (requestedMethod.equalsIgnoreCase("getLastEvents")) {
-                    getLastEvents(request, response);
-                } else if (requestedMethod.equalsIgnoreCase("serverTimestamp")) {
-                    Long timestamp = new Date().getTime();
-                    response.getOutputStream().write(timestamp.toString().getBytes("UTF-8"));
                 }
             } else {
                 response.sendError(400, "Unknown method");
             }
         } catch (Exception e) {
             response.sendError(500, e.getClass().getSimpleName() + ": " + e.getMessage());
-        }
-    }
-
-    /**
-     * Sends last x events to the client
-     * @param request   client's request
-     * @param response  server's response
-     * @throws IOException
-     */
-    private void getLastEvents(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Integer count;
-        try {
-            count = Integer.parseInt(request.getParameter("count"));
-        } catch (NumberFormatException e) {
-            count = 8;
-        }
-        if (count>0) {
-            Boolean ignoreKeylogger = true;
-            if (request.getParameter("ignoreKeylogger") != null && !request.getParameter("ignoreKeylogger").isEmpty()) {
-                ignoreKeylogger = Boolean.parseBoolean(request.getParameter("ignoreKeylogger"));
-            }
-            String lastEventsJson = dbManager.getLastEventsJson(count, ignoreKeylogger);
-            response.getOutputStream().write(lastEventsJson.getBytes("UTF-8"));
         }
     }
 
