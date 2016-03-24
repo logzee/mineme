@@ -1,15 +1,9 @@
-<%@ page import="java.util.Date" %>
-<%@ page import="classes.DBManager" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    DBManager dbManager = new DBManager();
-    boolean ignoreKeylogger = true;
     String showKeyloggerLink = "<a href=\"event-list.jsp?ignoreKeylogger=false\">Показать кейлоггер</a>";
-
-
     String requestBody = request.getParameter("ignoreKeylogger");
+
     if (requestBody != null) {
-        ignoreKeylogger = false;
         showKeyloggerLink = "<a href=\"event-list.jsp\">Спрятать кейлоггер</a>";
     }
 
@@ -36,12 +30,6 @@
     <script src="js/uikit.min.js"></script>
 </head>
 <body class="uk-height-1-1">
-<%-- Server time in case if the client's time is incorrect --%>
-<div hidden id="server-timestamp"><%= new Date().getTime() %></div>
-<%--  List of last 10 events from MongoDB in JSON format --%>
-<div hidden id="last-events"><%= dbManager.getLastEventsJson(100, ignoreKeylogger) %></div>
-<%-- Data from MongoDB describing events structure for the JavaScript --%>
-<div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
         <a class="uk-navbar-brand" href="index.jsp">MineMe</a>

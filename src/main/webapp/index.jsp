@@ -1,10 +1,4 @@
-<%@ page import="classes.DBManager" %>
-<%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    DBManager dbManager = new DBManager();
-%>
-
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
@@ -20,9 +14,6 @@
     <script src="js/uikit.min.js"></script>
 </head>
 <body>
-<%-- Server time in case if the client's time is incorrect --%>
-<div hidden id="server-timestamp"><%= new Date().getTime() %></div>
-
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
         <div class="uk-navbar-brand">MineMe</div>

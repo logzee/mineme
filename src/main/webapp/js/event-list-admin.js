@@ -9,8 +9,18 @@
  * 2. When it gets a value that is unmatched in the structure it concatenates it as it is, because this is a value, not a type name. Range for a run, for example.
  */
 function eventLogInit() {
-    var eventsData = JSON.parse(document.getElementById('last-events').innerHTML);
-    var structRoot = JSON.parse(document.getElementById('struct-data').innerHTML).struct;
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'data?method=getEventTypesStruct', false);
+    xhr.send();
+    var structRoot = JSON.parse(xhr.responseText).struct;
+
+    var ignoreKeylogger = getRequestParam('ignoreKeylogger');
+    if (ignoreKeylogger != undefined && ignoreKeylogger != 'false') {
+        ignoreKeylogger = true;
+    }
+    xhr.open('GET', 'data?method=getLastEvents&count=100&ignoreKeylogger=' + ignoreKeylogger, false);
+    xhr.send();
+    var eventsData = JSON.parse(xhr.responseText);
 
     var eventLogDl = document.getElementById('event-log');
 
@@ -94,6 +104,16 @@ function deleteEvent(element, id) {
             }
         } catch (ignored) {}
     });
+}
+
+/**
+ * Gets "GET" request params
+ * @param name     name of the param
+ * @returns {string}    value of the param
+ */
+function getRequestParam(name){
+    if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+        return decodeURIComponent(name[1]);
 }
 
 /**
