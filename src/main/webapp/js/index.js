@@ -65,6 +65,7 @@ function formatDate(timestamp) {
     xhr.open('GET', 'data?method=serverTimestamp', true);
     xhr.send();
 
+    var formattedDate = "";
     xhr.onreadystatechange = function() {
         if (xhr.readyState != 4) return;
 
@@ -72,12 +73,10 @@ function formatDate(timestamp) {
             var currentTimestamp = parseInt(xhr.responseText);
             var eventTimestamp = parseInt(timestamp);
             var delta = currentTimestamp - eventTimestamp;
-            return smartTime(delta);
-        } else {
-            return "error";
+            formattedDate = smartTime(delta);
         }
-
     };
+    return formattedDate;
 }
 
 /**
@@ -136,7 +135,7 @@ function smartTime(timestamp) {
 }
 
 /**
- * Noun declension function according to a number
+ * Calculates declension of a noun according to a number
  * @param number    number to incline
  * @param titles    array of noun cases
  **/

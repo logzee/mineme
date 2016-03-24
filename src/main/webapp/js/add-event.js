@@ -1,8 +1,20 @@
 // some data initialization
-var struct = JSON.parse(document.getElementById('struct-data').innerHTML).struct;
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'data?method=getEventTypesStruct', true);
+xhr.send();
+
+var structRoot = [];
+xhr.onreadystatechange = function() {
+    if (xhr.readyState != 4) return;
+
+    if (xhr.status == 200) {
+        structRoot = JSON.parse(xhr.responseText).struct;
+    }
+};
+
 var formWrapper = document.getElementById('form-wrapper');
 var structChain = [];
-var currentNode = struct;
+var currentNode = structRoot;
 
 /**
  * Called when input value changes
@@ -63,7 +75,7 @@ function addTextInput(itemStruct) {
 }
 
 /**
- * Adds multiple text fields for the list struct
+ * Adds multiple text fields for the list structRoot
  *
  * @param listStruct
  */
@@ -138,7 +150,7 @@ function addDropdownInput(itemStruct) {
 }
 
 /**
- * Returns structure of the event type from struct by its number and nesting level
+ * Returns structure of the event type from structRoot by its number and nesting level
  *
  * @param eventNumber     index number of the event type
  * @return currentNode      structure of requested event type
@@ -195,7 +207,7 @@ function clearBelow(input) {
  * Sets currentNode according to event chain
  */
 function resetStructChain() {
-    var result = struct;
+    var result = structRoot;
     for (var i = 0; i < structChain.length; i++) {
         result = result.value[structChain[i]];
     }
@@ -215,10 +227,10 @@ function dropDownInit() {
     option.innerHTML = 'Тип события';
     eventDropdown.appendChild(option);
 
-    for (var i = 0; i < struct.value.length; i++) {
-        if (struct.value[i].hidden != true) {
+    for (var i = 0; i < structRoot.value.length; i++) {
+        if (structRoot.value[i].hidden != true) {
             option = document.createElement('option');
-            option.innerHTML = struct.value[i].title;
+            option.innerHTML = structRoot.value[i].title;
             option.setAttribute('value', i);
             eventDropdown.appendChild(option);
         }
@@ -275,7 +287,7 @@ function sendData() {
         var minute = timePicker.value.split(":")[1];
 
         if (isBlank(hour) || isBlank(minute)) {
-            ukAlert('Ошибка при вводе даты', 'uk-alert-warning');
+            ukAlert('Ошибка при вводе времени', 'uk-alert-warning');
             return;
         }
 
@@ -288,16 +300,21 @@ function sendData() {
     }
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'data?method=addEvent', false);
+    xhr.open('POST', 'data?method=addEvent', true);
     xhr.send(JSON.stringify(result));
-    if (xhr.status == 200) {
-        ukAlert("Запись добавлена успешно");
-        clearTagsAndTime();
-    } else {
-        var debug = document.getElementById('response-debug');
-        debug.innerHTML = xhr.responseText;
-        ukAlert("Ошибка при добавлении. Код " + xhr.status + ": " + xhr.statusText, 'uk-alert-danger');
-    }
+
+    ukAlert("Загрузка...");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+        
+        if (xhr.status == 200) {
+            ukAlert("Запись добавлена успешно");
+            clearTagsAndTime();
+        } else {
+            // document.getElementById('response-debug').innerHTML = xhr.responseText;
+            ukAlert("Ошибка при добавлении. Код " + xhr.status + ": " + xhr.statusText, 'uk-alert-danger');
+        }
+    };
 }
 
 /**

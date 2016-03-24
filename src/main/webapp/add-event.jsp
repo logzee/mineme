@@ -1,10 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="classes.DBManager" %>
-
-<%
-    DBManager dbManager = new DBManager();
-%>
-
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
@@ -20,11 +14,9 @@
     <script src="js/uikit.min.js"></script>
 </head>
 <body>
-<%-- Data from MongoDB that describes events structure for JavaScript --%>
-<div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
-        <a class="uk-navbar-brand" href="index.jsp">MineMe</a>
+        <a class="uk-navbar-brand" href="/">MineMe</a>
         <ul class="uk-navbar-nav">
             <li class="uk-active"><a>Добавить событие</a></li>
         </ul>
