@@ -37,8 +37,7 @@
                     </div>
                 </div>
             </div>
-            <hr>
-            <h2>Графический отчет за 7 дней</h2>
+            <h3>Графический отчет за 7 дней</h3>
             <div id="chart_div"></div>
         </div>
         <div class="uk-width-large-1-2 uk-width-medium-1-1">

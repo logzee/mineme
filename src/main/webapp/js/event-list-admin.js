@@ -122,7 +122,10 @@ function getRequestParam(name){
  * @returns {String}
  */
 function formatDate(timestamp) {
-    var currentTimestamp = parseInt(document.getElementById('server-timestamp').innerHTML);
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'data?method=serverTimestamp', false);
+    xhr.send();
+    var currentTimestamp = parseInt(xhr.responseText);
     var eventTimestamp = parseInt(timestamp);
     var delta = currentTimestamp - eventTimestamp;
 
