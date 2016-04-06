@@ -58,7 +58,9 @@
     </div>
     <hr>
     <h2>Как менялось настроение за последние 7 дней</h2>
-    <div id="chart_div"></div>
+    <div id="mood_chart"></div>
+    <h2>Активность за компьютером за последние 7 дней</h2>
+    <div id="comp_chart"></div>
 </div>
 <script src="js/index.js" language="Javascript" type="text/javascript"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -98,7 +100,48 @@
             legend: { position: 'bottom' }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.LineChart(document.getElementById('mood_chart'));
+
+        chart.draw(data, options);
+    }
+</script>
+<script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    // method = getEventsByType, type=1 (настроение), msAgo = 604800000 (неделя)
+    xhr.open('GET', 'data?method=getEventsByType&type=4&msAgo=604800000', false);
+    xhr.send();
+
+    var keyloggerData = JSON.parse(xhr.responseText);
+    var dataRows = [];
+    for (var i = 0; i < keyloggerData.length; i++) {
+        var date = parseInt(keyloggerData[i].date);
+        var value = parseInt(keyloggerData[i].chain[1]);
+        dataRows.push([new Date(date), value]);
+    }
+
+    google.charts.load('current', {packages: ['corechart', 'line']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        // Define the chart to be drawn.
+        var data = new google.visualization.DataTable();
+
+        data.addColumn('date', 'Дата');
+        data.addColumn('number', 'Нажатий клавиш');
+        data.addRows(dataRows);
+
+        var options = {
+            hAxis: {
+                title: 'Дата'
+            },
+            curveType: 'function',
+            vAxis: {
+                title: 'Активность'
+            },
+            legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('comp_chart'));
 
         chart.draw(data, options);
     }
