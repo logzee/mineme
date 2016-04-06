@@ -65,23 +65,27 @@
 <script src="js/index.js" language="Javascript" type="text/javascript"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
-    var xhr = new XMLHttpRequest();
-    // method = getEventsByType, type=1 (настроение), msAgo = 604800000 (неделя)
-    xhr.open('GET', 'data?method=getEventsByType&type=1&msAgo=604800000', false);
-    xhr.send();
-
-    var moodData = JSON.parse(xhr.responseText);
-    var dataRows = [];
-    for (var i = 0; i < moodData.length; i++) {
-        var date = parseInt(moodData[i].date);
-        var value = parseInt(moodData[i].chain[1]);
-        dataRows.push([new Date(date), value]);
-    }
-
     google.charts.load('current', {packages: ['corechart', 'line']});
-    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(drawCharts);
 
-    function drawChart() {
+    function drawCharts() {
+        drawKeyloggerChart();
+        drawMoodChart();
+    }
+    function drawMoodChart() {
+        var xhr = new XMLHttpRequest();
+        // method = getEventsByType, type=1 (настроение), msAgo = 604800000 (неделя)
+        xhr.open('GET', 'data?method=getEventsByType&type=1&msAgo=604800000', false);
+        xhr.send();
+
+        var moodData = JSON.parse(xhr.responseText);
+        var dataRows = [];
+        for (var i = 0; i < moodData.length; i++) {
+            var date = parseInt(moodData[i].date);
+            var value = parseInt(moodData[i].chain[1]);
+            dataRows.push([new Date(date), value]);
+        }
+
         // Define the chart to be drawn.
         var data = new google.visualization.DataTable();
 
@@ -104,20 +108,23 @@
 
         chart.draw(data, options);
     }
-    xhr.open('GET', 'data?method=getEventsByType&type=4&msAgo=604800000', false);
-    xhr.send();
 
-    var keyloggerData = JSON.parse(xhr.responseText);
-    dataRows = [];
-    for (var i = 0; i < keyloggerData.length; i++) {
-        var date = parseInt(keyloggerData[i].date);
-        var value = parseInt(keyloggerData[i].chain[1]);
-        dataRows.push([new Date(date), value]);
-    }
-
-    google.charts.setOnLoadCallback(drawKeyloggerChart);
 
     function drawKeyloggerChart() {
+        var xhr = new XMLHttpRequest();
+
+        xhr.open('GET', 'data?method=getEventsByType&type=4&msAgo=604800000', false);
+        xhr.send();
+
+        var keyloggerData = JSON.parse(xhr.responseText);
+        debugger;
+        dataRows = [];
+        for (var i = 0; i < keyloggerData.length; i++) {
+            var date = parseInt(keyloggerData[i].date);
+            var value = parseInt(keyloggerData[i].chain[1]);
+            dataRows.push([new Date(date), value]);
+        }
+
         // Define the chart to be drawn.
         var data = new google.visualization.DataTable();
 
@@ -136,9 +143,9 @@
             legend: { position: 'bottom' }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('comp_chart'));
+        var comp_chart = new google.visualization.LineChart(document.getElementById('comp_chart'));
 
-        chart.draw(data, options);
+        comp_chart.draw(data, options);
     }
 </script>
 </body>

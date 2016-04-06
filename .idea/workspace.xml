@@ -49,8 +49,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-539">
-              <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
+            <state relative-caret-position="427">
+              <caret line="119" column="17" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -922,14 +922,7 @@
       <workItem from="1458843464805" duration="4540000" />
       <workItem from="1459870981628" duration="50000" />
       <workItem from="1459871102665" duration="616000" />
-      <workItem from="1459963686110" duration="2716000" />
-    </task>
-    <task id="LOCAL-00133" summary="Testing event deleting from web interface">
-      <created>1458376805777</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1458376805777</updated>
+      <workItem from="1459963686110" duration="3756000" />
     </task>
     <task id="LOCAL-00134" summary="Event deleting from web interface now works">
       <created>1458377254427</created>
@@ -1267,11 +1260,18 @@
       <option name="project" value="LOCAL" />
       <updated>1459966212920</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="Added keylogs chart">
+      <created>1459971673026</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1459971673026</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179878000" />
+    <option name="totallyTimeSpent" value="180918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1688,8 +1688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-539">
-          <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
+        <state relative-caret-position="427">
+          <caret line="119" column="17" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
           <folding />
         </state>
       </provider>
