@@ -104,25 +104,20 @@
 
         chart.draw(data, options);
     }
-</script>
-<script type="text/javascript">
-    var xhr = new XMLHttpRequest();
-    // method = getEventsByType, type=1 (настроение), msAgo = 604800000 (неделя)
     xhr.open('GET', 'data?method=getEventsByType&type=4&msAgo=604800000', false);
     xhr.send();
 
     var keyloggerData = JSON.parse(xhr.responseText);
-    var dataRows = [];
+    dataRows = [];
     for (var i = 0; i < keyloggerData.length; i++) {
         var date = parseInt(keyloggerData[i].date);
         var value = parseInt(keyloggerData[i].chain[1]);
         dataRows.push([new Date(date), value]);
     }
 
-    google.charts.load('current', {packages: ['corechart', 'line']});
-    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(drawKeyloggerChart);
 
-    function drawChart() {
+    function drawKeyloggerChart() {
         // Define the chart to be drawn.
         var data = new google.visualization.DataTable();
 
