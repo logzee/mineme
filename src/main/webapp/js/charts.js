@@ -105,12 +105,12 @@ function drawStepsChart() {
 
     var options = {
         hAxis: {
-            title: 'Дата',
-            ticks: [new Date(), new Date(), new Date(), new Date(), new Date(), new Date(), new Date()]
+            title: 'Дата'
         },
         vAxis: {
             title: 'Количество шагов'
-        }
+        },
+        legend: { position: 'none' }
     };
 
     var stepsChart = new google.visualization.Histogram(document.getElementById('steps_chart'));
