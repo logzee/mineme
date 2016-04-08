@@ -26,7 +26,7 @@
 
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
-        <div class="uk-navbar-brand">MineMe<span class="uk-badge uk-margin-small-right">alpha</span></div>
+        <div class="uk-navbar-brand">MineMe <span class="uk-badge uk-margin-small-right">alpha</span></div>
         <ul class="uk-navbar-nav">
             <li><a href="add-event.jsp">Добавить событие</a></li>
         </ul>
