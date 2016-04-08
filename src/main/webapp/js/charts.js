@@ -1,7 +1,7 @@
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawCharts);
 
-chartColors = ['#07d'];
+chartColors = ['#07d', '#82bb42'];
 
 function drawCharts() {
     drawKeyloggerChart();
@@ -104,10 +104,12 @@ function drawStepsChart() {
             title: 'Количество шагов',
             scaleType: 'mirrorLog'
         },
+        height: 350,
         legend: { position: 'none' },
         chartArea: {
             top: 55,
-            height: '40%'
+            width: '98%',
+            height: '50%',
         },
         colors: chartColors
     };
@@ -150,7 +152,7 @@ function drawSleepChart() {
         legend: { position: 'none' },
         chartArea: {
             top: 55,
-            width: '100%',
+            width: '98%',
             height: '50%',
         },
         colors: chartColors

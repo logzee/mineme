@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="Minor changes in sleep chart">
+    <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts.js" />
     </list>
     <ignored path="mineme.iws" />
@@ -70,8 +69,8 @@
       <file leaf-file-name="charts.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="153" column="22" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
+            <state relative-caret-position="445">
+              <caret line="112" column="10" selection-start-line="112" selection-start-column="10" selection-end-line="112" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -973,14 +972,7 @@
       <workItem from="1459963686110" duration="4363000" />
       <workItem from="1460094614297" duration="1973000" />
       <workItem from="1460116927003" duration="5551000" />
-      <workItem from="1460133903376" duration="9997000" />
-    </task>
-    <task id="LOCAL-00158" summary="Migrating to Servlets from JSPs (just figured out that it's awful to keep pure Java code in JSP).&#10;Testing Google Charts">
-      <created>1458761150420</created>
-      <option name="number" value="00158" />
-      <option name="presentableId" value="LOCAL-00158" />
-      <option name="project" value="LOCAL" />
-      <updated>1458761150421</updated>
+      <workItem from="1460133903376" duration="10269000" />
     </task>
     <task id="LOCAL-00159" summary="Migrating to Servlets from JSPs (just figured out that it's awful to keep pure Java code in JSP).&#10;Testing Google Charts">
       <created>1458762350315</created>
@@ -1318,11 +1310,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460147249368</updated>
     </task>
-    <option name="localTasksCounter" value="207" />
+    <task id="LOCAL-00207" summary="Testing visual changes in charts">
+      <created>1460148212846</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1460148212846</updated>
+    </task>
+    <option name="localTasksCounter" value="208" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199046000" />
+    <option name="totallyTimeSpent" value="199318000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1372,7 +1371,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed removal event issues and migrated to servlets methods" />
     <MESSAGE value="Fixed some issues" />
     <MESSAGE value="Completely servletted" />
     <MESSAGE value="Keylogger ignoration fixed" />
@@ -1397,7 +1395,8 @@
     <MESSAGE value="Fixed sleep chart" />
     <MESSAGE value="Finally fxed sleep chart" />
     <MESSAGE value="Minor changes in sleep chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes in sleep chart" />
+    <MESSAGE value="Testing visual changes in charts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing visual changes in charts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1736,8 +1735,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="153" column="22" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
+        <state relative-caret-position="445">
+          <caret line="112" column="10" selection-start-line="112" selection-start-column="10" selection-end-line="112" selection-end-column="10" />
           <folding />
         </state>
       </provider>
