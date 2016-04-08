@@ -28,9 +28,6 @@ function drawMoodChart() {
     data.addRows(dataRows);
 
     var options = {
-        hAxis: {
-            title: 'Дата'
-        },
         curveType: 'function',
         vAxis: {
             title: 'Настроение'
@@ -67,11 +64,6 @@ function drawKeyloggerChart() {
     data.addRows(dataRows);
 
     var options = {
-        hAxis: {
-            title: 'Дата',
-            ticks: [new Date(), new Date(), new Date(), new Date(), new Date(), new Date(), new Date()]
-        },
-        
         vAxis: {
             title: 'Активность'
         },
@@ -104,14 +96,12 @@ function drawStepsChart() {
     data.addRows(dataRows);
 
     var options = {
-        hAxis: {
-            title: 'Дата'
-        },
         vAxis: {
             title: 'Количество шагов',
             scaleType: 'mirrorLog'
         },
-        legend: { position: 'none' }
+        legend: { position: 'none' },
+        chartArea: {  width: "50%", height: "70%" }
     };
 
     var stepsChart = new google.visualization.ColumnChart(document.getElementById('steps_chart'));
