@@ -101,7 +101,10 @@ function drawStepsChart() {
             scaleType: 'mirrorLog'
         },
         legend: { position: 'none' },
-        chartArea: {  width: "50%", height: "70%" }
+        chartArea: {
+            top: 55,
+            height: '40%'
+        }
     };
 
     var stepsChart = new google.visualization.ColumnChart(document.getElementById('steps_chart'));

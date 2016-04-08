@@ -79,8 +79,8 @@
       <file leaf-file-name="charts.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+            <state relative-caret-position="690">
+              <caret line="106" column="9" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -952,14 +952,7 @@
       <workItem from="1459963686110" duration="4363000" />
       <workItem from="1460094614297" duration="1973000" />
       <workItem from="1460116927003" duration="5551000" />
-      <workItem from="1460133903376" duration="2745000" />
-    </task>
-    <task id="LOCAL-00144" summary="debuuuug">
-      <created>1458500769383</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1458500769383</updated>
+      <workItem from="1460133903376" duration="3094000" />
     </task>
     <task id="LOCAL-00145" summary="Some fixes">
       <created>1458501455122</created>
@@ -1297,11 +1290,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460139696244</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="Fixed date truncation issue">
+      <created>1460140517386</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1460140517386</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191794000" />
+    <option name="totallyTimeSpent" value="192143000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1351,7 +1351,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finally" />
     <MESSAGE value="Some minor changes" />
     <MESSAGE value="Migrating to Servlets from JSPs (just figured out that it's awful to keep pure Java code in JSP).&#10;Testing Google Charts" />
     <MESSAGE value="Fixed msAgo" />
@@ -1376,7 +1375,8 @@
     <MESSAGE value="Fixed date format" />
     <MESSAGE value="Removed legend from steps chart" />
     <MESSAGE value="Fixed data interpritation issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed data interpritation issue" />
+    <MESSAGE value="Fixed date truncation issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed date truncation issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1711,8 +1711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        <state relative-caret-position="690">
+          <caret line="106" column="9" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
           <folding />
         </state>
       </provider>
