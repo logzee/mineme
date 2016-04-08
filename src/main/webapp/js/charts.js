@@ -134,8 +134,8 @@ function drawSleepChart() {
 
     var data = new google.visualization.DataTable();
     data.addColumn('date', 'Дата');
-    data.addColumn('number', 'Продолжительность сна');
-    data.addColumn('number', 'Продолжительность глубокого сна');
+    data.addColumn('number', 'Продолжительность');
+    data.addColumn('number', 'Глубокий сон');
     data.addRows(dataRows);
 
     var options = {
@@ -147,7 +147,8 @@ function drawSleepChart() {
         chartArea: {
             top: 55,
             height: '40%'
-        }
+        },
+        isStacked: true
     };
 
     var sleepChart = new google.visualization.ColumnChart(document.getElementById('sleep_chart'));

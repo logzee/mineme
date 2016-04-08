@@ -379,5 +379,6 @@ function ukAlert(message, htmlClass) {
  * Clears forms
  */
 function clearTagsAndTime() {
+    updateForm(document.getElementById('event-dropdown'));
     document.getElementById('tags').value = '';
 }
