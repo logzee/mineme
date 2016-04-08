@@ -94,7 +94,7 @@ function drawStepsChart() {
     var dataRows = [];
     for (var i = 0; i < stepsData.length; i++) {
         var date = parseInt(stepsData[i].date);
-        var value = parseInt(stepsData[i].chain[1]);
+        var value = parseInt(stepsData[i].chain[stepsData[i].chain.length-1]);
         dataRows.push([new Date(date), value]);
     }
 
