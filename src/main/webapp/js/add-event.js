@@ -243,16 +243,16 @@ function formatDateStd(timestamp) {
     // new Date(year, month[, day[, hour[, minute[, second[, millisecond]]]]]);
     var date = new Date(timestamp);
 
-    return ("00" + (date.getMonth() + 1)).slice(-2) + "." +
-        ("00" + date.getDate()).slice(-2) + "." +
+    return ("00" + date.getDate()).slice(-2) + "." +
+        ("00" + (date.getMonth() + 1)).slice(-2) + "." +
         date.getFullYear();
 }
 
 function formatTime(timestamp) {
     var date = new Date(timestamp);
 
-    return ("00" + d.getHours()).slice(-2) + ":" +
-        ("00" + d.getMinutes()).slice(-2);
+    return ("00" + date.getHours()).slice(-2) + ":" +
+        ("00" + date.getMinutes()).slice(-2);
 }
 
 /**
