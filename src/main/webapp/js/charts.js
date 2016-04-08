@@ -127,8 +127,8 @@ function drawSleepChart() {
     for (var i = 0; i < sleepData.length; i++) {
         var date = parseInt(sleepData[i].date);
         // "chain":["3",["06:13","03:07"]]
-        var totalTime = parseInt(sleepData[i].chain[1][1].split(":")[0]) + parseInt(sleepData[i].chain[1][1].split(":")[1])/60;
-        var deepSleepTime = parseInt(sleepData[i].chain[1][2].split(":")[0]) + parseInt(sleepData[i].chain[1][2].split(":")[1])/60;
+        var totalTime = parseInt(sleepData[i].chain[1][0].split(":")[0]) + parseInt(sleepData[i].chain[1][0].split(":")[1])/60;
+        var deepSleepTime = parseInt(sleepData[i].chain[1][1].split(":")[0]) + parseInt(sleepData[i].chain[1][1].split(":")[1])/60;
         dataRows.push([new Date(date), totalTime, deepSleepTime]);
     }
 
