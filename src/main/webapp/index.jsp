@@ -47,7 +47,7 @@
                 </div>
             </div>
             <h2>Физиологические данные</h2>
-            <h4>Шаги</h4>
+            <h4 class="uk-margin-small">Шаги</h4>
             <div id="steps_chart"></div>
             <div id="sleep_chart"></div>
         </div>
@@ -62,9 +62,9 @@
     </div>
     <hr>
     <h2>Ментальные данные</h2>
-    <h4>Настроение</h4>
+    <h4 class="uk-margin-small">Настроение</h4>
     <div id="mood_chart"></div>
-    <h4>Работа за компьютером</h4>
+    <h4 class="uk-margin-small">Работа за компьютером</h4>
     <div id="comp_chart"></div>
 </div>
 <script src="js/index.js" language="Javascript" type="text/javascript"></script>
