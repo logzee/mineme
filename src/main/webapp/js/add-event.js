@@ -8,6 +8,8 @@ var formWrapper = document.getElementById('form-wrapper');
 var structChain = [];
 var currentNode = structRoot;
 
+document.addEventListener("DOMContentLoaded", dropDownInit);
+
 /**
  * Called when input value changes
  *
@@ -207,7 +209,7 @@ function resetStructChain() {
 }
 
 /**
- * Called when the page loads
+ * Calls when the page loads
  */
 function dropDownInit() {
     var eventDropdown = document.getElementById('event-dropdown');
@@ -227,6 +229,30 @@ function dropDownInit() {
             eventDropdown.appendChild(option);
         }
     }
+
+    // setting default date and time
+    var currentTimestamp = parseInt(document.getElementById('server-timestamp').innerHTML);
+    var datePicker = document.getElementById('date-picker');
+    datePicker.value = formatDateStd(currentTimestamp);
+
+    var timePicker = document.getElementById('time-picker');
+    timePicker.value = formatTime(currentTimestamp);
+}
+
+function formatDateStd(timestamp) {
+    // new Date(year, month[, day[, hour[, minute[, second[, millisecond]]]]]);
+    var date = new Date(timestamp);
+
+    return ("00" + (date.getMonth() + 1)).slice(-2) + "." +
+        ("00" + date.getDate()).slice(-2) + "." +
+        date.getFullYear();
+}
+
+function formatTime(timestamp) {
+    var date = new Date(timestamp);
+
+    return ("00" + d.getHours()).slice(-2) + ":" +
+        ("00" + d.getMinutes()).slice(-2);
 }
 
 /**
@@ -272,24 +298,28 @@ function sendData() {
         tags: validTags
     };
 
-    // checking if date is set or not
+    // getting date & time from inputs
     var timePicker = document.getElementById('time-picker');
-    if (!isBlank(timePicker.value)) {
-        var hour = timePicker.value.split(":")[0];
-        var minute = timePicker.value.split(":")[1];
+    var datePicker = document.getElementById('date-picker');
 
-        if (isBlank(hour) || isBlank(minute)) {
-            ukAlert('Ошибка при вводе времени', 'uk-alert-warning');
-            return;
-        }
+    var hour = timePicker.value.split(":")[0];
+    var minute = timePicker.value.split(":")[1];
 
-        var currentDate = new Date();
-        var currentYear = currentDate.getFullYear();
-        var currentMonth = currentDate.getMonth();
-        var currentDay = currentDate.getDate();
+    var day = datePicker.value.split(".")[0];
+    var month = datePicker.value.split(".")[1];
+    var year = datePicker.value.split(".")[2];
 
-        result.date = new Date(currentYear, currentMonth, currentDay, parseInt(hour), parseInt(minute)).getTime().toString();
+    if (isBlank(hour) || isBlank(minute) || isBlank(day) || isBlank(month) || isBlank(year)) {
+        ukAlert('Ошибка при вводе времени или даты', 'uk-alert-warning');
+        return;
     }
+
+    // var currentDate = new Date();
+    // var currentYear = currentDate.getFullYear();
+    // var currentMonth = currentDate.getMonth();
+    // var currentDay = currentDate.getDate();
+
+    result.date = new Date(parseInt(year), parseInt(month-1), parseInt(day), parseInt(hour), parseInt(minute)).getTime().toString();
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'data?method=addEvent', true);
@@ -317,7 +347,6 @@ function sendData() {
 function isBlank(str) {
     return (!str || /^\s*$/.test(str));
 }
-document.addEventListener("DOMContentLoaded", dropDownInit);
 
 /**
  *  Displays a uikit alert message
@@ -346,7 +375,10 @@ function ukAlert(message, htmlClass) {
     alertWrapper.appendChild(ukAlert);
 }
 
+/**
+ * Clears forms
+ */
 function clearTagsAndTime() {
-    document.getElementById('time-picker').value = '';
+    clearBelow(document.getElementById('event-dropdown'));
     document.getElementById('tags').value = '';
 }

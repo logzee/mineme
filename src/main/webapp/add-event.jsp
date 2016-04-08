@@ -22,6 +22,8 @@
         </ul>
     </div>
 </nav>
+<!-- Server time in case if client's time is incorrect. Put in the hidden tag so the data loads faster -->
+<div hidden id="server-timestamp"><%= new Date().getTime() %></div>
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
     <div class="uk-container-center">
         <h1>Добавить событие</h1>
@@ -37,6 +39,9 @@
                 </div>
                 <div class="uk-form-row">
                     <input type="text" id="time-picker" placeholder="Время" data-uk-timepicker>
+                </div>
+                <div class="uk-form-row">
+                    <input type="text" id="date-picker" placeholder="Дата" data-uk-timepicker>
                 </div>
                 <div class="uk-form-row">
                     <a class="uk-button uk-button-primary uk-margin-small-top" onclick="sendData()"><i class="fa fa-floppy-o"></i> Сохранить событие</a>
