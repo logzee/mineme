@@ -7,6 +7,7 @@ function drawCharts() {
     drawKeyloggerChart();
     drawMoodChart();
     drawStepsChart();
+    drawSleepChart();
 }
 function drawMoodChart() {
     var xhr = new XMLHttpRequest();
