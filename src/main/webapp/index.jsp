@@ -49,6 +49,7 @@
             <h2>Физиологические данные</h2>
             <h4 class="uk-margin-small">Шаги</h4>
             <div id="steps_chart"></div>
+            <h4 class="uk-margin-small">Сон</h4>
             <div id="sleep_chart"></div>
         </div>
         <div class="uk-width-large-1-2 uk-width-medium-1-1">

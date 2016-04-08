@@ -33,10 +33,6 @@ function drawMoodChart() {
             title: 'Настроение'
         },
         legend: { position: 'bottom' },
-        chartArea: {
-            top: 55,
-            height: '40%'
-        }
     };
 
     var mood_chart = new google.visualization.LineChart(document.getElementById('mood_chart'));
@@ -73,10 +69,6 @@ function drawKeyloggerChart() {
         },
         legend: { position: 'bottom' },
         curveType: 'function',
-        chartArea: {
-            top: 55,
-            height: '40%'
-        }
     };
 
     var comp_chart = new google.visualization.LineChart(document.getElementById('comp_chart'));
@@ -118,4 +110,36 @@ function drawStepsChart() {
     var stepsChart = new google.visualization.ColumnChart(document.getElementById('steps_chart'));
 
     stepsChart.draw(data, options);
+}
+
+function drawSleepChart() {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('GET', 'data?method=getEventsByType&type=3&msAgo=604800000', false);
+    xhr.send();
+
+    var sleepData = JSON.parse(xhr.responseText);
+
+    var dataRows = [];
+    dataRows.push(['Информация о сне', 'Время сна', 'Время глубокого сна']);
+    for (var i = 0; i < sleepData.length; i++) {
+        var date = parseInt(sleepData[i].date);
+        var totalTime = parseInt(sleepData[i].chain[1].split(":")[0]) + parseInt(sleepData[i].chain[1].split(":")[1])/60;
+        var deepSleepTime = parseInt(sleepData[i].chain[2].split(":")[0]) + parseInt(sleepData[i].chain[2].split(":")[1])/60;
+        dataRows.push([new Date(date), totalTime, deepSleepTime]);
+    }
+
+    var data = google.visualization.arrayToDataTable(dataRows);
+
+    var options = {
+        vAxis: {
+            title: 'Качество сна',
+            scaleType: 'mirrorLog'
+        },
+        legend: { position: 'none' },
+        chartArea: {
+            top: 55,
+            height: '40%'
+        }
+    };
 }
