@@ -69,8 +69,8 @@
       <file leaf-file-name="charts.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="112" column="10" selection-start-line="112" selection-start-column="10" selection-end-line="112" selection-end-column="10" />
+            <state relative-caret-position="446">
+              <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -972,14 +972,7 @@
       <workItem from="1459963686110" duration="4363000" />
       <workItem from="1460094614297" duration="1973000" />
       <workItem from="1460116927003" duration="5551000" />
-      <workItem from="1460133903376" duration="10269000" />
-    </task>
-    <task id="LOCAL-00159" summary="Migrating to Servlets from JSPs (just figured out that it's awful to keep pure Java code in JSP).&#10;Testing Google Charts">
-      <created>1458762350315</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1458762350315</updated>
+      <workItem from="1460133903376" duration="10504000" />
     </task>
     <task id="LOCAL-00160" summary="Fixed msAgo">
       <created>1458763002296</created>
@@ -1317,11 +1310,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460148212846</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="Some cool improvments">
+      <created>1460148504327</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1460148504327</updated>
+    </task>
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199318000" />
+    <option name="totallyTimeSpent" value="199553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1371,7 +1371,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed some issues" />
     <MESSAGE value="Completely servletted" />
     <MESSAGE value="Keylogger ignoration fixed" />
     <MESSAGE value="Server timestamp now would be taken by XMLHttpRequest" />
@@ -1396,7 +1395,8 @@
     <MESSAGE value="Finally fxed sleep chart" />
     <MESSAGE value="Minor changes in sleep chart" />
     <MESSAGE value="Testing visual changes in charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing visual changes in charts" />
+    <MESSAGE value="Some cool improvments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some cool improvments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1735,8 +1735,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="112" column="10" selection-start-line="112" selection-start-column="10" selection-end-line="112" selection-end-column="10" />
+        <state relative-caret-position="446">
+          <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
           <folding />
         </state>
       </provider>

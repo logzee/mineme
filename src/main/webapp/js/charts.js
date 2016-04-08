@@ -104,7 +104,7 @@ function drawStepsChart() {
             title: 'Количество шагов',
             scaleType: 'mirrorLog'
         },
-        height: 350,
+        height: 270,
         legend: { position: 'none' },
         chartArea: {
             top: 55,
@@ -148,7 +148,7 @@ function drawSleepChart() {
             title: 'Качество сна',
             scaleType: 'mirrorLog'
         },
-        height: 350,
+        height: 270,
         legend: { position: 'none' },
         chartArea: {
             top: 55,
