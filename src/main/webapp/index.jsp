@@ -34,7 +34,7 @@
 </nav>
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
     <div class="uk-grid" data-uk-grid-match>
-        <div class="uk-width-large-1-2 uk-width-medium-1-1 uk-margin-large-bottom">
+        <div class="uk-width-large-1-2 uk-width-medium-1-1 uk-margin-small">
             <div class="uk-panel uk-panel-box">
                 <div class="uk-display-block uk-comment-meta">
                     <img class="uk-comment-avatar uk-border-rounded" src="img/profile.png" alt="Avatar" width="59">

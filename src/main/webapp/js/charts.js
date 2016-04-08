@@ -1,7 +1,7 @@
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawCharts);
 
-chartColors = ['#004411'];
+chartColors = ['#07d'];
 
 function drawCharts() {
     drawKeyloggerChart();
@@ -36,6 +36,7 @@ function drawMoodChart() {
             title: 'Настроение'
         },
         legend: { position: 'bottom' },
+        colors: chartColors
     };
 
     var mood_chart = new google.visualization.LineChart(document.getElementById('mood_chart'));
@@ -70,6 +71,7 @@ function drawKeyloggerChart() {
             title: 'Активность'
         },
         legend: { position: 'bottom' },
+        colors: chartColors,
         curveType: 'function',
     };
 
@@ -106,7 +108,8 @@ function drawStepsChart() {
         chartArea: {
             top: 55,
             height: '40%'
-        }
+        },
+        colors: chartColors
     };
 
     var stepsChart = new google.visualization.ColumnChart(document.getElementById('steps_chart'));
@@ -143,13 +146,14 @@ function drawSleepChart() {
             title: 'Качество сна',
             scaleType: 'mirrorLog'
         },
-        height: 300,
+        height: 350,
         legend: { position: 'none' },
         chartArea: {
             top: 55,
-            height: '40%'
+            width: '100%',
+            height: '50%',
         },
-        isStacked: true
+        colors: chartColors
     };
 
     var sleepChart = new google.visualization.ColumnChart(document.getElementById('sleep_chart'));
