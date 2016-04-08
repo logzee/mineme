@@ -1,6 +1,8 @@
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawCharts);
 
+chartColors = ['#004411'];
+
 function drawCharts() {
     drawKeyloggerChart();
     drawMoodChart();
@@ -48,7 +50,6 @@ function drawKeyloggerChart() {
     xhr.send();
 
     var keyloggerData = JSON.parse(xhr.responseText);
-    debugger;
     var dataRows = [];
     for (var i = 0; i < keyloggerData.length; i++) {
         var date = parseInt(keyloggerData[i].date);
@@ -124,13 +125,13 @@ function drawSleepChart() {
     
     for (var i = 0; i < sleepData.length; i++) {
         var date = parseInt(sleepData[i].date);
-        var totalTime = parseInt(sleepData[i].chain[1].split(":")[0]) + parseInt(sleepData[i].chain[1].split(":")[1])/60;
-        var deepSleepTime = parseInt(sleepData[i].chain[2].split(":")[0]) + parseInt(sleepData[i].chain[2].split(":")[1])/60;
+        // "chain":["3",["06:13","03:07"]]
+        var totalTime = parseInt(sleepData[i].chain[1][1].split(":")[0]) + parseInt(sleepData[i].chain[1][1].split(":")[1])/60;
+        var deepSleepTime = parseInt(sleepData[i].chain[1][2].split(":")[0]) + parseInt(sleepData[i].chain[1][2].split(":")[1])/60;
         dataRows.push([new Date(date), totalTime, deepSleepTime]);
     }
 
     var data = new google.visualization.DataTable();
-
     data.addColumn('date', 'Дата');
     data.addColumn('number', 'Продолжительность сна');
     data.addColumn('number', 'Продолжительность глубокого сна');
