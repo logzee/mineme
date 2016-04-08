@@ -143,6 +143,7 @@ function drawSleepChart() {
             title: 'Качество сна',
             scaleType: 'mirrorLog'
         },
+        height: 300,
         legend: { position: 'none' },
         chartArea: {
             top: 55,
