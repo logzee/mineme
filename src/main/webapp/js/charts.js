@@ -32,7 +32,11 @@ function drawMoodChart() {
         vAxis: {
             title: 'Настроение'
         },
-        legend: { position: 'bottom' }
+        legend: { position: 'bottom' },
+        chartArea: {
+            top: 55,
+            height: '40%'
+        }
     };
 
     var mood_chart = new google.visualization.LineChart(document.getElementById('mood_chart'));
@@ -68,7 +72,11 @@ function drawKeyloggerChart() {
             title: 'Активность'
         },
         legend: { position: 'bottom' },
-        curveType: 'function'
+        curveType: 'function',
+        chartArea: {
+            top: 55,
+            height: '40%'
+        }
     };
 
     var comp_chart = new google.visualization.LineChart(document.getElementById('comp_chart'));
