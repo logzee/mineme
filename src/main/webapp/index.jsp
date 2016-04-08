@@ -46,8 +46,10 @@
                     </div>
                 </div>
             </div>
-            <h2>Шагов пройдено за последние 7 дней</h2>
+            <h2>Физиологические данные</h2>
+            <h4>Шаги</h4>
             <div id="steps_chart"></div>
+            <div id="sleep_chart"></div>
         </div>
         <div class="uk-width-large-1-2 uk-width-medium-1-1">
             <div class="uk-panel uk-panel-box">
@@ -59,9 +61,10 @@
         </div>
     </div>
     <hr>
-    <h2>Как менялось настроение за последние 7 дней</h2>
+    <h2>Ментальные данные</h2>
+    <h4>Настроение</h4>
     <div id="mood_chart"></div>
-    <h2>Активность за компьютером за последние 7 дней</h2>
+    <h4>Работа за компьютером</h4>
     <div id="comp_chart"></div>
 </div>
 <script src="js/index.js" language="Javascript" type="text/javascript"></script>
