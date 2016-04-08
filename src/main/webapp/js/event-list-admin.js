@@ -21,7 +21,7 @@ function eventLogInit() {
         dl.setAttribute('class', 'uk-list uk-list-line uk-description-list-line uk-margin-remove');
 
         var closeBtn = document.createElement('span');
-        closeBtn.setAttribute('class', 'uk-close uk-float-right uk-close-alt');
+        closeBtn.setAttribute('class', 'uk-close uk-float-right uk-modal-close');
         var id = eventsData[i]._id.$oid;
         closeBtn.setAttribute('onclick', 'removeEvent(this, "' + id + '");');
 
