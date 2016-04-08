@@ -121,7 +121,7 @@ function drawSleepChart() {
     var sleepData = JSON.parse(xhr.responseText);
 
     var dataRows = [];
-    dataRows.push(['Информация о сне', 'Время сна', 'Время глубокого сна']);
+    
     for (var i = 0; i < sleepData.length; i++) {
         var date = parseInt(sleepData[i].date);
         var totalTime = parseInt(sleepData[i].chain[1].split(":")[0]) + parseInt(sleepData[i].chain[1].split(":")[1])/60;
@@ -129,7 +129,12 @@ function drawSleepChart() {
         dataRows.push([new Date(date), totalTime, deepSleepTime]);
     }
 
-    var data = google.visualization.arrayToDataTable(dataRows);
+    var data = new google.visualization.DataTable();
+
+    data.addColumn('date', 'Дата');
+    data.addColumn('number', 'Продолжительность сна');
+    data.addColumn('number', 'Продолжительность глубокого сна');
+    data.addRows(dataRows);
 
     var options = {
         vAxis: {
@@ -142,4 +147,8 @@ function drawSleepChart() {
             height: '40%'
         }
     };
+
+    var sleepChart = new google.visualization.ColumnChart(document.getElementById('sleep_chart'));
+
+    sleepChart.draw(data, options);
 }
