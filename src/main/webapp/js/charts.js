@@ -108,12 +108,13 @@ function drawStepsChart() {
             title: 'Дата'
         },
         vAxis: {
-            title: 'Количество шагов'
+            title: 'Количество шагов',
+            scaleType: 'mirrorLog'
         },
         legend: { position: 'none' }
     };
 
-    var stepsChart = new google.visualization.Histogram(document.getElementById('steps_chart'));
+    var stepsChart = new google.visualization.ColumnChart(document.getElementById('steps_chart'));
 
     stepsChart.draw(data, options);
 }
