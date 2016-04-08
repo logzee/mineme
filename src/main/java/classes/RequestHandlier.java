@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -131,8 +132,20 @@ public class RequestHandlier extends HttpServlet {
      * @throws IOException
      */
     private void getEventByType(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Integer[] typeChain = new Integer[1];
-        typeChain[0] = Integer.parseInt(request.getParameter("type"));
+        String type = request.getParameter("type");
+
+        Integer[] typeChain;
+        if (!type.contains(",")) {
+            typeChain = new Integer[1];
+            typeChain[0] = Integer.parseInt(request.getParameter("type"));
+        } else {
+            String[] typeChainStrings = type.split(",");
+            ArrayList<Integer> typeChainList = new ArrayList<Integer>();
+            for (String typeString : typeChainStrings) {
+                typeChainList.add(Integer.parseInt(typeString));
+            }
+            typeChain = (Integer[]) typeChainList.toArray();
+        }
         Long msAgo = Long.parseLong(request.getParameter("msAgo"));
 
         String jsonResponse = dbManager.getEventsOfAType(typeChain, msAgo);
