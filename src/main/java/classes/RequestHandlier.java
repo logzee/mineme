@@ -140,11 +140,10 @@ public class RequestHandlier extends HttpServlet {
             typeChain[0] = Integer.parseInt(request.getParameter("type"));
         } else {
             String[] typeChainStrings = type.split(",");
-            ArrayList<Integer> typeChainList = new ArrayList<Integer>();
-            for (String typeString : typeChainStrings) {
-                typeChainList.add(Integer.parseInt(typeString));
+            typeChain = new Integer[typeChainStrings.length];
+            for (int i = 0; i < typeChain.length; i++) {
+                typeChain[i] = Integer.valueOf(typeChainStrings[i]);
             }
-            typeChain = (Integer[]) typeChainList.toArray();
         }
         Long msAgo = Long.parseLong(request.getParameter("msAgo"));
 

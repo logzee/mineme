@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <h2>Количество шагов за последне 7 дней</h2>
+            <h2>Шагов пройдено за последние 7 дней</h2>
             <div id="steps_chart"></div>
         </div>
         <div class="uk-width-large-1-2 uk-width-medium-1-1">
