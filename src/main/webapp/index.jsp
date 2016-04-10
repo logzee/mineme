@@ -58,7 +58,7 @@
                 <dl class="uk-list uk-list-line uk-description-list-line" id="event-log">
                 </dl>
             </div>
-            <p><a href="event-list.jsp">Все события</a><a href="#">Запросить отчет</a></p>
+            <p><a href="event-list.jsp">Все события </a><a href="#">Запросить отчет</a></p>
         </div>
     </div>
     <hr>

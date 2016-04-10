@@ -6,18 +6,23 @@ chartColors = ['#07d', '#82bb42'];
 function chartsInit() {
     drawKeyloggerChart();
     drawMoodChart();
+    requestAndDraw('data?method=getEventsByType&type=0,4&msAgo=604800000', drawStepsChart);
+    drawSleepChart();
+}
+
+function requestAndDraw(request, drawFunction) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data?method=getEventsByType&type=0,4&msAgo=604800000', true);
+    xhr.open('GET', request, true);
     xhr.send();
     xhr.onreadystatechange = function() {
         if (xhr.readyState != 4) return;
         if (xhr.status == 200) {
-            var stepsData = JSON.parse(xhr.responseText);
-            drawStepsChart(stepsData);
+            var data = JSON.parse(xhr.responseText);
+            drawFunction(data);
         }
     }
-    drawSleepChart();
 }
+
 function drawMoodChart() {
     var xhr = new XMLHttpRequest();
     // method = getEventsByType, type=1 (настроение), msAgo = 604800000 (неделя)
