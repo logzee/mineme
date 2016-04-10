@@ -40,7 +40,7 @@
 
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
     <div class="uk-container uk-container-center">
-        <a class="uk-navbar-brand" href="index.jsp">MineMe</a>
+        <a class="uk-navbar-brand" href="index.jsp">MineMe <span class="uk-badge uk-margin-small-right">alpha</span></a>
     </div>
 </nav>
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
