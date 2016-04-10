@@ -81,7 +81,7 @@ function drawKeyloggerChart() {
         curveType: 'function',
     };
 
-    var comp_chart = new google.visualization.LineChart(document.getElementById('comp_chart'));
+    var comp_chart = new google.visualization.ScatterChart(document.getElementById('comp_chart'));
 
     comp_chart.draw(data, options);
 }
