@@ -18,9 +18,9 @@ function requestAndDraw(request, drawFunction, htmlId) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState != 4) return;
         if (xhr.status == 200) {
+            toggleLoading(htmlId);
             var data = JSON.parse(xhr.responseText);
             drawFunction(data);
-            toggleLoading(htmlId);
         }
     }
 }
