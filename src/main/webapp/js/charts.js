@@ -4,10 +4,10 @@ google.charts.setOnLoadCallback(chartsInit);
 chartColors = ['#07d', '#82bb42'];
 
 function chartsInit() {
-    drawKeyloggerChart();
-    drawMoodChart();
+    requestAndDraw('data?method=getEventsByType&type=4&msAgo=604800000', drawKeyloggerChart);
+    requestAndDraw('data?method=getEventsByType&type=1&msAgo=604800000', drawMoodChart);
     requestAndDraw('data?method=getEventsByType&type=0,4&msAgo=604800000', drawStepsChart);
-    drawSleepChart();
+    requestAndDraw('data?method=getEventsByType&type=3&msAgo=604800000', drawSleepChart);
 }
 
 function requestAndDraw(request, drawFunction) {
@@ -23,13 +23,7 @@ function requestAndDraw(request, drawFunction) {
     }
 }
 
-function drawMoodChart() {
-    var xhr = new XMLHttpRequest();
-    // method = getEventsByType, type=1 (настроение), msAgo = 604800000 (неделя)
-    xhr.open('GET', 'data?method=getEventsByType&type=1&msAgo=604800000', false);
-    xhr.send();
-
-    var moodData = JSON.parse(xhr.responseText);
+function drawMoodChart(moodData) {
     var dataRows = [];
     for (var i = 0; i < moodData.length; i++) {
         var date = parseInt(moodData[i].date);
@@ -62,13 +56,7 @@ function drawMoodChart() {
 }
 
 
-function drawKeyloggerChart() {
-    var xhr = new XMLHttpRequest();
-
-    xhr.open('GET', 'data?method=getEventsByType&type=4&msAgo=604800000', false);
-    xhr.send();
-
-    var keyloggerData = JSON.parse(xhr.responseText);
+function drawKeyloggerChart(keyloggerData) {
     var dataRows = [];
     for (var i = 0; i < keyloggerData.length; i++) {
         var date = parseInt(keyloggerData[i].date);
@@ -135,14 +123,7 @@ function drawStepsChart(stepsData) {
     stepsChart.draw(data, options);
 }
 
-function drawSleepChart() {
-    var xhr = new XMLHttpRequest();
-
-    xhr.open('GET', 'data?method=getEventsByType&type=3&msAgo=604800000', false);
-    xhr.send();
-
-    var sleepData = JSON.parse(xhr.responseText);
-
+function drawSleepChart(sleepData) {
     var dataRows = [];
     
     for (var i = 0; i < sleepData.length; i++) {
