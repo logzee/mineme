@@ -4,13 +4,14 @@ google.charts.setOnLoadCallback(chartsInit);
 chartColors = ['#07d', '#82bb42'];
 
 function chartsInit() {
-    requestAndDraw('data?method=getEventsByType&type=4&msAgo=604800000', drawKeyloggerChart);
-    requestAndDraw('data?method=getEventsByType&type=1&msAgo=604800000', drawMoodChart);
-    requestAndDraw('data?method=getEventsByType&type=0,4&msAgo=604800000', drawStepsChart);
-    requestAndDraw('data?method=getEventsByType&type=3&msAgo=604800000', drawSleepChart);
+    requestAndDraw('data?method=getEventsByType&type=4&msAgo=604800000', drawKeyloggerChart, 'comp_chart');
+    requestAndDraw('data?method=getEventsByType&type=1&msAgo=604800000', drawMoodChart, 'mood_chart');
+    requestAndDraw('data?method=getEventsByType&type=0,4&msAgo=604800000', drawStepsChart, 'steps_chart');
+    requestAndDraw('data?method=getEventsByType&type=3&msAgo=604800000', drawSleepChart, 'sleep_chart');
 }
 
-function requestAndDraw(request, drawFunction) {
+function requestAndDraw(request, drawFunction, htmlId) {
+    toggleLoading(htmlId);
     var xhr = new XMLHttpRequest();
     xhr.open('GET', request, true);
     xhr.send();
@@ -19,7 +20,21 @@ function requestAndDraw(request, drawFunction) {
         if (xhr.status == 200) {
             var data = JSON.parse(xhr.responseText);
             drawFunction(data);
+            toggleLoading(htmlId);
         }
+    }
+}
+
+function toggleLoading(htmlId) {
+    var elem = document.getElementById(htmlId);
+    var innerHtml = elem.innerHTML;
+    innerHtml = (innerHtml.trim) ? innerHtml.trim() : innerHtml.replace(/^\s+/,'');
+    if(innerHtml == '') {
+        var spinner = document.createElement('div');
+        spinner.setAttribute('class', 'spinner');
+        elem.appendChild(spinner);
+    } else {
+        elem.innerHTML = '';
     }
 }
 
@@ -64,7 +79,6 @@ function drawKeyloggerChart(keyloggerData) {
         dataRows.push([new Date(date), value]);
     }
 
-    // Define the chart to be drawn.
     var data = new google.visualization.DataTable();
 
     data.addColumn('date', 'Дата');
