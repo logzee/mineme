@@ -33,7 +33,10 @@ function drawMoodChart() {
     var options = {
         curveType: 'function',
         vAxis: {
-            title: 'Настроение'
+            title: 'Настроение',
+            baselineColor: '#fff',
+            gridlineColor: '#fff',
+            textPosition: 'none'
         },
         legend: { position: 'bottom' },
         colors: chartColors
@@ -68,7 +71,10 @@ function drawKeyloggerChart() {
 
     var options = {
         vAxis: {
-            title: 'Активность'
+            title: 'Активность',
+            baselineColor: '#fff',
+            gridlineColor: '#fff',
+            textPosition: 'none'
         },
         legend: { position: 'bottom' },
         colors: chartColors,
@@ -104,6 +110,7 @@ function drawStepsChart() {
             title: 'Количество шагов',
             scaleType: 'mirrorLog'
         },
+
         height: 210,
         legend: { position: 'none' },
         chartArea: {
