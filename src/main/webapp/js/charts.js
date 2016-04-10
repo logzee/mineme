@@ -1,12 +1,16 @@
 google.charts.load('current', {packages: ['corechart', 'line']});
-google.charts.setOnLoadCallback(drawCharts);
+google.charts.setOnLoadCallback(chartsInit);
 
 chartColors = ['#07d', '#82bb42'];
 
-function drawCharts() {
+function chartsInit() {
     drawKeyloggerChart();
     drawMoodChart();
-    drawStepsChart();
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'data?method=getEventsByType&type=0,4&msAgo=604800000', false);
+    xhr.send();
+    var stepsData = JSON.parse(xhr.responseText);
+    drawStepsChart(stepsData);
     drawSleepChart();
 }
 function drawMoodChart() {
@@ -86,13 +90,8 @@ function drawKeyloggerChart() {
     comp_chart.draw(data, options);
 }
 
-function drawStepsChart() {
-    var xhr = new XMLHttpRequest();
+function drawStepsChart(stepsData) {
 
-    xhr.open('GET', 'data?method=getEventsByType&type=0,4&msAgo=604800000', false);
-    xhr.send();
-
-    var stepsData = JSON.parse(xhr.responseText);
     var dataRows = [];
     for (var i = 0; i < stepsData.length; i++) {
         var date = parseInt(stepsData[i].date);

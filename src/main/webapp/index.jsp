@@ -21,7 +21,7 @@
 <body>
 <!-- I use these hidden tags to get data from the server because it much faster then XmlHttpRequest -->
 <div hidden id="server-timestamp"><%= new Date().getTime() %></div>
-<div hidden id="last-events"><%= dbManager.getLastEventsJson(8, true) %></div>
+<div hidden id="last-events"><%= dbManager.getLastEventsJson(10, true) %></div>
 <div hidden id="struct-data"><%= dbManager.getStruct() %></div>
 
 <nav class="uk-navbar uk-margin-large-bottom uk-navbar-attached">
@@ -58,7 +58,7 @@
                 <dl class="uk-list uk-list-line uk-description-list-line" id="event-log">
                 </dl>
             </div>
-            <p><a href="event-list.jsp">Все события</a></p>
+            <p><a href="event-list.jsp">Все события</a><a href="#">Запросить отчет</a></p>
         </div>
     </div>
     <hr>
