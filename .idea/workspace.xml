@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af533fb6-af59-42a7-8695-6ae8dd99a72a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/charts.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/charts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/mineme.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/mineme.css" />
     </list>
     <ignored path="mineme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,21 +46,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="charts.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="charts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <state relative-caret-position="63">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mineme.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mineme.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mineme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+            <state relative-caret-position="294">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -174,8 +174,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/report.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/mineme.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/charts.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/mineme.css" />
       </list>
     </option>
   </component>
@@ -965,14 +965,7 @@
       <workItem from="1460116927003" duration="5551000" />
       <workItem from="1460133903376" duration="11480000" />
       <workItem from="1460226885969" duration="21000" />
-      <workItem from="1460316536364" duration="5657000" />
-    </task>
-    <task id="LOCAL-00172" summary="Server timestamp now would be taken by XMLHttpRequest">
-      <created>1458799834382</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1458799834383</updated>
+      <workItem from="1460316536364" duration="5852000" />
     </task>
     <task id="LOCAL-00173" summary="No data from server through hidden HTML tags from now!">
       <created>1458800360195</created>
@@ -1310,11 +1303,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460322884360</updated>
     </task>
-    <option name="localTasksCounter" value="221" />
+    <task id="LOCAL-00221" summary="fixed previous changes">
+      <created>1460323042526</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1460323042526</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206207000" />
+    <option name="totallyTimeSpent" value="206402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1852" height="1053" extended-state="6" />
@@ -1364,7 +1364,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed steps chart" />
     <MESSAGE value="Added date input" />
     <MESSAGE value="Fixed date format" />
     <MESSAGE value="Removed legend from steps chart" />
@@ -1389,7 +1388,8 @@
     <MESSAGE value="replaced sync request with async ones" />
     <MESSAGE value="replaced sync requests with async ones" />
     <MESSAGE value="added loading animation (i think)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added loading animation (i think)" />
+    <MESSAGE value="fixed previous changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed previous changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1715,18 +1715,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mineme.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        <state relative-caret-position="63">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/charts.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mineme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state relative-caret-position="294">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding />
         </state>
       </provider>
