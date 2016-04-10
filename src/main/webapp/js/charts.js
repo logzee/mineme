@@ -7,10 +7,15 @@ function chartsInit() {
     drawKeyloggerChart();
     drawMoodChart();
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data?method=getEventsByType&type=0,4&msAgo=604800000', false);
+    xhr.open('GET', 'data?method=getEventsByType&type=0,4&msAgo=604800000', true);
     xhr.send();
-    var stepsData = JSON.parse(xhr.responseText);
-    drawStepsChart(stepsData);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+        if (xhr.status == 200) {
+            var stepsData = JSON.parse(xhr.responseText);
+            drawStepsChart(stepsData);
+        }
+    }
     drawSleepChart();
 }
 function drawMoodChart() {
