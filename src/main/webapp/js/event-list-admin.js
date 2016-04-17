@@ -29,7 +29,7 @@ function eventLogInit() {
         dt.setAttribute('class', 'uk-text-truncate');
 
         var dd = document.createElement('dd');
-        dd.innerHTML = formatDate(eventsData[i].date);
+        dd.innerHTML = formatTime(eventsData[i].date) + ", " + formatDate(eventsData[i].date);
 
         var tagsWrapper = undefined;
         if (eventsData[i].hasOwnProperty('tags') && eventsData[i].tags.length > 0) {
@@ -97,18 +97,30 @@ function removeEvent(element, id) {
 }
 
 /**
- * Formats date
- * @param timestamp     event timestamp
- * @returns {String}
+ * Format date in dd.MM.yyyy
+ *
+ * @param timestamp
+ * @returns {string}
  */
 function formatDate(timestamp) {
-    var currentTimestamp = parseInt(document.getElementById('server-timestamp').innerHTML);
-    var eventTimestamp = parseInt(timestamp);
-    var delta = currentTimestamp - eventTimestamp;
+    var date = new Date(timestamp);
 
-    var date = new Date(eventTimestamp);
-    // date.getHours() + ":" + date.getSeconds() + " " + date.getDay() + "." + date.getMonth() + "." + date.getFullYear() + ', ' + 
-    return smartTime(delta);
+    return ("00" + date.getDate()).slice(-2) + "." +
+        ("00" + (date.getMonth() + 1)).slice(-2) + "." +
+        date.getFullYear();
+}
+
+/**
+ * Format time in HH:mm
+ *
+ * @param timestamp
+ * @returns {string}
+ */
+function formatTime(timestamp) {
+    var date = new Date(timestamp);
+
+    return ("00" + date.getHours()).slice(-2) + ":" +
+        ("00" + date.getMinutes()).slice(-2);
 }
 
 /**

@@ -22,6 +22,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="loader" level="application" />
+    <orderEntry type="library" name="KotlinJavaRuntime (2)" level="project" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
     <orderEntry type="library" name="Maven: org.postgresql:postgresql:9.2-1003-jdbc4" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.25" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
@@ -30,6 +33,5 @@
     <orderEntry type="library" name="Maven: com.google.gwt:gwt-dev:2.5.0-redhat-1" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.6.2" level="project" />
-    <orderEntry type="library" name="loader" level="application" />
   </component>
 </module>

@@ -2,17 +2,27 @@ google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(chartsInit);
 
 chartColors = ['#07d', '#82bb42'];
-
+/**
+ * Draw all the charts on startup
+ */
 function chartsInit() {
-    requestAndDraw('data?method=getEventsByType&type=4&msAgo=604800000', drawKeyloggerChart, 'comp_chart');
-    requestAndDraw('data?method=getEventsByType&type=1&msAgo=604800000', drawMoodChart, 'mood_chart');
-    requestAndDraw('data?method=getEventsByType&type=0,4&msAgo=604800000', drawStepsChart, 'steps_chart');
-    requestAndDraw('data?method=getEventsByType&type=3&msAgo=604800000', drawSleepChart, 'sleep_chart');
+    requestAndDraw('4', drawKeyloggerChart, 'comp_chart');
+    requestAndDraw('1', drawMoodChart, 'mood_chart');
+    requestAndDraw('0,4', drawStepsChart, 'steps_chart');
+    requestAndDraw('3', drawSleepChart, 'sleep_chart');
 }
 
-function requestAndDraw(request, drawFunction, htmlId) {
+/**
+ * Request wrapper function
+ *
+ * @param request
+ * @param drawFunction call when data obtain
+ * @param htmlId id of the chart container
+ */
+function requestAndDraw(type, drawFunction, htmlId) {
     toggleLoading(htmlId);
     var xhr = new XMLHttpRequest();
+    var request = 'data?method=getEventsByType&type=' + type + '&msAgo=604800000'
     xhr.open('GET', request, true);
     xhr.send();
     xhr.onreadystatechange = function() {
@@ -25,6 +35,11 @@ function requestAndDraw(request, drawFunction, htmlId) {
     }
 }
 
+/**
+ * Toggle lodaing animation in the container
+ * 
+ * @param htmlId container
+ */
 function toggleLoading(htmlId) {
     var elem = document.getElementById(htmlId);
     var innerHtml = elem.innerHTML;
@@ -38,6 +53,11 @@ function toggleLoading(htmlId) {
     }
 }
 
+/**
+ * Draw mood chart
+ * 
+ * @param moodData
+ */
 function drawMoodChart(moodData) {
     var dataRows = [];
     for (var i = 0; i < moodData.length; i++) {
@@ -46,7 +66,7 @@ function drawMoodChart(moodData) {
         dataRows.push([new Date(date), value]);
     }
 
-    // Define the chart to be drawn.
+    // define the chart to draw
     var data = new google.visualization.DataTable();
 
     data.addColumn('date', 'Дата');
@@ -70,7 +90,11 @@ function drawMoodChart(moodData) {
     mood_chart.draw(data, options);
 }
 
-
+/**
+ * Draw keylogger chart
+ * 
+ * @param keyloggerData
+ */
 function drawKeyloggerChart(keyloggerData) {
     var dataRows = [];
     for (var i = 0; i < keyloggerData.length; i++) {
@@ -102,6 +126,11 @@ function drawKeyloggerChart(keyloggerData) {
     comp_chart.draw(data, options);
 }
 
+/**
+ * Draw steps chart
+ * 
+ * @param stepsData
+ */
 function drawStepsChart(stepsData) {
 
     var dataRows = [];
@@ -137,6 +166,11 @@ function drawStepsChart(stepsData) {
     stepsChart.draw(data, options);
 }
 
+/**
+ * Draw sleep chart
+ * 
+ * @param sleepData
+ */
 function drawSleepChart(sleepData) {
     var dataRows = [];
     

@@ -24,7 +24,7 @@ function eventLogInit() {
         dt.setAttribute('class', 'uk-text-truncate');
 
         var dd = document.createElement('dd');
-        dd.innerHTML = formatDate(eventsData[i].date);
+        dd.innerHTML = formatTime(eventsData[i].date) + ", " + formatDate(eventsData[i].date);
 
         var tagsWrapper = undefined;
         if (eventsData[i].hasOwnProperty('tags') && eventsData[i].tags.length > 0) {
@@ -71,80 +71,38 @@ function eventLogInit() {
 }
 
 /**
- * Formats date
- * @param timestamp     event timestamp
- * @returns {String}
+ * Format date in dd.MM.yyyy
+ *
+ * @param timestamp
+ * @returns {string}
  */
 function formatDate(timestamp) {
-    var currentTimestamp = parseInt(document.getElementById('server-timestamp').innerHTML);
-    var eventTimestamp = parseInt(timestamp);
-    var delta = currentTimestamp - eventTimestamp;
+    var date = new Date(timestamp);
 
-    var date = new Date(eventTimestamp);
-    // date.getHours() + ":" + date.getSeconds() + " " + date.getDay() + "." + date.getMonth() + "." + date.getFullYear() + ', ' + 
-    return smartTime(delta);
+    return ("00" + date.getDate()).slice(-2) + "." +
+        ("00" + (date.getMonth() + 1)).slice(-2) + "." +
+        date.getFullYear();
 }
 
 /**
- * Formats passed time
+ * Format time in HH:mm
+ *
  * @param timestamp
- * @returns String
+ * @returns {string}
  */
-function smartTime(timestamp) {
-    var seconds = timestamp / 1000;
-    if (seconds < 60) {
-        return 'Меньше минуты назад';
-    }
+function formatTime(timestamp) {
+    var date = new Date(timestamp);
 
-    var minutes = Math.round(seconds/60);
-    if (minutes < 60) {
-        return minutes + ' ' + declOfNum(minutes, ['минута', 'минуты', 'минут']) + ' назад';
-    }
-
-    var message;
-
-    var hours = Math.round(minutes/60);
-    if(hours < 24) {
-        message = hours + ' ' + declOfNum(hours, ['час', 'часа', 'часов']);
-        if (minutes % 60 > 0) {
-            message += ' ' + minutes % 60 + ' ' + declOfNum(minutes % 60, ['минута', 'минуты', 'минут']);
-        }
-        message += ' назад';
-        return message;
-    }
-
-    var days = Math.round(hours/24);
-    if(days < 30) {
-        message = days + ' ' + declOfNum(days, ['день', 'дня', 'дней']);
-        if (hours % 24 > 0) {
-            message += ' ' + hours % 24 + ' ' + declOfNum(hours % 24, ['час', 'часа', 'часов']);
-        }
-        message += ' назад';
-        return message;
-    }
-
-    var months = Math.round(days/30);
-    if(months < 12) {
-        message = months + ' ' + declOfNum(months, ['месяц', 'месяца', 'месяцев']);
-        if (days % 30 > 0) {
-            message += ' ' + days % 30 + ' ' + declOfNum(days % 30, ['день', 'дня', 'дней']);
-        }
-        message += ' назад';
-        return message;
-    }
-    message = Math.round(months/12) + ' ' + declOfNum(months/12, ['год', 'года', 'лет']);
-    if (months % 12 > 0) {
-        message += ' ' + months % 12 + ' ' + declOfNum(months % 12, ['месяц', 'месяца', 'месяцев']);
-    }
-    message += ' назад';
-    return message;
+    return ("00" + date.getHours()).slice(-2) + ":" +
+        ("00" + date.getMinutes()).slice(-2);
 }
 
 /**
- * Noun declension function according to a number
- * @param number    number to incline
- * @param titles    array of noun cases
- **/
+ * Noun declense according to a number
+ *
+ * @param number number to incline
+ * @param titles array of noun cases
+ */
 function declOfNum(number, titles) {
     cases = [2, 0, 1, 1, 1, 2];
     return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];

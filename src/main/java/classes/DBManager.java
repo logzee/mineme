@@ -8,14 +8,9 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.result.DeleteResult;
-import com.mongodb.util.JSON;
-import org.bson.BsonArray;
-import org.bson.BsonInt32;
 import org.bson.Document;
 import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
-import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 
 import java.net.UnknownHostException;
@@ -34,8 +29,9 @@ public class DBManager {
     private MongoDatabase db;
 
     /**
-     * The only constructor initializes mongo client connection and then database connection
-     * @throws UnknownHostException     if failed to connect to the database
+     * Initialize mongo client connection and database connection
+     *
+     * @throws UnknownHostException if failed to connect
      */
     public DBManager() throws UnknownHostException {
         MongoClient mongoClient = new MongoClient(new MongoClientURI(System.getenv("MONGODB_URL")));
@@ -43,7 +39,7 @@ public class DBManager {
     }
 
     /**
-      * Gets data that describes the structure of event types
+      * Get data that describes the structure of event types
       * @return structure of event types in JSON format
       */
     public String getStruct() {
@@ -53,8 +49,8 @@ public class DBManager {
     }
 
     /**
-      * Inserts a new event to the database
-      * @param json     an event data to insert in JSON format
+      * Insert a new event to the database
+      * @param json an event data to insert in JSON
       */
     public void insertFromString(String json) {
         this.collection = db.getCollection("events");
@@ -62,10 +58,10 @@ public class DBManager {
     }
 
     /**
-     * Gets last events from the database
+     * Get last events from the database
      *
-     * @param count    how many events to get
-     * @return         last events in JSON format
+     * @param count how many events to get
+     * @return last events in JSON format
      */
     public String getLastEventsJson(int count, boolean ignoreHidden) {
         this.collection = db.getCollection("events");
@@ -91,8 +87,9 @@ public class DBManager {
     }
 
     /**
-     * Gets all the tags from the database;
-     * @return      list of all tags from the database
+     * Get all the tags
+     *
+     * @return list of all tags from the database
      */
     public List<String> getTags() {
         this.collection = db.getCollection("event-types");
@@ -105,7 +102,8 @@ public class DBManager {
     }
 
     /**
-     * Adds new tags to the database
+     * Add new tags to the database
+     *
      * @param eventTags   tags to add
      */
     public void updateTags(List<String> eventTags) {
@@ -124,8 +122,9 @@ public class DBManager {
     }
 
     /**
-     * Removes event from database
-     * @param eventId  request body from client
+     * Remove event from
+     *
+     * @param eventId request body
      */
     public void removeEvent(String eventId) {
         this.collection = db.getCollection("events");
@@ -133,10 +132,11 @@ public class DBManager {
     }
 
     /**
-     * Gets list of events of requested type from database
-     * @param chainFromClient    event type or type and subtype
-     * @param msAgo     since which time
-     * @return  result in JSON format
+     * Get list of events of requested type
+     *
+     * @param chainFromClient event type or type and subtype
+     * @param msAgo from what time
+     * @return result in JSON
      */
     public String getEventsOfAType(Integer[] chainFromClient, Long msAgo) {
         this.collection = db.getCollection("events");

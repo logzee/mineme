@@ -11,9 +11,9 @@ var currentNode = structRoot;
 document.addEventListener("DOMContentLoaded", dropDownInit);
 
 /**
- * Called when input value changes
+ * Call when input value changed
  *
- * @param form      html element which has called the function
+ * @param form html element that has called the function
  */
 function updateForm(form) {
     var eventNumber = form.value;
@@ -43,7 +43,7 @@ function updateForm(form) {
 }
 
 /**
- * Adds a new text input
+ * Add a new text input
  *
  * @param itemStruct    event structure of selected event
  */
@@ -69,7 +69,7 @@ function addTextInput(itemStruct) {
 }
 
 /**
- * Adds multiple text fields for the list structRoot
+ * Add multiple text fields for the list structRoot
  *
  * @param listStruct
  */
@@ -122,9 +122,9 @@ function addListInput(listStruct) {
 }
 
 /**
- * Adds new dropdown input, takes the item's structure as the argument
+ * Add new dropdown input
  *
- * @param itemStruct    structure of item to add dropdown input for
+ * @param itemStruct structure of item to add dropdown input for
  */
 function addDropdownInput(itemStruct) {
     var select = document.createElement('select');
@@ -144,10 +144,10 @@ function addDropdownInput(itemStruct) {
 }
 
 /**
- * Returns structure of the event type from structRoot by its number and nesting level
+ * Return structure of the event type from structRoot by its number and nesting level
  *
- * @param eventNumber     index number of the event type
- * @return currentNode      structure of requested event type
+ * @param eventNumber code number of the event type
+ * @return currentNode structure of requested event type
  */
 function getEventStruct(eventNumber) {
     structChain.push(eventNumber);
@@ -165,12 +165,11 @@ function getEventStruct(eventNumber) {
 }
 
 /**
- * Removes all inputs under the input, which has passed as the argument
+ * Remove all inputs under the element
  *
- * @param input
+ * @param input element
  */
 function clearBelow(input) {
-    // определяем индекс input'a
     var targetIndex = 0;
 
     while( (input = input.previousElementSibling) != null ) {
@@ -198,7 +197,7 @@ function clearBelow(input) {
 
 
 /**
- * Sets currentNode according to event chain
+ * Set currentNode according to event chain
  */
 function resetStructChain() {
     var result = structRoot;
@@ -209,7 +208,7 @@ function resetStructChain() {
 }
 
 /**
- * Calls when the page loads
+ * Call when the page loaded
  */
 function dropDownInit() {
     var eventDropdown = document.getElementById('event-dropdown');
@@ -238,9 +237,13 @@ function dropDownInit() {
     var timePicker = document.getElementById('time-picker');
     timePicker.value = formatTime(currentTimestamp);
 }
-
+/**
+ * Format date in dd.MM.yyyy
+ *
+ * @param timestamp
+ * @returns {string}
+ */
 function formatDateStd(timestamp) {
-    // new Date(year, month[, day[, hour[, minute[, second[, millisecond]]]]]);
     var date = new Date(timestamp);
 
     return ("00" + date.getDate()).slice(-2) + "." +
@@ -248,6 +251,12 @@ function formatDateStd(timestamp) {
         date.getFullYear();
 }
 
+/**
+ * Format time in HH:mm
+ * 
+ * @param timestamp
+ * @returns {string}
+ */
 function formatTime(timestamp) {
     var date = new Date(timestamp);
 
@@ -256,7 +265,7 @@ function formatTime(timestamp) {
 }
 
 /**
- * Sends data to the server
+ * Send data to the server
  */
 function sendData() {
     // getting data from the forms
@@ -319,7 +328,11 @@ function sendData() {
     // var currentMonth = currentDate.getMonth();
     // var currentDay = currentDate.getDate();
 
-    result.date = new Date(parseInt(year), parseInt(month-1), parseInt(day), parseInt(hour), parseInt(minute)).getTime().toString();
+    result.date = new Date(parseInt(year), 
+                            parseInt(month-1), 
+                            parseInt(day), 
+                            parseInt(hour), 
+                            parseInt(minute)).getTime().toString();
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'data?method=addEvent', true);
@@ -333,14 +346,13 @@ function sendData() {
             ukAlert("Запись добавлена успешно");
             clearTagsAndTime();
         } else {
-            // document.getElementById('response-debug').innerHTML = xhr.responseText;
             ukAlert("Ошибка при добавлении. Код " + xhr.status + ": " + xhr.statusText, 'uk-alert-danger');
         }
     };
 }
 
 /**
- * Checks if string is blank, null, undefined or has no characters but spaces
+ * Check if string is blank, null, undefined or has no characters but spaces
  *
  * @return boolean
  */
@@ -349,7 +361,7 @@ function isBlank(str) {
 }
 
 /**
- *  Displays a uikit alert message
+ *  Display a uikit alert message
  */
 function ukAlert(message, htmlClass) {
     htmlClass = htmlClass || null;
@@ -376,7 +388,7 @@ function ukAlert(message, htmlClass) {
 }
 
 /**
- * Clears forms
+ * Clear forms
  */
 function clearTagsAndTime() {
     updateForm(document.getElementById('event-dropdown'));

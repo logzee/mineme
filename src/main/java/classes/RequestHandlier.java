@@ -19,12 +19,10 @@ import java.util.List;
 
 /**
  * This servlet handles HTTP requests
+ * In fact, this is a wrapper for {@link DBManager}
  */
 @WebServlet(name = "RequestHandlier", urlPatterns={"/data"})
 public class RequestHandlier extends HttpServlet {
-    /**
-     * Instance of DBManager to access MongoDB
-     */
     private DBManager dbManager;
 
     public RequestHandlier() {
@@ -71,7 +69,8 @@ public class RequestHandlier extends HttpServlet {
     }
 
     /**
-     * Sends structure of event types to the client
+     * Send structure of event types to the client
+     *
      * @param response  link to servlet response
      */
     private void getEventTypesStruct(HttpServletResponse response) throws IOException {
@@ -89,7 +88,8 @@ public class RequestHandlier extends HttpServlet {
     }
 
     /**
-     * Adds data about new event to the database using {@link DBManager}
+     * Add new event to the database using {@link DBManager}
+     *
      * @param request   Servlet request variable
      * @throws IOException
      */
@@ -125,7 +125,8 @@ public class RequestHandlier extends HttpServlet {
     }
 
     /**
-     * Sends response with events of requested type and time interval
+     * Send response with events of requested type and time interval
+     *
      * @param request   Client's request
      * @param response  Server's response
      * @throws IOException
